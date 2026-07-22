@@ -1,0 +1,41 @@
+version: 1
+
+project:
+  name: azure_knowledge_rag
+  environment: development
+
+paths:
+  raw_data: data/raw
+  staging: data/staging
+  processed_documents: data/processed/documents
+  manifests: data/manifests
+  rejected: data/rejected
+  logs: logs
+
+ingestion:
+  incremental: true
+  overwrite_existing: false
+  calculate_checksum: true
+  continue_on_error: true
+
+network:
+  timeout_seconds: 60
+  max_retries: 3
+  retry_delay_seconds: 2
+  user_agent: Azure-RAG-Ingestion/1.0
+
+validation:
+  reject_empty_documents: true
+  minimum_file_size_bytes: 100
+  minimum_content_length: 100
+
+output:
+  document_format: jsonl
+  encoding: utf-8
+  save_manifest: true
+
+logging:
+  level: INFO
+  log_to_console: true
+  log_to_file: true
+  filename: ingestion.log

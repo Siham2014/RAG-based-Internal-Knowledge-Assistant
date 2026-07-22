@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Azure Reliability Guide</title>
+
+    <meta
+        name="description"
+        content="Guide for improving reliability on Azure."
+    >
+
+    <meta
+        name="author"
+        content="Microsoft"
+    >
+
+    <meta
+        name="keywords"
+        content="Azure, reliability, cloud"
+    >
+
+    <link
+        rel="canonical"
+        href="https://learn.microsoft.com/azure/reliability/"
+    >
+</head>
+
+<body>
+    <main>
+        <h1>Azure Reliability</h1>
+
+        <p>
+            Reliability ensures that workloads remain available
+            and recover from failures.
+        </p>
+
+        <p>
+            Read the
+            <a href="https://learn.microsoft.com/azure/">
+                Azure documentation
+            </a>.
+        </p>
+
+        <h2>Recommendations</h2>
+
+        <p>Apply the following recommendations:</p>
+
+        <ul>
+            <li>Use availability zones</li>
+            <li>Configure monitoring</li>
+            <li>Test disaster recovery</li>
+        </ul>
+
+        <h2>Service levels</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>SLA</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Virtual Machines</td>
+                    <td>99.99%</td>
+                </tr>
+
+                <tr>
+                    <td>Azure SQL</td>
+                    <td>99.995%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Python example</h2>
+
+        <pre><code class="language-python">def health_check():
+    return "healthy"</code></pre>
+
+        <blockquote>
+            Test the recovery process regularly.
+        </blockquote>
+    </main>
+
+    <script>
+        console.log("This script must not be indexed.");
+    </script>
+</body>
+</html>

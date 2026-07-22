@@ -1,0 +1,365 @@
+<main class="layout-body-main" data-bi-name="content" dir="ltr" id="main" lang="en-us" role="main">
+<div class="content-header default-focus border-bottom-none" data-bi-name="content-header" id="ms--content-header">
+<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+
+
+</div>
+</div>
+<div class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm" data-main-column="">
+<div>
+<div class="background-color-body margin-bottom-xs display-none-print" id="article-header">
+<div class="display-flex align-items-center justify-content-space-between">
+<details class="popover popover-left" data-for="article-header-breadcrumbs" id="article-header-breadcrumbs-overflow-popover">
+<summary aria-label="All breadcrumbs" class="button button-clear button-primary button-sm inner-focus">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-more"></span>
+</span>
+</summary>
+<div class="popover-content" id="article-header-breadcrumbs-overflow"></div>
+</details>
+<bread-crumbs aria-label="Breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs" data-test-id="article-header-breadcrumbs" id="article-header-breadcrumbs" role="group"></bread-crumbs>
+<div class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch" id="article-header-page-actions">
+
+
+
+<details class="popover popover-right" id="article-header-page-actions-overflow">
+<summary aria-label="More actions" class="justify-content-flex-start button button-clear button-sm button-primary inner-focus" title="More actions">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-more-vertical"></span>
+</span>
+</summary>
+<div class="popover-content">
+
+
+<a class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left" data-bi-name="language-toggle" data-check-hidden="true" data-page-action-item="overflow-all" data-read-in-link="" hidden="" href="#" id="lang-link-overflow">
+<span aria-hidden="true" class="icon" data-read-in-link-icon="">
+<span class="docon docon-locale-globe"></span>
+</span>
+<span data-read-in-link-text="">Read in English</span>
+</a>
+
+
+<a class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none" data-bi-name="edit" data-check-hidden="true" data-contenteditbtn="" data-original_content_git_url="https://github.com/MicrosoftDocs/architecture-center-pr/blob/live/docs/databases/database-get-started.md" data-original_content_git_url_template="{repo}/blob/{branch}/docs/databases/database-get-started.md" data-page-action-item="overflow-all" data-pr_branch="" data-pr_repo="" href="https://github.com/microsoftdocs/architecture-center/blob/main/docs/databases/database-get-started.md">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-edit-outline"></span>
+</span>
+<span>Edit</span>
+</a>
+<hr class="margin-block-xxs"/>
+
+
+</div>
+</details>
+</div>
+</div>
+</div>
+<!-- privateUnauthorizedTemplate is hidden by default -->
+<div data-bi-name="permission-content-unauthorized-private" hidden="" unauthorized-private-section="">
+<hr class="hr margin-top-xs margin-bottom-sm"/>
+<div class="notification notification-info">
+<div class="notification-content">
+<p class="margin-top-none notification-title">
+<span aria-hidden="true" class="icon"><span class="docon docon-exclamation-circle-solid"></span></span>
+<span>Note</span>
+</p>
+<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" data-bi-name="permission-content-sign-in" href="#">signing in</a> or <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+</div>
+</div>
+</div>
+<div class="content"><h1 id="get-started-with-database-architecture-design">Get started with database architecture design</h1></div>
+<div class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap" data-bi-name="article-metadata" data-test-id="article-metadata" id="article-metadata">
+<div class="margin-block-xxs display-none display-none-print" data-hide-on-archived="" hidden="" id="user-feedback">
+
+</div>
+</div>
+<div class="display-none-print" data-id="ai-summary">
+<div class="margin-top-xs display-flex align-items-center" id="ms--ai-summary-cta">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+</span>
+
+</div>
+<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+<div class="margin-top-xs" id="ms--ai-summary-header"></div>
+</div>
+
+<div class="content"><p>Data is central to all applications. One of your most important architectural decisions is choosing the right database solution. Azure provides a comprehensive portfolio of database services that span relational databases, NoSQL databases, in-memory caches, and managed database instances. Whether you build transactional applications, analytical workloads, or globally distributed systems, Azure database services provide the performance, scalability, and reliability that your organization needs.</p>
+<p>The right database for your scenario depends on your data model, consistency requirements, query patterns, and operational preferences. Key considerations include data structure like relational versus nonrelational, transaction requirements, scalability needs, and your desired level of management overhead. The Azure database portfolio spans fully managed platform as a service (PaaS) offerings, infrastructure as a service (IaaS) options, and specialized services for specific workload patterns.</p>
+<h2 id="architecture">Architecture</h2>
+<p>
+<a data-linktype="relative-path" href="media/get-started-databases.svg#lightbox">
+<img alt="Diagram that shows the database solution journey on Azure." aria-describedby="20-0" data-linktype="relative-path" src="media/get-started-databases.svg"/>
+</a></p><div class="visually-hidden" id="20-0"><p><a data-linktype="relative-path" href="media/get-started-databases.svg#lightbox">
+Architecture diagram of an Azure workload within a virtual network. Client traffic enters through network ingress services like Azure Front Door, Azure Application Gateway, or Azure Load Balancer and reaches a compute layer. The workload uses managed Azure database services, including relational databases such as Azure SQL, Azure Database for MySQL, Azure SQL virtual machine (VM), and Azure Database for PostgreSQL, and NoSQL services like Azure Cosmos DB, Azure Managed Instance for Apache Cassandra, Azure Managed Redis, and Azure DocumentDB. The architecture also includes private endpoints, user-defined routes (UDRs), network security groups (NSGs), virtual private network (VPN) or Azure ExpressRoute connectivity, and platform services such as managed identities, Azure Monitor, Azure Data Factory, Microsoft Entra ID, and Azure DNS.</a></p></div><a data-linktype="relative-path" href="media/get-started-databases.svg#lightbox">
+</a>
+<p></p>
+<p><em>Download a <a data-linktype="external" href="https://arch-center.azureedge.net/databases-get-started-diagram.vsdx">Visio file</a> of this architecture.</em></p>
+<p><em>ApacheÂ®, Apache CassandraÂ®, and the Hadoop logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. No endorsement by The Apache Software Foundation is implied by the use of these marks.</em></p>
+<p>The previous diagram demonstrates a typical basic or baseline database implementation. For real-world solutions that you can build in Azure, see <a data-linktype="self-bookmark" href="#database-architectures">Database architectures</a>.</p>
+<p>Azure database solutions include traditional relational database management systems (RDBMS) and online transaction processing (OLTP) systems, big data and analytics workloads including online analytical processing (OLAP) systems, and NoSQL workloads. To find real-world solutions that you can build in Azure, see <a data-linktype="self-bookmark" href="#explore-database-architectures-and-guides">Database architectures</a>.</p>
+<h2 id="explore-database-architectures-and-guides">Explore database architectures and guides</h2>
+<p>The articles in this section include fully developed architectures that you can deploy in Azure and expand to production-grade solutions and guides. These articles can help you decide how to use database technologies in Azure. Solution ideas demonstrate implementation patterns and possibilities to consider as you plan your database proof-of-concept (POC) development.</p>
+<h3 id="database-guides">Database guides</h3>
+<p><strong>Technology choices</strong></p>
+<p>The following articles help you evaluate and select the best database technologies for your workload requirements:</p>
+<ul>
+<li><a data-linktype="relative-path" href="../guide/technology-choices/data-stores-getting-started">Prepare to choose a data store in Azure</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/technology-choices/understand-data-store-models">Understand data store models</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/technology-choices/data-storage">Big data storage</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/technology-choices/search-options">Search data store</a></li>
+<li><a data-linktype="relative-path" href="../guide/technology-choices/vector-search">Vector search</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/technology-choices/pipeline-orchestration-data-movement">Pipeline orchestration</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/scenarios/data-transfer">Data transfer options</a></li>
+</ul>
+<p><strong>NoSQL</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="guide/transactional-out-box-cosmos">Use the Transactional Outbox pattern</a></li>
+<li><a data-linktype="relative-path" href="guide/cassandra">Run Apache Cassandra</a></li>
+</ul>
+<p><strong>Data processing</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="../data-guide/relational-data/online-analytical-processing">OLAP solutions</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/relational-data/online-transaction-processing">OLTP solutions</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/relational-data/etl">Extract, transform, and load (ETL) guide</a></li>
+<li><a data-linktype="relative-path" href="../data-guide/scenarios/data-lake">Data lakes</a></li>
+<li><a data-linktype="relative-path" href="guide/big-data-architectures">Big data architectures</a></li>
+</ul>
+<p><strong>Data governance</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="../guide/data/collection-structure-federated-catalog">Collection structure for a federated Microsoft Purview catalog</a></li>
+</ul>
+<h3 id="database-architectures">Database architectures</h3>
+<p>The following production-ready architectures demonstrate end-to-end database solutions that you can deploy and customize:</p>
+<p><strong>Data warehouse</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="architecture/dataops-mdw">DataOps for modern data warehouse</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/data/greenfield-lakehouse-fabric">Greenfield lakehouse on Microsoft Fabric</a></li>
+</ul>
+<p><strong>Azure Data Factory</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="architecture/azure-data-factory-on-azure-landing-zones-index">Medallion lakehouse by using Azure Data Factory</a></li>
+<li><a data-linktype="relative-path" href="architecture/azure-data-factory-on-azure-landing-zones-baseline">Azure Data Factory baseline architecture</a></li>
+<li><a data-linktype="relative-path" href="architecture/azure-data-factory-enterprise-hardened">Azure Data Factory enterprise hardened architecture</a></li>
+<li><a data-linktype="relative-path" href="architecture/azure-data-factory-mission-critical">Azure Data Factory mission-critical architecture</a></li>
+</ul>
+<p><strong>NoSQL</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="architecture/mongodb-atlas-baseline">Deploy MongoDB Atlas on Azure</a></li>
+<li><a data-linktype="relative-path" href="architecture/azure-synapse-analytics-integrate-mongodb-atlas">Analyze MongoDB Atlas data</a></li>
+</ul>
+<p><strong>Mainframe</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="../reference-architectures/migration/sync-mainframe-data-with-azure">Replicate and sync mainframe data</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/mainframe-replication-precisely-connect">Mainframe data replication by using Precisely Connect</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/mainframe-midrange-data-replication-azure-qlik">Mainframe data replication by using Qlik</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/mainframe-data-replication-azure-rdrs">Mainframe data replication by using RocketÂ® Data Replicate and Sync (RDRS)</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/mainframe-data-replication-azure-data-platform">Migrate mainframe data tier to Azure by using mLogica LIBER*IRIS</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/modernize-mainframe-data-to-azure">Modernize mainframe midrange data</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/reengineer-mainframe-batch-apps-azure">Reengineer mainframe batch apps</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/rehost-ims-raincode-imsql">Rehost IMS Data Communication (IMS DC) and IMS Database (IMS DB)</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/integration/sma-opcon-azure">Implement SMA OpCon in Azure</a></li>
+</ul>
+<p><strong>In-memory data stores</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="architecture/write-through-caching-azure-sql-managed-redis">Write-through caching with Azure Managed Redis and Azure SQL Database</a></li>
+</ul>
+<p><strong>Relational</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="../example-scenario/file-storage/oracle-azure-netapp-files">Oracle Database with Azure NetApp Files</a></li>
+<li><a data-linktype="relative-path" href="../example-scenario/apps/sap-production">SAP deployment by using an Oracle database</a></li>
+</ul>
+<p><strong>Big data</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="../data-guide/technology-choices/fabric-deployment-patterns">Microsoft Fabric deployment patterns</a></li>
+</ul>
+<h3 id="database-solution-ideas">Database solution ideas</h3>
+<p><strong>Relational</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="idea/topic-migrate-oracle-azure">Migrate an Oracle database to Azure</a></li>
+<li><a data-linktype="relative-path" href="idea/migrate-oracle-azure-iaas">Migrate an Oracle database to an Azure virtual machine</a></li>
+<li><a data-linktype="relative-path" href="idea/migrate-oracle-odaa-exadata">Migrate an Oracle database to Oracle Exadata Database@Azure</a></li>
+<li><a data-linktype="relative-path" href="../solution-ideas/articles/secure-sql-managed-instance-managed-hardware-security-module">Cross-region resiliency for SQL transparent data encryption (TDE) by using Azure Key Vault Managed HSM</a></li>
+</ul>
+<p><strong>NoSQL</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="idea/minimal-storage-change-feed-replicate-data">Replicate data by using a change feed to minimize storage</a></li>
+</ul>
+<p><strong>Relational and NoSQL</strong></p>
+<ul>
+<li><a data-linktype="relative-path" href="idea/combine-relational-nosql">Polyglot persistence with Azure Cosmos DB and Azure SQL Database</a></li>
+</ul>
+<h2 id="learn-about-databases-on-azure">Learn about databases on Azure</h2>
+<p><a data-linktype="absolute-path" href="/en-us/training/?WT.mc_id=learnaka">Microsoft Learn</a> provides free online training resources for Azure database technologies. The platform offers videos, tutorials, and interactive labs for specific products and services, along with learning paths organized by job role.</p>
+<p>The following resources provide foundational knowledge for database implementations on Azure:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/training/paths/azure-fundamentals-describe-azure-architecture-services/">Explore Azure database and analytics services</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/storage/common/storage-account-overview">Choose a data storage approach in Azure</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/training/modules/deploy-paas-solutions-with-azure-sql/">Deploy Azure SQL Database</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/training/paths/secure-your-cloud-data/">Secure your Azure SQL Database</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/data-migration/sql-server/database/guide">Design your migration to Azure</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/training/browse/?products=azure&amp;terms=database">Browse Azure database modules</a></li>
+</ul>
+<h3 id="learning-paths-by-role">Learning paths by role</h3>
+<ul>
+<li><strong>Data engineer:</strong> <a data-linktype="absolute-path" href="/en-us/training/paths/azure-data-fundamentals-explore-relational-data/">Azure data fundamentals: Explore relational data in Azure</a></li>
+<li><strong>Database administrator:</strong> <a data-linktype="absolute-path" href="/en-us/training/courses/dp-300t00">Implement scalable database solutions by using Azure SQL</a></li>
+<li><strong>Developer:</strong> <a data-linktype="absolute-path" href="/en-us/training/paths/az-204-develop-solutions-that-use-azure-cosmos-db/">Develop solutions that use Azure Cosmos DB</a></li>
+</ul>
+<p>For more role-based training, <a data-linktype="absolute-path" href="/en-us/training/browse/?resource_type=learning%20path">browse other learning paths</a>.</p>
+<h2 id="organizational-readiness">Organizational readiness</h2>
+<p>Organizations that are beginning their cloud adoption can use the <a data-linktype="absolute-path" href="/en-us/azure/cloud-adoption-framework/">Cloud Adoption Framework for Azure</a> for proven guidance designed to accelerate cloud adoption. For guidance on creating an executive strategy for a unified data platform, see <a data-linktype="absolute-path" href="/en-us/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform">Executive strategy for unifying your data</a>.</p>
+<p>To help ensure the quality of your database solution on Azure, follow the <a data-linktype="absolute-path" href="/en-us/azure/well-architected/">Azure Well-Architected Framework</a>. The Well-Architected Framework provides prescriptive guidance for organizations that seek architectural excellence and describes how to design, provision, and monitor cost-optimized Azure solutions.</p>
+<p>For database-specific guidance, see the following Well-Architected Framework service guides:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/service-guides/cosmos-db">Azure Cosmos DB</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/service-guides/azure-sql-database">Azure SQL Database</a></li>
+</ul>
+<h2 id="best-practices">Best practices</h2>
+<p>Review the following best practices when you design your database solutions.</p>
+<table>
+<thead>
+<tr>
+<th>Best practice</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a data-linktype="relative-path" href="guide/transactional-out-box-cosmos">The Transactional Outbox pattern with Azure Cosmos DB</a></td>
+<td>Learn how to use the Transactional Outbox pattern for reliable messaging and guaranteed event delivery.</td>
+</tr>
+<tr>
+<td><a data-linktype="absolute-path" href="/en-us/azure/cosmos-db/distribute-data-globally">Distribute your data globally by using Azure Cosmos DB</a></td>
+<td>To achieve low latency and high availability, some applications must be deployed in datacenters that are close to their users.</td>
+</tr>
+<tr>
+<td><a data-linktype="absolute-path" href="/en-us/azure/cosmos-db/security">Security in Azure Cosmos DB</a></td>
+<td>Security best practices help prevent, detect, and respond to database breaches.</td>
+</tr>
+<tr>
+<td><a data-linktype="absolute-path" href="/en-us/azure/cosmos-db/continuous-backup-restore-introduction">Continuous backup with point-in-time restore (PITR) in Azure Cosmos DB</a></td>
+<td>Learn about Azure Cosmos DB PITR.</td>
+</tr>
+<tr>
+<td><a data-linktype="absolute-path" href="/en-us/azure/reliability/reliability-cosmos-db-nosql">Achieve high availability by using Azure Cosmos DB</a></td>
+<td>Azure Cosmos DB provides multiple features and configuration options to achieve high availability.</td>
+</tr>
+<tr>
+<td><a data-linktype="absolute-path" href="/en-us/azure/azure-sql/database/high-availability-sla-local-zone-redundancy">High availability for Azure SQL Database and Azure SQL Managed Instance</a></td>
+<td>The database shouldn't be a single point of failure in your architecture.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stay-current-with-databases">Stay current with databases</h2>
+<p>Azure database services evolve to address modern data challenges. Stay informed about the latest <a data-linktype="external" href="https://azure.microsoft.com/updates/?category=databases">updates and features</a>.</p>
+<p>To stay current with key database services, see the following articles:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new">What's new in Azure SQL Database</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/postgresql/release-notes/release-notes">What's new in Azure Database for PostgreSQL</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/mysql/flexible-server/whats-new">What's new in Azure Database for MySQL</a></li>
+</ul>
+<h2 id="other-resources">Other resources</h2>
+<p>Databases is a broad category and covers a range of solutions. The following resources can help you discover more about Azure.</p>
+<h3 id="hybrid-and-multicloud">Hybrid and multicloud</h3>
+<p>Most organizations need a hybrid approach to databases because they have workloads that run both on-premises and in the cloud. Organizations typically <a data-linktype="absolute-path" href="/en-us/azure/architecture/databases/guide/hybrid-on-premises-and-cloud">extend on-premises database solutions to the cloud</a>. To connect environments, organizations must <a data-linktype="absolute-path" href="/en-us/azure/architecture/reference-architectures/hybrid-networking/index">choose a hybrid network architecture</a>.</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/azure-arc/data/what-is-azure-arc-enabled-postgres-hyperscale">Azure Arc-enabled PostgreSQL</a>: Run Azure-managed PostgreSQL on your infrastructure.</li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/hybrid/hybrid-start-here">Azure hybrid and multicloud patterns</a>: Connect on-premises databases to cloud services.</li>
+</ul>
+<p>Review the following key hybrid database scenarios:</p>
+<ul>
+<li><a data-linktype="relative-path" href="../hybrid/azure-arc-sql-server">Azure Arc hybrid management for SQL Server</a>: Use Azure Arc to manage SQL Server across environments.</li>
+<li><a data-linktype="relative-path" href="../hybrid/hybrid-start-here">Hybrid architecture design</a>: Connect on-premises environments to Azure.</li>
+</ul>
+<h3 id="mainframe-data-modernization">Mainframe data modernization</h3>
+<p>Organizations that use legacy mainframe systems can modernize their data workloads by migrating to Azure database services. Azure provides multiple migration patterns and replication strategies to help you transition mainframe data while maintaining business continuity.</p>
+<ul>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/modernize-mainframe-data-to-azure">Modernize mainframe midrange data</a>: Migrate legacy data sources to modern platforms.</li>
+<li><a data-linktype="relative-path" href="../reference-architectures/migration/sync-mainframe-data-with-azure">Replicate and sync mainframe data</a>: Keep mainframe and cloud data synchronized.</li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/mainframe-replication-precisely-connect">Mainframe data replication by using Connect</a>: Use Precisely Connect for data replication.</li>
+<li><a data-linktype="relative-path" href="../example-scenario/mainframe/mainframe-midrange-data-replication-azure-qlik">Mainframe data replication by using Qlik</a>: Replicate data by using Qlik technologies.</li>
+</ul>
+<h3 id="analytics-integration">Analytics integration</h3>
+<p>For analytics workloads that depend on well-architected database foundations, see the following articles:</p>
+<ul>
+<li><a data-linktype="relative-path" href="../analytics/analytics-get-started">Analytics architecture design</a>: See an overview of analytics solutions on Azure.</li>
+<li><a data-linktype="relative-path" href="../example-scenario/data/data-warehouse">Data warehousing and analytics</a>: Integrate databases with analytics platforms.</li>
+</ul>
+<h2 id="amazon-web-services-aws-or-google-cloud-professionals">Amazon Web Services (AWS) or Google Cloud professionals</h2>
+<p>To help you ramp up quickly, the following articles compare Azure database options to other cloud services:</p>
+<ul>
+<li><a data-linktype="relative-path" href="../aws-professional/databases">Relational database technologies on Azure and AWS</a>: Compare Azure and AWS database services.</li>
+<li><a data-linktype="relative-path" href="../gcp-professional/services#data-platform">Google Cloud to Azure services comparison: Data platform</a>: Compare Azure and Google Cloud database services.</li>
+</ul>
+<h2 id="contributors">Contributors</h2>
+<p><em>Microsoft maintains this article. The following contributors wrote this article.</em></p>
+<p>Principal authors:</p>
+<ul>
+<li><a data-linktype="external" href="https://www.linkedin.com/in/mohitagarwal01/">Mohit Agarwal</a> | Principal Cloud Solution Architect</li>
+</ul>
+<p><em>To see nonpublic LinkedIn profiles, sign in to LinkedIn.</em></p>
+</div>
+<div class="margin-block-xs" data-bi-name="inline-notification" id="ms--inline-notifications"></div>
+<div aria-atomic="true" aria-live="assertive" aria-relevant="additions" class="visually-hidden" id="assertive-live-region" role="alert"></div>
+<div aria-atomic="true" aria-live="polite" aria-relevant="additions" class="visually-hidden" id="polite-live-region" role="status"></div>
+<!-- feedback section -->
+<section class="font-size-sm margin-top-md display-none-print display-none-desktop" data-bi-name="site-feedback-section" data-test-id="site-user-feedback-footer" id="site-user-feedback-footer">
+<hr class="hr"/>
+<h2 class="title is-3" id="ms--feedback">Feedback</h2>
+<div class="display-flex flex-wrap-wrap align-items-center">
+<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+<div class="buttons">
+
+
+<details class="popover popover-top" data-test-id="footer-feedback-popover" id="mobile-help-popover">
+<summary aria-pressed="false" class="thumb-rating-button dislike button button-primary button-sm" data-bi-an="feedback-unhelpful-popover" data-bi-name="button-rating-no" data-binary-rating-response="rating-no" data-test-id="details-footer-rating-no" title="This article is not helpful">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-dislike"></span>
+</span>
+<span>No</span>
+</summary>
+<div aria-describedby="popover-description" aria-labelledby="popover-heading" class="popover-content width-200 width-300-tablet" role="dialog">
+<p class="font-size-lg margin-bottom-xxs font-weight-semibold" id="popover-heading">
+								Need help with this topic?
+							</p>
+<p class="font-size-sm margin-bottom-xs" id="popover-description">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+<div>
+
+
+
+</div>
+
+</div>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- end feedback section -->
+</div>
+<div class="display-none-print" id="ms--additional-resources-mobile">
+<hr class="hr" hidden=""/>
+<h2 class="title is-3" hidden="" id="ms--additional-resources-mobile-heading">
+				Additional resources
+			</h2>
+<section class="" data-bi-name="recommendations" hidden="" id="right-rail-recommendations-mobile"></section>
+<section class="" data-bi-name="learning-resource-card" hidden="" id="right-rail-training-mobile"></section>
+<section class="" data-bi-name="events-card" hidden="" id="right-rail-events-mobile"></section>
+</div>
+<div class="page-metadata-container" data-bi-name="article-metadata-footer" data-test-id="article-metadata-footer" id="article-metadata-footer">
+<hr class="hr"/>
+
+</div>
+</div>
+<div aria-label="Action Panel" class="action-panel" id="action-panel" role="region" tabindex="-1"></div>
+</main>

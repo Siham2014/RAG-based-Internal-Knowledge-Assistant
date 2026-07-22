@@ -1,0 +1,139 @@
+{
+    "document_id": "markdown_test:azure_retry",
+    "source_id": "markdown_test",
+    "source_type": "local_folder",
+    "local_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\data\\staging\\parser_test\\azure_retry.md",
+    "checksum_sha256": "4e47094c40324e7a4f6a796f47b8ef2c87960f06aea93a8c9968813627971490",
+    "title": "Azure Retry Pattern",
+    "author": null,
+    "created_at": null,
+    "updated_at": null,
+    "source_url": null,
+    "language": "en",
+    "organization": "Microsoft",
+    "document_format": "markdown",
+    "sections": [
+        {
+            "section_id": "markdown_test:azure_retry:section-0",
+            "heading": "Azure Retry Pattern",
+            "heading_level": 1,
+            "paragraphs": [
+                "The Retry pattern helps an application handle transient failures.",
+                "Documentation: Azure Architecture Center ."
+            ],
+            "lists": [],
+            "tables": [],
+            "code_blocks": [],
+            "links": [
+                {
+                    "text": "Azure Architecture Center",
+                    "url": "https://learn.microsoft.com/en-us/azure/architecture/"
+                }
+            ],
+            "page_number": null,
+            "position": 0,
+            "heading_path": [
+                "Azure Retry Pattern"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "markdown_test:azure_retry:section-1",
+            "heading": "Recommendations",
+            "heading_level": 2,
+            "paragraphs": [
+                "Use the following recommendations:"
+            ],
+            "lists": [
+                [
+                    "Use exponential backoff",
+                    "Limit the number of retries",
+                    "Log final failures"
+                ]
+            ],
+            "tables": [],
+            "code_blocks": [],
+            "links": [],
+            "page_number": null,
+            "position": 1,
+            "heading_path": [
+                "Azure Retry Pattern",
+                "Recommendations"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "markdown_test:azure_retry:section-2",
+            "heading": "Retry configuration",
+            "heading_level": 2,
+            "paragraphs": [],
+            "lists": [],
+            "tables": [
+                {
+                    "headers": [
+                        "Attempt",
+                        "Delay"
+                    ],
+                    "rows": [
+                        [
+                            "1",
+                            "1 second"
+                        ],
+                        [
+                            "2",
+                            "2 seconds"
+                        ],
+                        [
+                            "3",
+                            "4 seconds"
+                        ]
+                    ],
+                    "caption": null
+                }
+            ],
+            "code_blocks": [],
+            "links": [],
+            "page_number": null,
+            "position": 2,
+            "heading_path": [
+                "Azure Retry Pattern",
+                "Retry configuration"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "markdown_test:azure_retry:section-3",
+            "heading": "Python example",
+            "heading_level": 2,
+            "paragraphs": [
+                "> Retry only operations that are safe to repeat."
+            ],
+            "lists": [],
+            "tables": [],
+            "code_blocks": [
+                {
+                    "content": "for attempt in range(3):\n    execute_operation()",
+                    "language": "python"
+                }
+            ],
+            "links": [],
+            "page_number": null,
+            "position": 3,
+            "heading_path": [
+                "Azure Retry Pattern",
+                "Python example"
+            ],
+            "metadata": {}
+        }
+    ],
+    "metadata": {
+        "organization": "Microsoft",
+        "domain": "Azure",
+        "language": "en",
+        "source_format": "markdown",
+        "filename": "azure_retry.md",
+        "extension": ".md",
+        "parser": "MarkdownParser",
+        "section_count": 4
+    }
+}

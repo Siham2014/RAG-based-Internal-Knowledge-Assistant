@@ -1,0 +1,17 @@
+[
+    {
+        "document_id": "test:document_test.md",
+        "source_id": "test_source",
+        "source_type": "local_folder",
+        "local_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\data\\staging\\manifest_test\\document_test.md",
+        "checksum_sha256": "d87213499ca72c1b14b7324faa3fa49767c5d48777f264a02af4ef9c54ada79b",
+        "status": "missing",
+        "source_url": null,
+        "remote_version": null,
+        "file_size_bytes": 28,
+        "first_seen_at": "2026-07-20T09:57:35.857833+00:00",
+        "last_seen_at": "2026-07-20T09:57:35.913543+00:00",
+        "ingested_at": "2026-07-20T09:57:35.892364+00:00",
+        "error_message": null
+    }
+]

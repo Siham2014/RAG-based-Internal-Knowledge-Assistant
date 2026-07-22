@@ -1,0 +1,407 @@
+<main class="layout-body-main" data-bi-name="content" dir="ltr" id="main" lang="en-us" role="main">
+<div class="content-header default-focus border-bottom-none" data-bi-name="content-header" id="ms--content-header">
+<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+
+
+</div>
+</div>
+<div class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm" data-main-column="">
+<div>
+<div class="background-color-body margin-bottom-xs display-none-print" id="article-header">
+<div class="display-flex align-items-center justify-content-space-between">
+<details class="popover popover-left" data-for="article-header-breadcrumbs" id="article-header-breadcrumbs-overflow-popover">
+<summary aria-label="All breadcrumbs" class="button button-clear button-primary button-sm inner-focus">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-more"></span>
+</span>
+</summary>
+<div class="popover-content" id="article-header-breadcrumbs-overflow"></div>
+</details>
+<bread-crumbs aria-label="Breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs" data-test-id="article-header-breadcrumbs" id="article-header-breadcrumbs" role="group"></bread-crumbs>
+<div class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch" id="article-header-page-actions">
+
+
+
+<details class="popover popover-right" id="article-header-page-actions-overflow">
+<summary aria-label="More actions" class="justify-content-flex-start button button-clear button-sm button-primary inner-focus" title="More actions">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-more-vertical"></span>
+</span>
+</summary>
+<div class="popover-content">
+
+
+<a class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left" data-bi-name="language-toggle" data-check-hidden="true" data-page-action-item="overflow-all" data-read-in-link="" hidden="" href="#" id="lang-link-overflow">
+<span aria-hidden="true" class="icon" data-read-in-link-icon="">
+<span class="docon docon-locale-globe"></span>
+</span>
+<span data-read-in-link-text="">Read in English</span>
+</a>
+
+
+<a class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none" data-bi-name="edit" data-check-hidden="true" data-contenteditbtn="" data-original_content_git_url="https://github.com/MicrosoftDocs/architecture-center-pr/blob/live/docs/ai-ml/ai-get-started.md" data-original_content_git_url_template="{repo}/blob/{branch}/docs/ai-ml/ai-get-started.md" data-page-action-item="overflow-all" data-pr_branch="" data-pr_repo="" href="https://github.com/microsoftdocs/architecture-center/blob/main/docs/ai-ml/ai-get-started.md">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-edit-outline"></span>
+</span>
+<span>Edit</span>
+</a>
+<hr class="margin-block-xxs"/>
+
+
+</div>
+</details>
+</div>
+</div>
+</div>
+<!-- privateUnauthorizedTemplate is hidden by default -->
+<div data-bi-name="permission-content-unauthorized-private" hidden="" unauthorized-private-section="">
+<hr class="hr margin-top-xs margin-bottom-sm"/>
+<div class="notification notification-info">
+<div class="notification-content">
+<p class="margin-top-none notification-title">
+<span aria-hidden="true" class="icon"><span class="docon docon-exclamation-circle-solid"></span></span>
+<span>Note</span>
+</p>
+<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" data-bi-name="permission-content-sign-in" href="#">signing in</a> or <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+</div>
+</div>
+</div>
+<div class="content"><h1 id="get-started-with-ai-architecture-design">Get started with AI architecture design</h1></div>
+<div class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap" data-bi-name="article-metadata" data-test-id="article-metadata" id="article-metadata">
+<div class="margin-block-xxs display-none display-none-print" data-hide-on-archived="" hidden="" id="user-feedback">
+
+</div>
+</div>
+<div class="display-none-print" data-id="ai-summary">
+<div class="margin-top-xs display-flex align-items-center" id="ms--ai-summary-cta">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+</span>
+
+</div>
+<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+<div class="margin-top-xs" id="ms--ai-summary-header"></div>
+</div>
+
+<div class="content"><p>AI enables machines to analyze data, generate content, synthesize speech, make predictions, and support decision-making across industries. As AI capabilities expand through generative models, language models, and agent-based architectures, organizations need architectural guidance to design reliable, secure, cost-effective, and operationally stable AI workloads.</p>
+<p>This article helps you get started with AI on Azure. It introduces AI services, reference architectures, best practices, and learning resources so that you can design and build AI solutions that meet your workload requirements.</p>
+<h2 id="azure-services-for-ai">Azure services for AI</h2>
+<p>Azure provides a range of services for building, deploying, and managing AI workloads. These services span development platforms, prebuilt AI capabilities, data platforms, and tools for creating custom models. Use the following services to integrate AI into your workload design.</p>
+<h3 id="ai-development-platforms">AI development platforms</h3>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/foundry/what-is-foundry">Microsoft Foundry</a>: A unified platform as a service (PaaS) for developing and deploying generative AI applications and agents. Microsoft Foundry provides access to a model catalog, agent hosting through Foundry Agent Service, fine-tuning, evaluation tools, and responsible AI capabilities. Use the <a data-linktype="external" href="https://ai.azure.com">Foundry portal</a> to experiment, build, and deploy AI models and agents.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/machine-learning/overview-what-is-azure-machine-learning">Azure Machine Learning</a>: A cloud service for building, training, and deploying machine learning models at scale. Azure Machine Learning supports open-source frameworks like PyTorch, TensorFlow, and scikit-learn. It also provides capabilities for AutoML, hyperparameter tuning, distributed training, machine learning operations, and responsible AI.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio">Microsoft Copilot Studio</a>: A low-code platform for building, customizing, and deploying AI-powered agents. Use Microsoft Copilot Studio to create conversational agents for internal and external scenarios and to extend Microsoft 365 Copilot with enterprise data and custom workflows.</p>
+</li>
+</ul>
+<h3 id="prebuilt-ai-services">Prebuilt AI services</h3>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/ai-services/what-are-ai-services">Foundry Tools</a>: A suite of prebuilt and customizable APIs and models for adding intelligent features to applications. Foundry Tools includes capabilities for speech, translation, language understanding, document intelligence, content understanding, vision, content safety, and search.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure">Azure OpenAI</a>: Provides access to OpenAI models, including GPT and DALL-E, through Azure-managed infrastructure with enterprise security, networking, and responsible AI controls.</p>
+</li>
+</ul>
+<h3 id="data-platforms-for-ai">Data platforms for AI</h3>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/fabric/fundamentals/microsoft-fabric-overview">Microsoft Fabric</a>: An end-to-end analytics and data platform that covers data ingestion, transformation, real-time event routing, and reporting. Microsoft Fabric provides OneLake as a unified data lake and includes embedded AI capabilities, Microsoft Copilot features, and integration with Foundry Tools.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/databricks/introduction/">Azure Databricks</a>: A Spark-based analytics platform for data engineering, data science, and machine learning. Azure Databricks provides Databricks Runtime for Azure Machine Learning, MLflow integration, AutoML, foundation model fine-tuning, and Mosaic AI Vector Search for embedding-based retrieval.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/hdinsight/spark/apache-spark-overview">Azure HDInsight</a>: A managed Apache Spark service for big data processing and analytics. Azure HDInsight Spark clusters support machine learning workloads through MLlib, are compatible with Azure Storage and Azure Data Lake Storage, and support SynapseML for deep learning.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/storage/blobs/data-lake-storage-introduction">Azure Data Lake Storage</a>: A scalable, centralized repository for storing structured and unstructured data. Azure Data Lake Storage provides file system semantics, file-level security, and tiered storage built on Azure Blob Storage.</p>
+</li>
+</ul>
+<h3 id="enterprise-intelligence-layers">Enterprise Intelligence Layers</h3>
+<p>AI architecture at Microsoft introduces three complementary intelligence layers or <em>IQs</em> that represent key sources of context for AI systems:</p>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/microsoft-365/copilot/extensibility/work-iq/">Work IQ</a> captures intelligence about how work happens inside an organization. It uses signals from Microsoft 365 such as emails, chats, meetings, documents, and collaboration patterns.</p>
+<p>This layer is essential for grounding AI in human activity and organizational behavior rather than treating interactions as isolated prompts.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/fabric/iq/overview">Fabric IQ</a> provides intelligence derived from structured enterprise data managed in Microsoft Fabric, including analytics models, key performance indicators (KPIs), and business entities.</p>
+<p>Fabric IQ enables AI to answer complex analytical questions and interpret results in the context of business operations.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/foundry/agents/concepts/what-is-foundry-iq?tabs=portal">Foundry IQ</a> provides a unified, multisource knowledge layer that allows AI agents to retrieve and ground responses in enterprise data.</p>
+<p>This layer is critical for implementing patterns like retrieval-augmented generation (RAG) to help ensure that AI outputs are accurate, current, and compliant.</p>
+</li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p>The following diagram shows a baseline end-to-end chat architecture that uses Microsoft Foundry. This reference architecture demonstrates how AI services comprise a production-ready solution on Azure. It includes identity, networking, monitoring, and governance layers.</p>
+<p>
+<a data-linktype="relative-path" href="architecture/_images/baseline-microsoft-foundry.svg#lightbox">
+<img alt="Diagram that shows a baseline end-to-end chat architecture that uses Microsoft Foundry." aria-describedby="68-0" data-linktype="relative-path" src="architecture/_images/baseline-microsoft-foundry.svg"/>
+</a></p><div class="visually-hidden" id="68-0"><p><a data-linktype="relative-path" href="architecture/_images/baseline-microsoft-foundry.svg#lightbox">
+The diagram presents a detailed Azure architecture for deploying an AI solution. On the left, a user connects through an application gateway with a web application firewall (WAF), which is part of a virtual network. This gateway links to private Domain Name System (DNS) zones. Azure DDoS Protection protects the gateway. Below the gateway, private endpoints connect to services like Azure App Service, Azure Key Vault, and Azure Storage, which are used for client app deployment. Azure App Service is managed with identity and spans three zones. Application Insights and Azure Monitor provide monitoring, and Microsoft Entra ID handles authentication. To the right, the virtual network has several subnets: App Service integration, a private endpoint, Microsoft Foundry integration, Azure AI agent integration, Azure Bastion, a jump box, build agents, and Azure Firewall. Each subnet hosts specific endpoints or services, like storage, Microsoft Foundry, Azure AI Search, Azure Cosmos DB, and knowledge stores, that connect via private endpoints. Outbound traffic from the network passes through Azure Firewall to reach internet sources. To the far right, a separate box represents Microsoft Foundry, which includes an account and a project. Managed identities connect Foundry Agent Service to the Microsoft Foundry project, which in turn accesses Azure OpenAI. The diagram uses numbered circles to indicate the logical flow, which shows how user requests traverse the network, interact with different endpoints, and connect to Foundry Tools and storage.</a></p></div><a data-linktype="relative-path" href="architecture/_images/baseline-microsoft-foundry.svg#lightbox">
+</a>
+<p></p>
+<p><em>Download a <a data-linktype="external" href="https://arch-center.azureedge.net/baseline-microsoft-foundry.vsdx">Visio file</a> of this architecture.</em></p>
+<p>The previous diagram demonstrates a typical baseline AI implementation. For real-world solutions that you can build in Azure, see <a data-linktype="self-bookmark" href="#ai-architectures">AI architectures</a>.</p>
+<h2 id="explore-ai-architectures-and-guides">Explore AI architectures and guides</h2>
+<p>The articles in this section include guides and fully developed architectures that you can deploy in Azure and expand to production-grade solutions. Solution ideas demonstrate implementation patterns and possibilities to consider as you plan your AI proof-of-concept (POC) development. These articles can help you decide how to use AI technologies in Azure.</p>
+<h3 id="ai-guides">AI guides</h3>
+<p>The following article helps you evaluate and select the best AI technologies for your workload requirements:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/data-science-and-machine-learning">Machine learning options</a>: Compares Azure Machine Learning products and technologies to help you choose the right platform for model training and deployment.</li>
+</ul>
+<h4 id="ai-agent-design">AI agent design</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns">AI agent orchestration patterns</a>: Describes design patterns for orchestrating AI agents in complex scenarios.</li>
+</ul>
+<h4 id="rag-solution-development-and-evaluation">RAG solution development and evaluation</h4>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide">Design a RAG solution</a>: Provides an overview of how to design and evaluate RAG solutions.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-preparation-phase">Preparation phase</a>: Covers data preparation for RAG implementations.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-chunking-phase">Chunking phase</a>: Describes strategies for chunking content in RAG pipelines.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-enrichment-phase">Chunk enrichment phase</a>: Covers enrichment techniques applied to content chunks.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-generate-embeddings">Embedding phase</a>: Describes how to generate embeddings for RAG retrieval.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-information-retrieval">Information-retrieval phase</a>: Covers information retrieval strategies in RAG architectures.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-llm-evaluation-phase">Model end-to-end evaluation phase</a>: Describes how to evaluate RAG models end to end.</p>
+</li>
+</ul>
+<h4 id="multitenant-rag-solution">Multitenant RAG solution</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/secure-multitenant-rag">Design a secure multitenant RAG inferencing solution</a>: Provides guidance for securing RAG solutions in multitenant environments.</li>
+</ul>
+<h4 id="machine-learning-operations">Machine learning operations</h4>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/machine-learning-operations-v2">Machine learning operations v2</a>: Describes the machine learning operations v2 approach for operationalizing machine learning workflows.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/genaiops-for-mlops">Generative AI operations with machine learning operations</a>: Extends machine learning operations practices to generative AI workloads.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/mlops-maturity-model">Machine learning operations maturity model</a>: Defines maturity levels for machine learning operations adoption.</p>
+</li>
+</ul>
+<h4 id="proxy-generative-ai-models">Proxy generative AI models</h4>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/azure-openai-gateway-guide">Use a gateway in front of generative models</a>: Describes the benefits and architecture of placing a gateway in front of generative AI model endpoints.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/azure-openai-gateway-multi-backend">Use a gateway in front of multiple models</a>: Extends the gateway pattern to route requests across multiple model back ends.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/azure-openai-gateway-custom-authentication">Provide custom authentication to models through a gateway</a>: Implements custom authentication flows for model access through a gateway.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/azure-openai-gateway-monitoring">Implement advanced model monitoring through a gateway</a>: Adds monitoring and observability to generative AI model traffic through a gateway.</p>
+</li>
+</ul>
+<h4 id="foundation-model-life-cycle">Foundation model life cycle</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/manage-foundation-models-lifecycle">Design to support foundation model life cycles</a>: Provides guidance for managing foundation model updates, deprecations, and transitions.</li>
+</ul>
+<h3 id="ai-architectures">AI architectures</h3>
+<p>The following production-ready architectures demonstrate end-to-end AI solutions that you can deploy and customize.</p>
+<h4 id="chat-with-data">Chat with data</h4>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/basic-microsoft-foundry-chat">Basic Microsoft Foundry chat reference architecture</a>: A basic RAG chat architecture that uses Microsoft Foundry and Azure OpenAI.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/baseline-microsoft-foundry-chat">Baseline Microsoft Foundry chat reference architecture</a>: A production-ready end-to-end chat architecture that uses Microsoft Foundry with enterprise security, networking, and monitoring.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/baseline-microsoft-foundry-landing-zone">Baseline Microsoft Foundry chat architecture in an Azure landing zone</a>: Deploys the baseline Microsoft Foundry chat architecture within an Azure landing zone for enterprise-scale governance.</p>
+</li>
+</ul>
+<h4 id="document-processing">Document processing</h4>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/automate-document-classification-durable-functions">Automate document classification</a>: Uses Durable Functions to automate document classification workflows.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/automate-pdf-forms-processing">Automate PDF form processing</a>: Automates the extraction and processing of data from PDF forms.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/build-deploy-custom-models">Build custom document processing models</a>: Builds and deploys custom models for document processing scenarios.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/search-blob-metadata">Multiple indexers with Azure AI Search</a>: Uses multiple indexers to process and index blob metadata by using Azure AI Search.</p>
+</li>
+</ul>
+<h4 id="video-and-image-classification">Video and image classification</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/analyze-video-computer-vision-machine-learning">Automate video analysis</a>: Analyzes video content by using computer vision and machine learning.</li>
+</ul>
+<h4 id="audio-processing">Audio processing</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/openai/architecture/call-center-openai-analytics">Extract and analyze call center data</a>: Extracts and analyzes call center conversations by using Azure OpenAI.</li>
+</ul>
+<h4 id="regulatory-requirements">Regulatory requirements</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/architecture/secure-compute-for-research">Secure research for regulated data</a>: Provides a secure compute environment for research workloads that handle regulated data.</li>
+</ul>
+<h3 id="ai-solution-ideas">AI solution ideas</h3>
+<p>The following AI solution ideas demonstrate implementation patterns and possibilities to explore.</p>
+<h4 id="audio-processing-1">Audio processing</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/unlock-insights-from-conversational-data">Unlock insights from conversational data</a>: Extracts actionable insights from conversational audio data.</li>
+</ul>
+<h4 id="image-processing">Image processing</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/intelligent-apps-image-processing">Image classification</a>: Classifies images by using intelligent application patterns.</li>
+</ul>
+<h4 id="predictive-analytics">Predictive analytics</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/next-order-forecasting">Customer order forecasting</a>: Predicts future customer orders by using machine learning.</li>
+</ul>
+<h4 id="machine-learning-operations-1">Machine learning operations</h4>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/orchestrate-machine-learning-azure-databricks">Use Azure Databricks to orchestrate machine learning operations</a>: Orchestrates machine learning operations by using Azure Databricks.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/many-models-machine-learning-azure-machine-learning">Many models with Machine Learning</a>: Trains and manages many models at scale by using Azure Machine Learning.</p>
+</li>
+</ul>
+<h4 id="document-processing-and-enrichment">Document processing and enrichment</h4>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/multi-modal-content-processing">Extract and map information from unstructured content</a>: Extracts and maps information from multimodal unstructured content.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/generate-documents-from-your-data">Generate documents from your data</a>: Generates structured documents from data sources.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/solution-ideas/articles/ai-search-skillsets">Use AI enrichment with Azure AI Search</a>: Enriches content by using AI skill sets in Azure AI Search indexing pipelines.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/example-scenario/ai/extract-object-text">Extract text by using Power Automate</a>: Extracts text from objects by using Power Automate and AI capabilities.</p>
+</li>
+</ul>
+<h4 id="workflow-automation">Workflow automation</h4>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/idea/multiple-agent-workflow-automation">Build a multiple-agent workflow automation solution by using Semantic Kernel</a>: Automates workflows by using multiple AI agents orchestrated through Semantic Kernel.</li>
+</ul>
+<h2 id="organizational-readiness">Organizational readiness</h2>
+<p>Organizations at the beginning of the cloud adoption process can use the <a data-linktype="absolute-path" href="/en-us/azure/cloud-adoption-framework/">Cloud Adoption Framework for Azure</a> to access proven guidance that accelerates cloud adoption.</p>
+<p>For AI-specific adoption guidance, see the following Cloud Adoption Framework resources:</p>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/cloud-adoption-framework/ai/">AI adoption</a>: Provides a structured process for adopting AI solutions in Azure, including strategy, planning, readiness, governance, security, and management.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/cloud-adoption-framework/ai/ready">AI ready</a>: Outlines the organizational process for building AI workloads in Azure, including resource organization, networking, reliability, and governance.</p>
+</li>
+</ul>
+<p>To help ensure the quality of your AI solution on Azure, follow the guidance in the <a data-linktype="absolute-path" href="/en-us/azure/well-architected/">Azure Well-Architected Framework</a>. The Well-Architected Framework provides prescriptive guidance for organizations that seek architectural excellence and describes how to design, provision, and monitor cost-optimized Azure solutions.</p>
+<p>For AI-specific guidance, see the following Well-Architected Framework resource:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/ai/get-started">AI workloads on Azure</a>: Addresses architectural challenges of designing AI workloads, including nondeterministic functionality, data and application design, and operations across the five Well-Architected Framework pillars.</li>
+</ul>
+<p>For AI-related Well-Architected Framework service guides, see:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/service-guides/azure-machine-learning">Azure Machine Learning</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/service-guides/azure-databricks">Azure Databricks</a></li>
+</ul>
+<h2 id="best-practices">Best practices</h2>
+<p>Follow these best practices to improve the reliability, security, cost effectiveness, operational quality, and performance of your AI workloads on Azure:</p>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide">Design and develop a RAG solution</a>: Follow a structured, phase-by-phase approach to designing RAG solutions, including chunking, embedding, information retrieval, and end-to-end evaluation.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/guide/technology-choices/vector-search">Choose an Azure service for vector search</a>: Evaluate Azure services that support vector search to find the best fit for your retrieval and similarity search requirements.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns">AI agent orchestration patterns</a>: Learn proven orchestration patterns for architectures that use multiple agents, including sequential, concurrent, group chat, handoff, and magentic patterns. Review implementation considerations for reliability, security, cost, and observability.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/azure-openai-gateway-guide">Use a gateway in front of generative AI models</a>: Implement gateway patterns for proxying, load balancing, and monitoring generative model endpoints.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/machine-learning-operations-v2">Machine learning operations v2</a>: Apply end-to-end machine learning operations life cycle guidance for training, deploying, and managing machine learning models at scale.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/genaiops-for-mlops">Generative AI operations with machine learning operations</a>: Extend machine learning operations practices to generative AI workloads, including prompt management, evaluation, and deployment.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/secure-multitenant-rag">Design a secure multitenant RAG inferencing solution</a>: Apply multitenancy patterns for RAG solutions that enforce data isolation and secure inferencing across tenants.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/manage-foundation-models-lifecycle">Design to support foundation model life cycles</a>: Manage model versioning, deprecation, and rotation to keep AI workloads current and resilient.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/ai-ml/guide/data-science-and-machine-learning">Machine learning options</a>: Compare machine learning training and deployment options in Azure to choose the right services for your workload.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/hdinsight/spark/spark-best-practices">Apache Spark guidelines</a>: Review guidelines for running, monitoring, debugging, and optimizing Apache Spark jobs on Azure HDInsight.</p>
+</li>
+</ul>
+<h2 id="stay-current-with-ai">Stay current with AI</h2>
+<p>Azure AI services evolve to address modern data challenges. Stay informed about the latest <a data-linktype="external" href="https://azure.microsoft.com/updates/">updates and features</a>.</p>
+<p>To stay current with key AI services, see the following articles:</p>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/foundry-classic/openai/whats-new">What's new in Azure OpenAI in Foundry Models</a>: Provides a summary of the latest releases and documentation updates for Azure OpenAI, including new model availability, API versions, and feature announcements.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/foundry/whats-new-foundry">What's new in Microsoft Foundry</a>: Highlights key article and product updates in Microsoft Foundry, including agent governance, observability features, and new capabilities.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/search/whats-new">What's new in Azure AI Search</a>: Covers the latest updates to Azure AI Search functionality, including new API versions, agentic retrieval features, and indexing capabilities.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/ai-services/language-service/whats-new">What's new in Azure Language in Foundry Tools</a>: Covers updates to Azure Language in Foundry Tools capabilities, including new SDK versions, orchestration workflows, and Microsoft Foundry integration.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/fabric/fundamentals/whats-new">What's new in Microsoft Fabric</a>: Covers updates across Microsoft Fabric capabilities, including data science, MLflow integration, data agents, and analytics features.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/machine-learning/azure-machine-learning-release-notes-cli-v2">Azure Machine Learning CLI and SDK release notes</a>: Provides release notes for the Azure Machine Learning CLI (v2) and Python SDK, including new features, bug fixes, and breaking changes.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/databricks/release-notes/product/">Azure Databricks platform release notes</a>: Covers updates to the Azure Databricks platform, including runtime versions, workspace features, and integration capabilities.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/microsoft-copilot-studio/whats-new">What's new in Microsoft Copilot Studio</a>: Highlights new features and updates for Microsoft Copilot Studio, including agent building capabilities and connector updates.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/ai-services/document-intelligence/whats-new">What's new in Azure Document Intelligence in Foundry Tools</a>: Covers updates to Azure Document Intelligence in Foundry Tools, including new prebuilt models, API versions, and extraction capabilities.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/ai-services/content-understanding/whats-new">What's new in Azure Content Understanding in Foundry Tools</a>: Covers updates to Azure Content Understanding in Foundry Tools, including new content analysis features and Microsoft Foundry integration.</p>
+</li>
+</ul>
+<h2 id="amazon-web-services-aws-or-google-cloud-professionals">Amazon Web Services (AWS) or Google Cloud professionals</h2>
+<p>To help you ramp up quickly, the following articles compare Azure AI options to other cloud services:</p>
+<ul>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/aws-professional/data-ai">Data and AI</a>: Compares AWS data and AI services, including machine learning, generative AI, and AI platform services, to their Azure counterparts.</p>
+</li>
+<li><p><a data-linktype="absolute-path" href="/en-us/azure/architecture/gcp-professional/services#ai-and-machine-learning">AI and machine learning</a>: Compares Google Cloud AI and machine learning services, including Vertex AI, Dialogflow, and Gemini, to their Azure counterparts.</p>
+</li>
+</ul>
+</div>
+<div class="margin-block-xs" data-bi-name="inline-notification" id="ms--inline-notifications"></div>
+<div aria-atomic="true" aria-live="assertive" aria-relevant="additions" class="visually-hidden" id="assertive-live-region" role="alert"></div>
+<div aria-atomic="true" aria-live="polite" aria-relevant="additions" class="visually-hidden" id="polite-live-region" role="status"></div>
+<!-- feedback section -->
+<section class="font-size-sm margin-top-md display-none-print display-none-desktop" data-bi-name="site-feedback-section" data-test-id="site-user-feedback-footer" id="site-user-feedback-footer">
+<hr class="hr"/>
+<h2 class="title is-3" id="ms--feedback">Feedback</h2>
+<div class="display-flex flex-wrap-wrap align-items-center">
+<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+<div class="buttons">
+
+
+<details class="popover popover-top" data-test-id="footer-feedback-popover" id="mobile-help-popover">
+<summary aria-pressed="false" class="thumb-rating-button dislike button button-primary button-sm" data-bi-an="feedback-unhelpful-popover" data-bi-name="button-rating-no" data-binary-rating-response="rating-no" data-test-id="details-footer-rating-no" title="This article is not helpful">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-dislike"></span>
+</span>
+<span>No</span>
+</summary>
+<div aria-describedby="popover-description" aria-labelledby="popover-heading" class="popover-content width-200 width-300-tablet" role="dialog">
+<p class="font-size-lg margin-bottom-xxs font-weight-semibold" id="popover-heading">
+								Need help with this topic?
+							</p>
+<p class="font-size-sm margin-bottom-xs" id="popover-description">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+<div>
+
+
+
+</div>
+
+</div>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- end feedback section -->
+</div>
+<div class="display-none-print" id="ms--additional-resources-mobile">
+<hr class="hr" hidden=""/>
+<h2 class="title is-3" hidden="" id="ms--additional-resources-mobile-heading">
+				Additional resources
+			</h2>
+<section class="" data-bi-name="recommendations" hidden="" id="right-rail-recommendations-mobile"></section>
+<section class="" data-bi-name="learning-resource-card" hidden="" id="right-rail-training-mobile"></section>
+<section class="" data-bi-name="events-card" hidden="" id="right-rail-events-mobile"></section>
+</div>
+<div class="page-metadata-container" data-bi-name="article-metadata-footer" data-test-id="article-metadata-footer" id="article-metadata-footer">
+<hr class="hr"/>
+
+</div>
+</div>
+<div aria-label="Action Panel" class="action-panel" id="action-panel" role="region" tabindex="-1"></div>
+</main>

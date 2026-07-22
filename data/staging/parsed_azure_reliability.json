@@ -1,0 +1,143 @@
+{
+    "document_id": "html_test:azure_reliability",
+    "source_id": "html_test",
+    "source_type": "local_folder",
+    "local_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\data\\staging\\parser_test\\azure_reliability.html",
+    "checksum_sha256": "5847da61b205e1783832921a75033f402b0ddee4e77634dc4c0fd47699c08682",
+    "title": "Azure Reliability",
+    "author": "Microsoft",
+    "created_at": null,
+    "updated_at": null,
+    "source_url": "https://learn.microsoft.com/azure/reliability/",
+    "language": "en",
+    "organization": "Microsoft",
+    "document_format": "html",
+    "sections": [
+        {
+            "section_id": "html_test:azure_reliability:section-0",
+            "heading": "Azure Reliability",
+            "heading_level": 1,
+            "paragraphs": [
+                "Reliability ensures that workloads remain available\n            and recover from failures.",
+                "Read the Azure documentation ."
+            ],
+            "lists": [],
+            "tables": [],
+            "code_blocks": [],
+            "links": [
+                {
+                    "text": "Azure documentation",
+                    "url": "https://learn.microsoft.com/azure/"
+                }
+            ],
+            "page_number": null,
+            "position": 0,
+            "heading_path": [
+                "Azure Reliability"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "html_test:azure_reliability:section-1",
+            "heading": "Recommendations",
+            "heading_level": 2,
+            "paragraphs": [
+                "Apply the following recommendations:"
+            ],
+            "lists": [
+                [
+                    "Use availability zones",
+                    "Configure monitoring",
+                    "Test disaster recovery"
+                ]
+            ],
+            "tables": [],
+            "code_blocks": [],
+            "links": [],
+            "page_number": null,
+            "position": 1,
+            "heading_path": [
+                "Azure Reliability",
+                "Recommendations"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "html_test:azure_reliability:section-2",
+            "heading": "Service levels",
+            "heading_level": 2,
+            "paragraphs": [],
+            "lists": [],
+            "tables": [
+                {
+                    "headers": [
+                        "Service",
+                        "SLA"
+                    ],
+                    "rows": [
+                        [
+                            "Virtual Machines",
+                            "99.99%"
+                        ],
+                        [
+                            "Azure SQL",
+                            "99.995%"
+                        ]
+                    ],
+                    "caption": null
+                }
+            ],
+            "code_blocks": [],
+            "links": [],
+            "page_number": null,
+            "position": 2,
+            "heading_path": [
+                "Azure Reliability",
+                "Service levels"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "html_test:azure_reliability:section-3",
+            "heading": "Python example",
+            "heading_level": 2,
+            "paragraphs": [
+                "> Test the recovery process regularly."
+            ],
+            "lists": [],
+            "tables": [],
+            "code_blocks": [
+                {
+                    "content": "def health_check():\n    return \"healthy\"",
+                    "language": "python"
+                }
+            ],
+            "links": [],
+            "page_number": null,
+            "position": 3,
+            "heading_path": [
+                "Azure Reliability",
+                "Python example"
+            ],
+            "metadata": {}
+        }
+    ],
+    "metadata": {
+        "organization": "Microsoft",
+        "domain": "Azure",
+        "language": "en",
+        "source_format": "html",
+        "description": "Guide for improving reliability on Azure.",
+        "author": "Microsoft",
+        "keywords": [
+            "Azure",
+            "reliability",
+            "cloud"
+        ],
+        "canonical_url": "https://learn.microsoft.com/azure/reliability/",
+        "filename": "azure_reliability.html",
+        "extension": ".html",
+        "parser": "HtmlParser",
+        "section_count": 4
+    }
+}

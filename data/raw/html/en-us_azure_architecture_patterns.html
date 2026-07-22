@@ -1,0 +1,419 @@
+<main class="layout-body-main" data-bi-name="content" dir="ltr" id="main" lang="en-us" role="main">
+<div class="content-header default-focus border-bottom-none" data-bi-name="content-header" id="ms--content-header">
+<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+
+
+</div>
+</div>
+<div class="reading-width margin-inline-auto layout-padding padding-top-none padding-top-sm-tablet padding-bottom-sm" data-main-column="">
+<div>
+<div class="background-color-body margin-bottom-xs display-none-print" id="article-header">
+<div class="display-flex align-items-center justify-content-space-between">
+<details class="popover popover-left" data-for="article-header-breadcrumbs" id="article-header-breadcrumbs-overflow-popover">
+<summary aria-label="All breadcrumbs" class="button button-clear button-primary button-sm inner-focus">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-more"></span>
+</span>
+</summary>
+<div class="popover-content" id="article-header-breadcrumbs-overflow"></div>
+</details>
+<bread-crumbs aria-label="Breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs" data-test-id="article-header-breadcrumbs" id="article-header-breadcrumbs" role="group"></bread-crumbs>
+<div class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch" id="article-header-page-actions">
+
+
+
+<details class="popover popover-right" id="article-header-page-actions-overflow">
+<summary aria-label="More actions" class="justify-content-flex-start button button-clear button-sm button-primary inner-focus" title="More actions">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-more-vertical"></span>
+</span>
+</summary>
+<div class="popover-content">
+
+
+<a class="button-sm inner-focus button button-clear button-block justify-content-flex-start text-align-left" data-bi-name="language-toggle" data-check-hidden="true" data-page-action-item="overflow-all" data-read-in-link="" hidden="" href="#" id="lang-link-overflow">
+<span aria-hidden="true" class="icon" data-read-in-link-icon="">
+<span class="docon docon-locale-globe"></span>
+</span>
+<span data-read-in-link-text="">Read in English</span>
+</a>
+
+
+<a class="button button-clear button-block button-sm inner-focus justify-content-flex-start text-align-left text-decoration-none" data-bi-name="edit" data-check-hidden="true" data-contenteditbtn="" data-original_content_git_url="https://github.com/MicrosoftDocs/architecture-center-pr/blob/live/docs/patterns/index.md" data-original_content_git_url_template="{repo}/blob/{branch}/docs/patterns/index.md" data-page-action-item="overflow-all" data-pr_branch="" data-pr_repo="" href="https://github.com/microsoftdocs/architecture-center/blob/main/docs/patterns/index.md">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-edit-outline"></span>
+</span>
+<span>Edit</span>
+</a>
+<hr class="margin-block-xxs"/>
+
+
+</div>
+</details>
+</div>
+</div>
+</div>
+<!-- privateUnauthorizedTemplate is hidden by default -->
+<div data-bi-name="permission-content-unauthorized-private" hidden="" unauthorized-private-section="">
+<hr class="hr margin-top-xs margin-bottom-sm"/>
+<div class="notification notification-info">
+<div class="notification-content">
+<p class="margin-top-none notification-title">
+<span aria-hidden="true" class="icon"><span class="docon docon-exclamation-circle-solid"></span></span>
+<span>Note</span>
+</p>
+<p class="margin-top-none authentication-determined not-authenticated">
+						Access to this page requires authorization. You can try <a class="docs-sign-in" data-bi-name="permission-content-sign-in" href="#">signing in</a> or <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+<p class="margin-top-none authentication-determined authenticated">
+						Access to this page requires authorization. You can try <a class="docs-change-directory" data-bi-name="permisson-content-change-directory">changing directories</a>.
+					</p>
+</div>
+</div>
+</div>
+<div class="content"><h1 id="cloud-design-patterns">Cloud design patterns</h1></div>
+<div class="page-metadata-container display-flex gap-xxs justify-content-space-between align-items-center flex-wrap-wrap" data-bi-name="article-metadata" data-test-id="article-metadata" id="article-metadata">
+<div class="margin-block-xxs display-none display-none-print" data-hide-on-archived="" hidden="" id="user-feedback">
+
+</div>
+</div>
+<div class="display-none-print" data-id="ai-summary">
+<div class="margin-top-xs display-flex align-items-center" id="ms--ai-summary-cta">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-sparkle-fill gradient-text-vivid"></span>
+</span>
+
+</div>
+<!-- Slot where the client will render the summary card after the user clicks the CTA -->
+<div class="margin-top-xs" id="ms--ai-summary-header"></div>
+</div>
+
+<div class="content"><p>Architects design workloads by integrating platform services, functionality, and code to meet both functional and nonfunctional requirements. To design effective workloads, you must understand these requirements and select topologies and methodologies that address the challenges of your workload's constraints. Cloud design patterns provide solutions to many common challenges.</p>
+<p>System design heavily relies on established design patterns. You can design infrastructure, code, and distributed systems by using a combination of these patterns. These patterns are crucial for building reliable, highly secure, cost-optimized, operationally efficient, and high-performing applications in the cloud.</p>
+<p>The following cloud design patterns are technology-agnostic, which makes them suitable for any distributed system. You can apply these patterns across Azure, other cloud platforms, on-premises setups, and hybrid environments.</p>
+<h2 id="how-cloud-design-patterns-enhance-the-design-process">How cloud design patterns enhance the design process</h2>
+<p>Cloud workloads are vulnerable to the <a data-linktype="external" href="https://wikipedia.org/wiki/Fallacies_of_distributed_computing">fallacies of distributed computing</a>, which are common but incorrect assumptions about how distributed systems operate. Examples of these fallacies include:</p>
+<ul>
+<li>The network is reliable.</li>
+<li>Latency is zero.</li>
+<li>Bandwidth is infinite.</li>
+<li>The network is secure.</li>
+<li>Topology doesn't change.</li>
+<li>There's one administrator.</li>
+<li>Component versioning is simple.</li>
+<li>Observability implementation can be delayed.</li>
+</ul>
+<p>These misconceptions can result in flawed workload designs. Design patterns don't eliminate these misconceptions, but they help raise awareness, provide compensation strategies, and offer mitigations. Each cloud design pattern has trade-offs. Focus on why you should choose a specific pattern instead of how to implement it.</p>
+<p>Consider how to use these industry-standard design patterns as the core building blocks for a well-architected workload design. Each design pattern in the Azure Well-Architected Framework represents one or more of its pillars. Some patterns might introduce trade-offs that affect the goals of other pillars.</p>
+<h2 id="select-a-pattern">Select a pattern</h2>
+<p>Choose a pattern based on the problem you need to solve, not the technology you want to use. Begin with a specific constraint or risk in your workload, such as a service that fails under load, a data store that can't keep up with read queries, or a dependency that you can't fully trust. A pattern is a good fit when its problem statement matches the challenge you face and when the trade-offs it introduces are ones you can accept in your workload.</p>
+<h2 id="pattern-catalog">Pattern catalog</h2>
+<p>Each pattern in this catalog describes the problem that it addresses, considerations for applying the pattern, and an example based on Microsoft Azure services and tools. Some patterns include code samples or snippets that show how to implement the pattern on Azure.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pattern</th>
+<th style="text-align: left;">Summary</th>
+<th style="text-align: left;">Well-Architected Framework pillars</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="ambassador">Ambassador</a></td>
+<td style="text-align: left;">Create helper services that send network requests on behalf of a consumer service or application.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="anti-corruption-layer">Anti-Corruption Layer</a></td>
+<td style="text-align: left;">Implement a faÃ§ade or adapter layer between a modern application and a legacy system.</td>
+<td style="text-align: left;">- Operational Excellence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="asynchronous-request-reply">Asynchronous Request-Reply</a></td>
+<td style="text-align: left;">Decouple back-end processing from a front-end host. This pattern is useful when back-end processing must be asynchronous, but the front end requires a clear and timely response.</td>
+<td style="text-align: left;">- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="backends-for-frontends">Backends for Frontends</a></td>
+<td style="text-align: left;">Create separate backend services for specific frontend applications or interfaces.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="bulkhead">Bulkhead</a></td>
+<td style="text-align: left;">Isolate elements of an application into pools so that if one fails, the others continue to function.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="cache-aside">Cache-Aside</a></td>
+<td style="text-align: left;">Load data on demand into a cache from a data store.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="choreography">Choreography</a></td>
+<td style="text-align: left;">Let individual services decide when and how a business operation is processed, instead of depending on a central orchestrator.</td>
+<td style="text-align: left;">- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="circuit-breaker">Circuit Breaker</a></td>
+<td style="text-align: left;">Handle faults that might take a variable amount of time to fix when an application connects to a remote service or resource.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="claim-check">Claim Check</a></td>
+<td style="text-align: left;">Split a large message into a claim check and a payload to avoid overwhelming a message bus.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Cost Optimization<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="compensating-transaction">Compensating Transaction</a></td>
+<td style="text-align: left;">Undo the work performed by a sequence of steps that collectively form an eventually consistent operation.</td>
+<td style="text-align: left;">- Reliability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="competing-consumers">Competing Consumers</a></td>
+<td style="text-align: left;">Enable multiple concurrent consumers to process messages that they receive on the same messaging channel.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Cost Optimization<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="compute-resource-consolidation">Compute Resource Consolidation</a></td>
+<td style="text-align: left;">Consolidate multiple tasks or operations into a single computational unit.</td>
+<td style="text-align: left;">- Cost Optimization<br/><br/>- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="cqrs">CQRS</a></td>
+<td style="text-align: left;">Separate operations that read data from those that update data by using distinct interfaces.</td>
+<td style="text-align: left;">- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="deployment-stamp">Deployment Stamps</a></td>
+<td style="text-align: left;">Deploy multiple independent copies of application components, including data stores.</td>
+<td style="text-align: left;">- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="event-sourcing">Event Sourcing</a></td>
+<td style="text-align: left;">Use an append-only store to record a full series of events that describe actions taken on data in a domain.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="external-configuration-store">External Configuration Store</a></td>
+<td style="text-align: left;">Move configuration information out of an application deployment package to a centralized location.</td>
+<td style="text-align: left;">- Operational Excellence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="federated-identity">Federated Identity</a></td>
+<td style="text-align: left;">Delegate authentication to an external identity provider.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="gatekeeper">Gatekeeper</a></td>
+<td style="text-align: left;">Protect applications and services by using a dedicated host instance to validate and sanitize requests before forwarding them to private back ends.</td>
+<td style="text-align: left;">- Security<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="gateway-aggregation">Gateway Aggregation</a></td>
+<td style="text-align: left;">Use a gateway to aggregate multiple individual requests into a single request.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="gateway-offloading">Gateway Offloading</a></td>
+<td style="text-align: left;">Offload shared or specialized service functionality to a gateway proxy.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Cost Optimization<br/><br/>- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="gateway-routing">Gateway Routing</a></td>
+<td style="text-align: left;">Route requests to multiple services by using a single endpoint.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="geodes">Geode</a></td>
+<td style="text-align: left;">Deploy back-end services across geographically distributed nodes. Each node can handle client requests from any region.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="health-endpoint-monitoring">Health Endpoint Monitoring</a></td>
+<td style="text-align: left;">Implement functional checks in an application that external tools can access through exposed endpoints at regular intervals.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="index-table">Index Table</a></td>
+<td style="text-align: left;">Create indexes over the fields in data stores that queries frequently reference.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="leader-election">Leader Election</a></td>
+<td style="text-align: left;">Coordinate actions in a distributed application by electing one instance as the leader. The leader manages a collection of collaborating task instances.</td>
+<td style="text-align: left;">- Reliability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="materialized-view">Materialized View</a></td>
+<td style="text-align: left;">Generate prepopulated views over the data in one or more data stores when the data is poorly formatted for required query operations.</td>
+<td style="text-align: left;">- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="messaging-bridge">Messaging Bridge</a></td>
+<td style="text-align: left;">Build an intermediary to enable communication between messaging systems that are otherwise incompatible.</td>
+<td style="text-align: left;">- Cost Optimization<br/><br/>- Operational Excellence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="pipes-and-filters">Pipes and Filters</a></td>
+<td style="text-align: left;">Break down a task that performs complex processing into a series of separate elements that can be reused.</td>
+<td style="text-align: left;">- Reliability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="priority-queue">Priority Queue</a></td>
+<td style="text-align: left;">Prioritize requests sent to services so that requests with a higher priority are processed more quickly.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="publisher-subscriber">Publisher-Subscriber</a></td>
+<td style="text-align: left;">Enable an application to announce events to multiple consumers asynchronously, without coupling senders to receivers.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Cost Optimization<br/><br/>- Operational Excellence<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="quarantine">Quarantine</a></td>
+<td style="text-align: left;">Ensure that external assets meet a team-agreed quality level before the workload consumes them.</td>
+<td style="text-align: left;">- Security<br/><br/>- Operational Excellence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="queue-based-load-leveling">Queue-Based Load Leveling</a></td>
+<td style="text-align: left;">Use a queue that creates a buffer between a task and a service to smooth intermittent heavy loads.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Cost Optimization<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="rate-limiting-pattern">Rate Limiting</a></td>
+<td style="text-align: left;">Avoid or minimize throttling errors by controlling the consumption of resources.</td>
+<td style="text-align: left;">- Reliability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="retry">Retry</a></td>
+<td style="text-align: left;">Enable applications to handle anticipated temporary failures by retrying failed operations.</td>
+<td style="text-align: left;">- Reliability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="saga">Saga</a></td>
+<td style="text-align: left;">Manage data consistency across microservices in distributed transaction scenarios.</td>
+<td style="text-align: left;">- Reliability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="scheduler-agent-supervisor">Scheduler Agent Supervisor</a></td>
+<td style="text-align: left;">Coordinate a set of actions across distributed services and resources.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="sequential-convoy">Sequential Convoy</a></td>
+<td style="text-align: left;">Process a set of related messages in a defined order without blocking other message groups.</td>
+<td style="text-align: left;">- Reliability</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="sharding">Sharding</a></td>
+<td style="text-align: left;">Divide a data store into a set of horizontal partitions or shards.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Cost Optimization</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="sidecar">Sidecar</a></td>
+<td style="text-align: left;">Deploy components into a separate process or container to provide isolation and encapsulation.</td>
+<td style="text-align: left;">- Security<br/><br/>- Operational Excellence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="static-content-hosting">Static Content Hosting</a></td>
+<td style="text-align: left;">Deploy static content to a cloud-based storage service for direct client delivery.</td>
+<td style="text-align: left;">- Cost Optimization</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="strangler-fig">Strangler Fig</a></td>
+<td style="text-align: left;">Incrementally migrate a legacy system by gradually replacing pieces of functionality with new applications and services.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Cost Optimization<br/><br/>- Operational Excellence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="throttling">Throttling</a></td>
+<td style="text-align: left;">Control the consumption of resources from applications, tenants, or services.</td>
+<td style="text-align: left;">- Reliability<br/><br/>- Security<br/><br/>- Cost Optimization<br/><br/>- Performance Efficiency</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a data-linktype="relative-path" href="valet-key">Valet Key</a></td>
+<td style="text-align: left;">Use a token or key to provide clients with restricted, direct access to a specific resource or service.</td>
+<td style="text-align: left;">- Security<br/><br/>- Cost Optimization<br/><br/>- Performance Efficiency</td>
+</tr>
+</tbody>
+</table>
+<h3 id="combine-patterns">Combine patterns</h3>
+<p>Patterns are composable. A single pattern addresses one problem, but a workload usually faces several problems at once, so you often apply multiple patterns together. Some patterns also build on others or pair naturally to cover a gap that one pattern leaves open. Consider these examples:</p>
+<ul>
+<li>Pair <a data-linktype="relative-path" href="retry">Retry</a> with <a data-linktype="relative-path" href="circuit-breaker">Circuit Breaker</a> so that an application retries transient faults but stops retrying when a fault persists.</li>
+<li>Combine <a data-linktype="relative-path" href="queue-based-load-leveling">Queue-Based Load Leveling</a> with <a data-linktype="relative-path" href="competing-consumers">Competing Consumers</a> to buffer load and then scale the processing of that load.</li>
+<li>Layer the <a data-linktype="relative-path" href="gateway-routing">Gateway Routing</a>, <a data-linktype="relative-path" href="gateway-aggregation">Gateway Aggregation</a>, and <a data-linktype="relative-path" href="gateway-offloading">Gateway Offloading</a> patterns behind a single gateway endpoint.</li>
+<li>Build <a data-linktype="relative-path" href="saga">Saga</a> on <a data-linktype="relative-path" href="compensating-transaction">Compensating Transaction</a> to maintain data consistency across services when a distributed operation fails partway through.</li>
+</ul>
+<h3 id="antipatterns">Antipatterns</h3>
+<p>A design pattern describes a practice to apply. An antipattern describes a practice to avoid. Antipatterns often start as reasonable designs that work in testing or at low scale, but they degrade reliability or performance as load increases. Recognizing an antipattern helps you spot a problem in an existing design and choose a pattern that resolves it. For the full list, see <a data-linktype="relative-path" href="../antipatterns/">Antipatterns for cloud applications</a>.</p>
+<h2 id="ai-agent-orchestration-patterns">AI agent orchestration patterns</h2>
+<p>The preceding cloud design patterns address common challenges in distributed systems, but AI workloads that use multiple autonomous agents require specialized coordination approaches. Traditional patterns like Scheduler Agent Supervisor or Choreography provide foundational concepts. However, AI agents introduce unique challenges such as nondeterministic outputs, dynamic reasoning capabilities, and the need for intelligent handoffs between specialized components.</p>
+<p>For AI workloads that include multiple autonomous agents, see <a data-linktype="relative-path" href="../ai-ml/guide/ai-agent-design-patterns">AI agent orchestration patterns</a>. These patterns complement the cloud design patterns in this catalog by addressing the specific coordination requirements of intelligent, autonomous components that work together to accomplish complex outcomes.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>Review the design patterns from the perspective of the Well-Architected Framework pillar that the pattern aims to optimize.</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/reliability/design-patterns">Design patterns to support the Reliability pillar</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/security/design-patterns">Design patterns to support the Security pillar</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/cost-optimization/design-patterns">Design patterns to support the Cost Optimization pillar</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/operational-excellence/design-patterns">Design patterns to support the Operational Excellence pillar</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/azure/well-architected/performance-efficiency/design-patterns">Design patterns to support the Performance Efficiency pillar</a></li>
+</ul>
+</div>
+<div class="margin-block-xs" data-bi-name="inline-notification" id="ms--inline-notifications"></div>
+<div aria-atomic="true" aria-live="assertive" aria-relevant="additions" class="visually-hidden" id="assertive-live-region" role="alert"></div>
+<div aria-atomic="true" aria-live="polite" aria-relevant="additions" class="visually-hidden" id="polite-live-region" role="status"></div>
+<!-- feedback section -->
+<section class="font-size-sm margin-top-md display-none-print display-none-desktop" data-bi-name="site-feedback-section" data-test-id="site-user-feedback-footer" id="site-user-feedback-footer">
+<hr class="hr"/>
+<h2 class="title is-3" id="ms--feedback">Feedback</h2>
+<div class="display-flex flex-wrap-wrap align-items-center">
+<p class="font-weight-semibold margin-xxs margin-left-none">
+					Was this page helpful?
+				</p>
+<div class="buttons">
+
+
+<details class="popover popover-top" data-test-id="footer-feedback-popover" id="mobile-help-popover">
+<summary aria-pressed="false" class="thumb-rating-button dislike button button-primary button-sm" data-bi-an="feedback-unhelpful-popover" data-bi-name="button-rating-no" data-binary-rating-response="rating-no" data-test-id="details-footer-rating-no" title="This article is not helpful">
+<span aria-hidden="true" class="icon">
+<span class="docon docon-dislike"></span>
+</span>
+<span>No</span>
+</summary>
+<div aria-describedby="popover-description" aria-labelledby="popover-heading" class="popover-content width-200 width-300-tablet" role="dialog">
+<p class="font-size-lg margin-bottom-xxs font-weight-semibold" id="popover-heading">
+								Need help with this topic?
+							</p>
+<p class="font-size-sm margin-bottom-xs" id="popover-description">
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							</p>
+<div class="buttons flex-direction-row flex-wrap justify-content-center gap-xxs">
+<div>
+
+
+
+</div>
+
+</div>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- end feedback section -->
+</div>
+<div class="display-none-print" id="ms--additional-resources-mobile">
+<hr class="hr" hidden=""/>
+<h2 class="title is-3" hidden="" id="ms--additional-resources-mobile-heading">
+				Additional resources
+			</h2>
+<section class="" data-bi-name="recommendations" hidden="" id="right-rail-recommendations-mobile"></section>
+<section class="" data-bi-name="learning-resource-card" hidden="" id="right-rail-training-mobile"></section>
+<section class="" data-bi-name="events-card" hidden="" id="right-rail-events-mobile"></section>
+</div>
+<div class="page-metadata-container" data-bi-name="article-metadata-footer" data-test-id="article-metadata-footer" id="article-metadata-footer">
+<hr class="hr"/>
+
+</div>
+</div>
+<div aria-label="Action Panel" class="action-panel" id="action-panel" role="region" tabindex="-1"></div>
+</main>

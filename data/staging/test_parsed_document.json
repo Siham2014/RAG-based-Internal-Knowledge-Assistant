@@ -1,0 +1,97 @@
+{
+    "document_id": "azure-retry-pattern",
+    "source_id": "azure_architecture_patterns",
+    "source_type": "html",
+    "local_path": "data/raw/html/azure-retry-pattern.html",
+    "checksum_sha256": "abc123",
+    "title": "Retry Pattern",
+    "author": "Microsoft",
+    "created_at": null,
+    "updated_at": null,
+    "source_url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/retry",
+    "language": "en",
+    "organization": "Microsoft",
+    "document_format": "html",
+    "sections": [
+        {
+            "section_id": "azure-retry-pattern:section-0",
+            "heading": "Retry Pattern",
+            "heading_level": 1,
+            "paragraphs": [
+                "The Retry pattern enables an application to handle transient failures."
+            ],
+            "lists": [],
+            "tables": [],
+            "code_blocks": [],
+            "links": [
+                {
+                    "text": "Azure Architecture Center",
+                    "url": "https://learn.microsoft.com/azure/architecture/"
+                }
+            ],
+            "page_number": null,
+            "position": 0,
+            "heading_path": [
+                "Cloud Design Patterns",
+                "Retry Pattern"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "azure-retry-pattern:section-1",
+            "heading": "Implementation",
+            "heading_level": 2,
+            "paragraphs": [
+                "Retry failed operations with controlled delays."
+            ],
+            "lists": [
+                [
+                    "Use exponential backoff",
+                    "Limit the number of retries",
+                    "Log each final failure"
+                ]
+            ],
+            "tables": [
+                {
+                    "headers": [
+                        "Attempt",
+                        "Delay"
+                    ],
+                    "rows": [
+                        [
+                            "1",
+                            "1 second"
+                        ],
+                        [
+                            "2",
+                            "2 seconds"
+                        ],
+                        [
+                            "3",
+                            "4 seconds"
+                        ]
+                    ],
+                    "caption": "Example retry delays"
+                }
+            ],
+            "code_blocks": [
+                {
+                    "content": "for attempt in range(3):\n    execute_operation()",
+                    "language": "python"
+                }
+            ],
+            "links": [],
+            "page_number": null,
+            "position": 1,
+            "heading_path": [
+                "Cloud Design Patterns",
+                "Retry Pattern",
+                "Implementation"
+            ],
+            "metadata": {}
+        }
+    ],
+    "metadata": {
+        "domain": "Azure"
+    }
+}

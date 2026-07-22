@@ -1,0 +1,132 @@
+version: 1
+
+sources:
+
+  - id: azure_well_architected
+    name: Azure Well-Architected Framework
+    type: local_folder
+    enabled: true
+
+    input:
+      path: data/raw/markdown/well-architected
+
+    filters:
+      extensions:
+        - .md
+      exclude_directories:
+        - .git
+        - .github
+        - images
+        - media
+        - _images
+
+    metadata:
+      organization: Microsoft
+      domain: Azure
+      language: en
+      source_format: markdown
+
+
+  - id: azure_architecture_main
+    name: Azure Architecture Center
+    type: html
+    enabled: true
+
+    input:
+      url: https://learn.microsoft.com/en-us/azure/architecture/
+
+    output:
+      directory: data/raw/html
+
+    extraction:
+      content_selector: main
+      remove_selectors:
+        - nav
+        - footer
+        - script
+        - style
+        - form
+        - button
+
+    metadata:
+      organization: Microsoft
+      domain: Azure
+      language: en
+      source_format: html
+
+
+  - id: azure_architecture_patterns
+    name: Azure Architecture Patterns
+    type: html
+    enabled: true
+
+    input:
+      url: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+
+    output:
+      directory: data/raw/html
+
+    extraction:
+      content_selector: main
+      remove_selectors:
+        - nav
+        - footer
+        - script
+        - style
+        - form
+        - button
+
+    metadata:
+      organization: Microsoft
+      domain: Azure
+      language: en
+      source_format: html
+
+
+  - id: azure_well_architected_github
+    name: Azure Well-Architected GitHub Repository
+    type: github
+    enabled: true
+
+    input:
+      repository_url: https://github.com/MicrosoftDocs/well-architected.git
+      branch: main
+      destination: data/raw/github/well-architected
+      repository_path: well-architected
+      recursive: true
+
+    filters:
+      extensions:
+        - .md
+      exclude_directories:
+        - .git
+        - .github
+        - images
+        - media
+        - _images
+        - node_modules
+
+    metadata:
+      organization: Microsoft
+      domain: Azure
+      language: en
+      source_format: markdown
+
+
+  - id: local_pdf_documents
+    name: Local Azure PDF Documents
+    type: local_folder
+    enabled: true
+
+    input:
+      path: data/raw/pdf
+
+    filters:
+      extensions:
+        - .pdf
+
+    metadata:
+      organization: Microsoft
+      domain: Azure
+      language: en
+      source_format: pdf

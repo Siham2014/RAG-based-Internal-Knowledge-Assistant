@@ -1,0 +1,74 @@
+{
+    "document_id": "pdf_test:azure_security",
+    "source_id": "pdf_test",
+    "source_type": "local_folder",
+    "local_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\data\\staging\\parser_test\\azure_security.pdf",
+    "checksum_sha256": "cd3b27b5f2c4433a27ca7a84c1542bf2379852d2d3f5c8178746ff0b4815d1b9",
+    "title": "Azure Security Guide",
+    "author": "Microsoft",
+    "created_at": null,
+    "updated_at": null,
+    "source_url": null,
+    "language": "en",
+    "organization": "Microsoft",
+    "document_format": "pdf",
+    "sections": [
+        {
+            "section_id": "pdf_test:azure_security:page-1",
+            "heading": "Page 1",
+            "heading_level": null,
+            "paragraphs": [
+                "Azure Security Guide Azure security protects cloud workloads and data. Use identity management, encryption and monitoring. Security recommendations - Enable multifactor authentication - Apply least privilege - Monitor security events"
+            ],
+            "lists": [],
+            "tables": [],
+            "code_blocks": [],
+            "links": [],
+            "page_number": null,
+            "position": 0,
+            "heading_path": [
+                "Page 1"
+            ],
+            "metadata": {}
+        },
+        {
+            "section_id": "pdf_test:azure_security:page-2",
+            "heading": "Page 2",
+            "heading_level": null,
+            "paragraphs": [
+                "Incident response Define a documented incident response process. Test the recovery process regularly."
+            ],
+            "lists": [],
+            "tables": [],
+            "code_blocks": [],
+            "links": [],
+            "page_number": null,
+            "position": 1,
+            "heading_path": [
+                "Page 2"
+            ],
+            "metadata": {}
+        }
+    ],
+    "metadata": {
+        "organization": "Microsoft",
+        "domain": "Azure",
+        "language": "en",
+        "source_format": "pdf",
+        "pdf_title": "Azure Security Guide",
+        "author": "Microsoft",
+        "subject": "unspecified",
+        "creator": "anonymous",
+        "producer": "ReportLab PDF Library - (opensource)",
+        "creation_date": "D:20260720134409+02'00'",
+        "modification_date": "D:20260720134409+02'00'",
+        "filename": "azure_security.pdf",
+        "extension": ".pdf",
+        "parser": "PdfParser",
+        "page_count": 2,
+        "extracted_page_count": 2,
+        "section_count": 2,
+        "extraction_status": "success",
+        "ocr_used": false
+    }
+}
