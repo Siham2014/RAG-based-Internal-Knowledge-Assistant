@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+
+  postgres:
+
+    image: pgvector/pgvector:pg17
+
+    container_name: rag_pgvector
+
+    restart: unless-stopped
+
+    ports:
+      - "5432:5432"
+
+    environment:
+      POSTGRES_DB: rag_benchmark
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
