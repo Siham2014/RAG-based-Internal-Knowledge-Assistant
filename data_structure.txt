@@ -1,0 +1,1942 @@
+ Le volume dans le lecteur C n'a pas de nom.
+ Le num‚ro de s‚rie du volume est F8F6-C524
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data
+
+24/07/2026  16:15    <DIR>          .
+04/08/2026  14:02    <DIR>          ..
+23/07/2026  02:04    <DIR>          benchmark_dataset
+23/07/2026  02:04        36ÿ041ÿ706 benchmark_dataset.zip
+24/07/2026  16:35    <DIR>          chunks
+24/07/2026  16:35    <DIR>          embeddings
+24/07/2026  16:35    <DIR>          evaluation
+20/07/2026  11:57    <DIR>          manifests
+17/07/2026  17:47    <DIR>          processed
+20/07/2026  12:07    <DIR>          raw
+17/07/2026  17:47    <DIR>          rejected
+20/07/2026  13:45    <DIR>          staging
+               1 fichier(s)       36ÿ041ÿ706 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\benchmark_dataset
+
+23/07/2026  02:04    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+23/07/2026  02:04    <DIR>          html
+23/07/2026  02:04    <DIR>          markdown
+23/07/2026  02:04    <DIR>          pdf
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\benchmark_dataset\html
+
+23/07/2026  02:04    <DIR>          .
+23/07/2026  02:04    <DIR>          ..
+17/07/2026  18:50            79ÿ057 en-us-azure-architecture-777fa9b92470.html
+17/07/2026  18:50            71ÿ963 en-us-azure-architecture-patterns-2da035768373.html
+17/07/2026  17:32            50ÿ836 en-us_azure_architecture.html
+17/07/2026  17:32            38ÿ385 en-us_azure_architecture_ai-ml.html
+17/07/2026  17:32               610 en-us_azure_architecture_browse.html
+17/07/2026  17:32            29ÿ911 en-us_azure_architecture_data-guide.html
+17/07/2026  17:32            30ÿ368 en-us_azure_architecture_patterns.html
+               7 fichier(s)          301ÿ130 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\benchmark_dataset\markdown
+
+23/07/2026  02:04    <DIR>          .
+23/07/2026  02:04    <DIR>          ..
+17/07/2026  17:06            20ÿ557 well-architected__ai__design-principles.md
+17/07/2026  17:06            20ÿ896 well-architected__cost-optimization__cost-model.md
+17/07/2026  17:06             6ÿ998 well-architected__cost-optimization__design-patterns.md
+17/07/2026  17:06            16ÿ080 well-architected__cost-optimization__optimize-flow-costs.md
+17/07/2026  17:06            17ÿ499 well-architected__hpc__hpc-design-principles.md
+17/07/2026  17:06            13ÿ988 well-architected__microsoft-fabric__reliability.md
+17/07/2026  17:06             6ÿ357 well-architected__mission-critical__mission-critical-design-methodology.md
+17/07/2026  17:06            89ÿ631 well-architected__service-guides__azure-databricks.md
+17/07/2026  17:06            12ÿ513 well-architected__sustainability__overview.md
+17/07/2026  17:06            15ÿ672 well-architected__sustainability__sustainability-cost-optimization-recommendations.md
+              10 fichier(s)          220ÿ191 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\benchmark_dataset\pdf
+
+23/07/2026  02:04    <DIR>          .
+23/07/2026  02:04    <DIR>          ..
+17/07/2026  17:37        23ÿ634ÿ988 azure_serverless_computing_cookbook.pdf
+17/07/2026  17:37        15ÿ855ÿ991 enterprise_cloud_strategy.pdf
+               2 fichier(s)       39ÿ490ÿ979 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\chunks
+
+24/07/2026  16:35    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+24/07/2026  10:49               348 chunking_manifest.json
+24/07/2026  10:49         2ÿ013ÿ081 fixed_1024_chunks.jsonl
+               2 fichier(s)        2ÿ013ÿ429 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\embeddings
+
+24/07/2026  16:35    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+24/07/2026  14:30               287 e5_base_cache_metadata.json
+24/07/2026  14:30         4ÿ540ÿ544 e5_base_document_embeddings.npy
+24/07/2026  14:30            92ÿ288 e5_base_query_embeddings.npy
+               3 fichier(s)        4ÿ633ÿ119 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\evaluation
+
+24/07/2026  16:35    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+24/07/2026  10:49            11ÿ941 evaluation_30_questions.csv
+               1 fichier(s)           11ÿ941 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\manifests
+
+20/07/2026  11:57    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+20/07/2026  11:53               526 ingestion_manifest.json
+20/07/2026  11:57               689 test_ingestion_manifest.json
+               2 fichier(s)            1ÿ215 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\processed
+
+17/07/2026  17:47    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+17/07/2026  17:47    <DIR>          documents
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\processed\documents
+
+17/07/2026  17:47    <DIR>          .
+17/07/2026  17:47    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw
+
+20/07/2026  12:07    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+20/07/2026  12:07    <DIR>          github
+17/07/2026  18:50    <DIR>          html
+17/07/2026  17:48    <DIR>          markdown
+17/07/2026  17:48    <DIR>          pdf
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          well-architected
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07               114 .acrolinx-config.edn
+20/07/2026  12:07    <DIR>          .docutune
+20/07/2026  12:07               419 .gitattributes
+20/07/2026  12:07    <DIR>          .github
+20/07/2026  12:07               283 .gitignore
+20/07/2026  12:07             1ÿ473 .openpublishing.publish.config.json
+20/07/2026  12:07           117ÿ445 .openpublishing.redirection.json
+20/07/2026  12:07             9ÿ535 AGENTS.md
+20/07/2026  12:07               458 CODEOWNERS
+20/07/2026  12:07            19ÿ044 LICENSE
+20/07/2026  12:07             1ÿ106 LICENSE-CODE
+20/07/2026  12:07               377 README.md
+20/07/2026  12:07             2ÿ760 SECURITY.md
+20/07/2026  12:07             1ÿ222 ThirdPartyNotices.md
+20/07/2026  12:07    <DIR>          well-architected
+              12 fichier(s)          154ÿ236 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.docutune
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          config
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.docutune\config
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07               858 docutune-unattended.json
+20/07/2026  12:07               280 docutune-well-architected-pr.json
+               2 fichier(s)            1ÿ138 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git
+
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07               318 config
+20/07/2026  12:07                73 description
+20/07/2026  12:07               109 FETCH_HEAD
+20/07/2026  12:07                21 HEAD
+20/07/2026  12:07    <DIR>          hooks
+20/07/2026  12:07            51ÿ970 index
+20/07/2026  12:07    <DIR>          info
+20/07/2026  12:07    <DIR>          logs
+20/07/2026  12:07    <DIR>          objects
+20/07/2026  12:07                41 ORIG_HEAD
+20/07/2026  12:07               112 packed-refs
+20/07/2026  12:07    <DIR>          refs
+20/07/2026  12:07                41 shallow
+               8 fichier(s)           52ÿ685 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\hooks
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07               478 applypatch-msg.sample
+20/07/2026  12:07             1ÿ972 commit-msg.sample
+20/07/2026  12:07             4ÿ611 fsmonitor-watchman.sample
+20/07/2026  12:07               189 post-update.sample
+20/07/2026  12:07               424 pre-applypatch.sample
+20/07/2026  12:07             1ÿ649 pre-commit.sample
+20/07/2026  12:07               416 pre-merge-commit.sample
+20/07/2026  12:07             1ÿ374 pre-push.sample
+20/07/2026  12:07             4ÿ898 pre-rebase.sample
+20/07/2026  12:07               544 pre-receive.sample
+20/07/2026  12:07             1ÿ492 prepare-commit-msg.sample
+20/07/2026  12:07             2ÿ783 push-to-checkout.sample
+20/07/2026  12:07             2ÿ308 sendemail-validate.sample
+20/07/2026  12:07             3ÿ650 update.sample
+              14 fichier(s)           26ÿ788 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\info
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07               240 exclude
+               1 fichier(s)              240 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\logs
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07               571 HEAD
+20/07/2026  12:07    <DIR>          refs
+               1 fichier(s)              571 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\logs\refs
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          heads
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\logs\refs\heads
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07               213 main
+               1 fichier(s)              213 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\objects
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          info
+20/07/2026  12:07    <DIR>          pack
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\objects\info
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\objects\pack
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            13ÿ840 pack-9782cffe56eedc837b3fc58b04af9bbab8b1aa1e.idx
+20/07/2026  12:07        38ÿ211ÿ582 pack-9782cffe56eedc837b3fc58b04af9bbab8b1aa1e.pack
+20/07/2026  12:07             1ÿ876 pack-9782cffe56eedc837b3fc58b04af9bbab8b1aa1e.rev
+               3 fichier(s)       38ÿ227ÿ298 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\refs
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          heads
+20/07/2026  12:07    <DIR>          tags
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\refs\heads
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07                41 main
+               1 fichier(s)               41 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.git\refs\tags
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\.github
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07             6ÿ859 pull_request_template.md
+               1 fichier(s)            6ÿ859 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          ai
+20/07/2026  12:07    <DIR>          architect-role
+20/07/2026  12:07    <DIR>          breadcrumb
+20/07/2026  12:07    <DIR>          cost-optimization
+20/07/2026  12:07    <DIR>          design-guides
+20/07/2026  12:07             3ÿ444 design.md
+20/07/2026  12:07             2ÿ592 docfx.json
+20/07/2026  12:07            12ÿ604 feed.atom
+20/07/2026  12:07    <DIR>          hpc
+20/07/2026  12:07             8ÿ174 index.yml
+20/07/2026  12:07    <DIR>          microsoft-fabric
+20/07/2026  12:07    <DIR>          mission-critical
+20/07/2026  12:07    <DIR>          operational-excellence
+20/07/2026  12:07    <DIR>          performance-efficiency
+20/07/2026  12:07             3ÿ579 pillars.md
+20/07/2026  12:07    <DIR>          reliability
+20/07/2026  12:07    <DIR>          saas
+20/07/2026  12:07    <DIR>          security
+20/07/2026  12:07    <DIR>          service-guides
+20/07/2026  12:07    <DIR>          sustainability
+20/07/2026  12:07            16ÿ314 TOC.yml
+20/07/2026  12:07            19ÿ069 what-is-well-architected-framework.md
+20/07/2026  12:07            61ÿ447 whats-new.md
+20/07/2026  12:07            16ÿ238 workloads.md
+20/07/2026  12:07    <DIR>          _images
+               9 fichier(s)          143ÿ461 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\ai
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            35ÿ764 application-design.md
+20/07/2026  12:07            21ÿ063 application-platform.md
+20/07/2026  12:07            29ÿ652 architecture-pattern.md
+20/07/2026  12:07             2ÿ473 assessment.md
+20/07/2026  12:07            33ÿ964 data-platform.md
+20/07/2026  12:07             5ÿ877 design-methodology.md
+20/07/2026  12:07            20ÿ557 design-principles.md
+20/07/2026  12:07            10ÿ561 get-started.md
+20/07/2026  12:07            34ÿ482 grounding-data-design.md
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07             3ÿ612 index.yml
+20/07/2026  12:07            26ÿ919 mlops-genaiops.md
+20/07/2026  12:07            15ÿ034 operations.md
+20/07/2026  12:07            16ÿ197 personas.md
+20/07/2026  12:07            26ÿ786 responsible-ai.md
+20/07/2026  12:07            19ÿ709 test.md
+20/07/2026  12:07             1ÿ051 toc.yml
+20/07/2026  12:07            26ÿ072 training-data-design.md
+              17 fichier(s)          329ÿ773 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\ai\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           230ÿ063 ai-architecture-pattern.png
+20/07/2026  12:07         1ÿ752ÿ046 ai-workload-architecture-pattern.png
+20/07/2026  12:07           150ÿ617 assessment-question.png
+20/07/2026  12:07           116ÿ107 assessment-recommendations.png
+20/07/2026  12:07         2ÿ581ÿ342 azure-analytics.svg
+20/07/2026  12:07           284ÿ919 baseline-microsoft-foundry-landing-zone.svg
+20/07/2026  12:07           269ÿ276 baseline-microsoft-foundry.svg
+20/07/2026  12:07            64ÿ325 gen-ai-workload.png
+20/07/2026  12:07           223ÿ205 gen-ai-workload.svg
+20/07/2026  12:07           204ÿ531 mlops-genaiops.png
+20/07/2026  12:07            80ÿ420 model-training-workload.png
+20/07/2026  12:07           209ÿ108 model-training-workload.svg
+20/07/2026  12:07           257ÿ189 organizational-governance-structure.png
+20/07/2026  12:07           762ÿ408 personas-to-architectures.png
+20/07/2026  12:07           340ÿ824 personas-to-processes.png
+20/07/2026  12:07           110ÿ018 responsible-ai.png
+              16 fichier(s)        7ÿ636ÿ398 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\architect-role
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07             4ÿ254 architecture-decision-record.md
+20/07/2026  12:07             5ÿ213 architecture-design-specification.md
+20/07/2026  12:07             4ÿ452 collaboration.md
+20/07/2026  12:07            13ÿ706 design-business-requirements.md
+20/07/2026  12:07            14ÿ759 design-diagrams.md
+20/07/2026  12:07            10ÿ884 fundamentals.md
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07             4ÿ633 ongoing-support.md
+               7 fichier(s)           57ÿ901 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\architect-role\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           138ÿ402 architecture-discovery.png
+               1 fichier(s)          138ÿ402 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\breadcrumb
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07             2ÿ276 toc.yml
+               1 fichier(s)            2ÿ276 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\cost-optimization
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            13ÿ789 align-usage-to-billing-increments.md
+20/07/2026  12:07             6ÿ388 checklist.md
+20/07/2026  12:07            22ÿ002 collect-review-cost-data.md
+20/07/2026  12:07            13ÿ129 consolidation.md
+20/07/2026  12:07            20ÿ896 cost-model.md
+20/07/2026  12:07            13ÿ030 create-culture-financial-responsibility.md
+20/07/2026  12:07             6ÿ998 design-patterns.md
+20/07/2026  12:07            28ÿ189 get-best-rates.md
+20/07/2026  12:07             4ÿ193 index.yml
+20/07/2026  12:07            38ÿ151 maturity-model.md
+20/07/2026  12:07            33ÿ096 optimize-code-costs.md
+20/07/2026  12:07            19ÿ619 optimize-component-costs.md
+20/07/2026  12:07            26ÿ491 optimize-data-costs.md
+20/07/2026  12:07            22ÿ908 optimize-environment-costs.md
+20/07/2026  12:07            16ÿ080 optimize-flow-costs.md
+20/07/2026  12:07            26ÿ014 optimize-personnel-time.md
+20/07/2026  12:07            25ÿ425 optimize-scaling-costs.md
+20/07/2026  12:07            14ÿ694 principles.md
+20/07/2026  12:07            18ÿ385 set-spending-guardrails.md
+20/07/2026  12:07            15ÿ221 tradeoffs.md
+              20 fichier(s)          384ÿ698 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\design-guides
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            41ÿ145 background-jobs.md
+20/07/2026  12:07            36ÿ863 disaster-recovery.md
+20/07/2026  12:07            32ÿ285 handle-transient-faults.md
+20/07/2026  12:07            26ÿ791 health-modeling.md
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07             8ÿ386 implementing-recommendations.md
+20/07/2026  12:07            29ÿ339 incident-management.md
+20/07/2026  12:07            33ÿ720 monitoring.md
+20/07/2026  12:07            20ÿ347 optimize-workload-using-flows.md
+20/07/2026  12:07            37ÿ295 partition-data.md
+20/07/2026  12:07            56ÿ961 regions-availability-zones.md
+20/07/2026  12:07            13ÿ475 release-engineering-continuous-integration.md
+20/07/2026  12:07            53ÿ677 throttling.md
+              12 fichier(s)          390ÿ284 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\design-guides\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           209ÿ938 azure-monitor-health-models-designer.png
+20/07/2026  12:07            92ÿ922 azure-monitor-health-models-traffic-light-system-demo.png
+20/07/2026  12:07            65ÿ676 business-workload-process.svg
+20/07/2026  12:07            23ÿ230 db-bottleneck-analysis.png
+20/07/2026  12:07            99ÿ519 disaster-recovery-criticality-tiers.png
+20/07/2026  12:07           208ÿ304 flow-design-process.svg
+20/07/2026  12:07            25ÿ774 health-impact.png
+20/07/2026  12:07           140ÿ608 health-model-activities.png
+20/07/2026  12:07            61ÿ320 health-model.png
+20/07/2026  12:07            27ÿ230 health-state-definition.png
+20/07/2026  12:07            26ÿ699 monitor-pipeline.png
+20/07/2026  12:07            16ÿ016 monitor-write-shared-storage.png
+20/07/2026  12:07            26ÿ995 order-failure-diagnosis.png
+20/07/2026  12:07    <DIR>          partition-data
+20/07/2026  12:07    <DIR>          regions-availability-zones
+20/07/2026  12:07    <DIR>          release-engineering-continuous-integration
+20/07/2026  12:07            75ÿ677 relecloud-flow.png
+20/07/2026  12:07            21ÿ744 service-instrumentation-data.png
+20/07/2026  12:07    <DIR>          throttling
+              15 fichier(s)        1ÿ121ÿ652 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\design-guides\images\partition-data
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            84ÿ204 multiple-shard-maps.svg
+20/07/2026  12:07            20ÿ300 partition-by-pattern.png
+20/07/2026  12:07            16ÿ752 partition-context-or-subdomain.png
+20/07/2026  12:07            22ÿ027 partition-data-key.png
+20/07/2026  12:07            52ÿ689 point-shardlet.svg
+20/07/2026  12:07            84ÿ199 range-shardlet.svg
+               6 fichier(s)          280ÿ171 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\design-guides\images\regions-availability-zones
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07             4ÿ511 application.png
+20/07/2026  12:07            10ÿ385 locally-redundant-backup-across-regions.png
+20/07/2026  12:07             5ÿ793 locally-redundant.png
+20/07/2026  12:07            14ÿ821 multi-region-asynchronous.png
+20/07/2026  12:07            15ÿ028 multi-region-synchronous.png
+20/07/2026  12:07            26ÿ196 regions-availability-zones.png
+20/07/2026  12:07            28ÿ015 zonal-multiple-zones.png
+20/07/2026  12:07            14ÿ564 zonal-single-zone.png
+20/07/2026  12:07            15ÿ791 zone-redundant-backup-across-regions.png
+20/07/2026  12:07             9ÿ858 zone-redundant.png
+              10 fichier(s)          144ÿ962 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\design-guides\images\release-engineering-continuous-integration
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            46ÿ397 azure-devops-github-status.png
+20/07/2026  12:07            34ÿ208 azure-devops-tests.png
+20/07/2026  12:07            65ÿ603 github-status-badge.png
+20/07/2026  12:07            91ÿ112 hotfix-branches.png
+20/07/2026  12:07            82ÿ670 release-branches.png
+               5 fichier(s)          319ÿ990 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\design-guides\images\throttling
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            63ÿ385 throttling-effect.png
+20/07/2026  12:07            43ÿ786 throttling-points.png
+20/07/2026  12:07            58ÿ013 throttling-request-dimensions.png
+               3 fichier(s)          165ÿ184 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\hpc
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07             9ÿ656 get-started-overview.md
+20/07/2026  12:07             8ÿ510 hpc-architecture-pattern.md
+20/07/2026  12:07             6ÿ592 hpc-design-methodology.md
+20/07/2026  12:07            17ÿ499 hpc-design-principles.md
+20/07/2026  12:07             2ÿ252 index.yml
+20/07/2026  12:07    <DIR>          media
+20/07/2026  12:07               320 toc.yml
+               6 fichier(s)           44ÿ829 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\hpc\media
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           102ÿ452 hpc-architecture.png
+20/07/2026  12:07            84ÿ063 hpc-finance-architecture-example.png
+20/07/2026  12:07           157ÿ520 hpc-finance-architecture-example.svg
+20/07/2026  12:07         1ÿ202ÿ043 hpc-identity-access-management-batch.png
+20/07/2026  12:07         1ÿ596ÿ490 hpc-identity-access-management-cyclecloud.png
+20/07/2026  12:07         1ÿ459ÿ315 hpc-manufacturing-architecture-example.png
+20/07/2026  12:07           205ÿ588 hpc-manufacturing-architecture-example.svg
+20/07/2026  12:07            81ÿ391 network-interconnect-compute-and-storage-seismic-analysis.png
+20/07/2026  12:07            69ÿ790 network-interconnect.png
+20/07/2026  12:07           345ÿ954 network-reference-architecture-reservoir-simulation.png
+20/07/2026  12:07           349ÿ874 network-reference-architecture-seismic-processing.png
+20/07/2026  12:07           100ÿ789 storage-selection-flow.svg
+              12 fichier(s)        5ÿ755ÿ269 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\microsoft-fabric
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            17ÿ434 cost-optimization.md
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07             4ÿ819 index.yml
+20/07/2026  12:07            15ÿ864 operational-excellence.md
+20/07/2026  12:07             5ÿ965 overview.md
+20/07/2026  12:07            12ÿ830 performance-efficiency.md
+20/07/2026  12:07            13ÿ988 reliability.md
+20/07/2026  12:07            16ÿ158 security.md
+20/07/2026  12:07               420 toc.yml
+               8 fichier(s)           87ÿ478 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\microsoft-fabric\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           305ÿ678 fabric-architecture.png
+20/07/2026  12:07            51ÿ552 fabric-cost-governance.png
+20/07/2026  12:07            60ÿ974 fabric-deployment-model.png
+20/07/2026  12:07            84ÿ057 fabric-security.png
+               4 fichier(s)          502ÿ261 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\mission-critical
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07             5ÿ522 index.yml
+20/07/2026  12:07            20ÿ114 mission-critical-application-design.md
+20/07/2026  12:07            27ÿ130 mission-critical-application-platform.md
+20/07/2026  12:07            11ÿ769 mission-critical-architecture-pattern.md
+20/07/2026  12:07             2ÿ127 mission-critical-assessment.md
+20/07/2026  12:07            35ÿ754 mission-critical-data-platform.md
+20/07/2026  12:07            31ÿ926 mission-critical-deployment-testing.md
+20/07/2026  12:07             6ÿ357 mission-critical-design-methodology.md
+20/07/2026  12:07            11ÿ930 mission-critical-design-principles.md
+20/07/2026  12:07            43ÿ031 mission-critical-networking-connectivity.md
+20/07/2026  12:07            14ÿ297 mission-critical-operational-procedures.md
+20/07/2026  12:07             7ÿ002 mission-critical-overview.md
+20/07/2026  12:07            27ÿ728 mission-critical-security.md
+20/07/2026  12:07             1ÿ137 toc.yml
+              14 fichier(s)          245ÿ824 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\mission-critical\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           179ÿ101 app-service-architecture.png
+20/07/2026  12:07           120ÿ171 assessment-recommendations.png
+20/07/2026  12:07           211ÿ602 assessment-review.png
+20/07/2026  12:07           122ÿ090 mission-critical-aiops-methodology.png
+20/07/2026  12:07           744ÿ790 mission-critical-architecture-landing-zone.svg
+20/07/2026  12:07           484ÿ942 mission-critical-architecture-network.svg
+20/07/2026  12:07            61ÿ785 mission-critical-architecture-online.png
+20/07/2026  12:07           139ÿ411 mission-critical-asynchronous-communication.png
+20/07/2026  12:07           258ÿ131 mission-critical-design-areas.svg
+20/07/2026  12:07           368ÿ151 mission-critical-design-principles.svg
+20/07/2026  12:07           188ÿ992 mission-critical-example-fault-states.png
+20/07/2026  12:07            92ÿ044 mission-critical-example-health-definitions.png
+20/07/2026  12:07         2ÿ123ÿ218 mission-critical-global-distribution.gif
+20/07/2026  12:07            25ÿ548 mission-critical-global-routing.gif
+20/07/2026  12:07           106ÿ095 mission-critical-health-data-collection.png
+20/07/2026  12:07           410ÿ946 mission-critical-high-level-architecture.png
+20/07/2026  12:07         5ÿ403ÿ257 mission-critical-landing-zones.gif
+20/07/2026  12:07            87ÿ280 mission-critical-pattern.png
+20/07/2026  12:07            45ÿ499 mission-critical-scale-units.png
+20/07/2026  12:07         3ÿ638ÿ703 mission-critical-slo.gif
+20/07/2026  12:07         1ÿ447ÿ884 mission-critical-subscription-organization.png
+20/07/2026  12:07         4ÿ413ÿ456 mission-critical-subscription-scale.gif
+20/07/2026  12:07            67ÿ531 mission-critical-zero-downtime-pipeline.png
+              23 fichier(s)       20ÿ740ÿ627 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\operational-excellence
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07             4ÿ315 checklist.md
+20/07/2026  12:07             8ÿ807 design-patterns.md
+20/07/2026  12:07             6ÿ213 devops-culture.md
+20/07/2026  12:07            29ÿ226 enable-automation.md
+20/07/2026  12:07            11ÿ831 formalize-development-practices.md
+20/07/2026  12:07             9ÿ000 formalize-operations-tasks.md
+20/07/2026  12:07            18ÿ302 incident-response.md
+20/07/2026  12:07             3ÿ988 index.yml
+20/07/2026  12:07            17ÿ818 infrastructure-as-code-design.md
+20/07/2026  12:07            76ÿ616 maturity-model.md
+20/07/2026  12:07    <DIR>          media
+20/07/2026  12:07            20ÿ298 observability.md
+20/07/2026  12:07            23ÿ304 principles.md
+20/07/2026  12:07            19ÿ553 safe-deployments.md
+20/07/2026  12:07            29ÿ689 testing.md
+20/07/2026  12:07            20ÿ501 tools-processes.md
+20/07/2026  12:07            14ÿ542 tradeoffs.md
+20/07/2026  12:07            19ÿ498 workload-supply-chain.md
+              17 fichier(s)          333ÿ501 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\operational-excellence\media
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          observability
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\operational-excellence\media\observability
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            27ÿ236 partition-move-data.png
+               1 fichier(s)           27ÿ236 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\performance-efficiency
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            17ÿ923 capacity-planning.md
+20/07/2026  12:07             4ÿ656 checklist.md
+20/07/2026  12:07            15ÿ979 continuous-performance-optimize.md
+20/07/2026  12:07            13ÿ942 design-patterns.md
+20/07/2026  12:07             3ÿ800 index.yml
+20/07/2026  12:07            37ÿ866 maturity-model.md
+20/07/2026  12:07            18ÿ434 monitoring.md
+20/07/2026  12:07            29ÿ991 optimize-code-infrastructure.md
+20/07/2026  12:07            33ÿ181 optimize-data-performance.md
+20/07/2026  12:07            17ÿ189 optimize-operational-tasks.md
+20/07/2026  12:07            12ÿ428 performance-targets.md
+20/07/2026  12:07            19ÿ282 performance-test.md
+20/07/2026  12:07            14ÿ026 principles.md
+20/07/2026  12:07            14ÿ455 prioritize-critical-flows.md
+20/07/2026  12:07            13ÿ268 respond-live-performance-issues.md
+20/07/2026  12:07            32ÿ674 scale-partition.md
+20/07/2026  12:07            23ÿ110 select-services.md
+20/07/2026  12:07            15ÿ241 tradeoffs.md
+              18 fichier(s)          337ÿ445 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\reliability
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07             4ÿ123 checklist.md
+20/07/2026  12:07            13ÿ634 design-patterns.md
+20/07/2026  12:07            16ÿ588 disaster-recovery.md
+20/07/2026  12:07            15ÿ782 failure-mode-analysis.md
+20/07/2026  12:07            14ÿ281 identify-flows.md
+20/07/2026  12:07             3ÿ601 index.yml
+20/07/2026  12:07            69ÿ220 maturity-model.md
+20/07/2026  12:07    <DIR>          media
+20/07/2026  12:07            29ÿ802 metrics.md
+20/07/2026  12:07            21ÿ303 monitoring.md
+20/07/2026  12:07            16ÿ067 principles.md
+20/07/2026  12:07            27ÿ914 redundancy.md
+20/07/2026  12:07            22ÿ202 reliability-test.md
+20/07/2026  12:07            16ÿ789 scaling.md
+20/07/2026  12:07            14ÿ144 self-preservation.md
+20/07/2026  12:07            13ÿ484 simplify.md
+20/07/2026  12:07            11ÿ387 tradeoffs.md
+              16 fichier(s)          310ÿ321 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\reliability\media
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          failure-mode-analysis
+20/07/2026  12:07    <DIR>          metrics
+20/07/2026  12:07    <DIR>          redundancy
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\reliability\media\failure-mode-analysis
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           170ÿ372 failure-mode-example.png
+               1 fichier(s)          170ÿ372 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\reliability\media\metrics
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           170ÿ455 example-architecture-targets.svg
+               1 fichier(s)          170ÿ455 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\reliability\media\redundancy
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            80ÿ730 reliable-web-app-dotnet.png
+               1 fichier(s)           80ÿ730 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\saas
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            38ÿ531 ai-strategy.md
+20/07/2026  12:07             2ÿ463 assessment.md
+20/07/2026  12:07            16ÿ138 billing-cost-management.md
+20/07/2026  12:07            17ÿ689 compute.md
+20/07/2026  12:07            27ÿ714 data.md
+20/07/2026  12:07             6ÿ688 design-methodology.md
+20/07/2026  12:07            10ÿ327 design-principles.md
+20/07/2026  12:07            14ÿ720 devops.md
+20/07/2026  12:07             9ÿ482 get-started.md
+20/07/2026  12:07            17ÿ054 governance.md
+20/07/2026  12:07            18ÿ987 identity-access.md
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07            13ÿ049 incident-management.md
+20/07/2026  12:07             2ÿ791 index.yml
+20/07/2026  12:07            24ÿ724 networking.md
+20/07/2026  12:07            11ÿ368 resource-organization.md
+20/07/2026  12:07               922 toc.yml
+              16 fichier(s)          232ÿ647 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\saas\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           134ÿ513 ai-progression.svg
+20/07/2026  12:07           160ÿ901 assessment-question.png
+20/07/2026  12:07           134ÿ116 assessment-recommendations.png
+20/07/2026  12:07            69ÿ992 federated-identity.svg
+20/07/2026  12:07            90ÿ189 identity-types.svg
+20/07/2026  12:07           200ÿ792 tags.png
+               6 fichier(s)          790ÿ503 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            15ÿ634 application-secrets.md
+20/07/2026  12:07             4ÿ124 checklist.md
+20/07/2026  12:07            15ÿ362 data-classification.md
+20/07/2026  12:07             7ÿ466 design-patterns.md
+20/07/2026  12:07            23ÿ238 encryption.md
+20/07/2026  12:07            15ÿ067 establish-baseline.md
+20/07/2026  12:07            16ÿ698 harden-resources.md
+20/07/2026  12:07            30ÿ397 identity-access.md
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07            13ÿ595 incident-response.md
+20/07/2026  12:07             4ÿ066 index.yml
+20/07/2026  12:07            33ÿ284 maturity-model.md
+20/07/2026  12:07            28ÿ528 monitor-threats.md
+20/07/2026  12:07            41ÿ968 networking.md
+20/07/2026  12:07            23ÿ988 principles.md
+20/07/2026  12:07            19ÿ977 secure-development-lifecycle.md
+20/07/2026  12:07            27ÿ666 segmentation.md
+20/07/2026  12:07            22ÿ528 test.md
+20/07/2026  12:07            13ÿ983 tradeoffs.md
+              18 fichier(s)          357ÿ569 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          baseline
+20/07/2026  12:07    <DIR>          data-classification
+20/07/2026  12:07    <DIR>          encryption
+20/07/2026  12:07    <DIR>          identity-access
+20/07/2026  12:07    <DIR>          incident-response
+20/07/2026  12:07    <DIR>          networking
+20/07/2026  12:07    <DIR>          secure-development-lifecycle
+20/07/2026  12:07    <DIR>          segmentation
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\baseline
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           189ÿ883 security-baseline.svg
+               1 fichier(s)          189ÿ883 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\data-classification
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           206ÿ367 data-classification-enterprise.svg
+20/07/2026  12:07            56ÿ688 data-classification-high-res.png
+20/07/2026  12:07           166ÿ948 data-classification.svg
+               3 fichier(s)          430ÿ003 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\encryption
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            82ÿ590 manage-keys-certificates-secrets-high-res.png
+20/07/2026  12:07           141ÿ927 manage-keys-certificates-secrets.svg
+               2 fichier(s)          224ÿ517 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\identity-access
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           116ÿ132 architecture-identity-highres.png
+20/07/2026  12:07           198ÿ680 architecture-identity.svg
+20/07/2026  12:07           237ÿ246 identity-architecture-design-highres.png
+20/07/2026  12:07           234ÿ961 identity-architecture-design.svg
+               4 fichier(s)          787ÿ019 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\incident-response
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07           226ÿ371 incident-response.png
+               1 fichier(s)          226ÿ371 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\networking
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            98ÿ365 controlled-egress.png
+20/07/2026  12:07           480ÿ732 controlled-egress.svg
+20/07/2026  12:07           251ÿ700 controlled-ingress-highres.png
+20/07/2026  12:07           564ÿ404 controlled-ingress.svg
+20/07/2026  12:07            45ÿ809 internet-network-public-highres.png
+20/07/2026  12:07            51ÿ878 internet-network-public.svg
+20/07/2026  12:07           247ÿ448 network-controls.svg
+20/07/2026  12:07            81ÿ223 network-defense-in-depth-private-highres.png
+20/07/2026  12:07            88ÿ747 network-defense-in-depth-private.svg
+20/07/2026  12:07           140ÿ204 private-endpoints-101-highres.png
+20/07/2026  12:07           250ÿ971 private-endpoints-101.svg
+20/07/2026  12:07            65ÿ363 vnet-isolation-peer-highres.png
+20/07/2026  12:07           158ÿ860 vnet-isolation-peer.svg
+              13 fichier(s)        2ÿ525ÿ704 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\secure-development-lifecycle
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            55ÿ872 devops-security.png
+20/07/2026  12:07           199ÿ080 threat-analysis.svg
+               2 fichier(s)          254ÿ952 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\security\images\segmentation
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            55ÿ305 az1-appgw-1-highres.png
+20/07/2026  12:07           101ÿ119 az1-appgw-1.svg
+20/07/2026  12:07            36ÿ333 az1-appgw-user-highres.png
+20/07/2026  12:07            65ÿ659 az1-appgw-user.svg
+20/07/2026  12:07            83ÿ706 network-segmentation-highres.png
+20/07/2026  12:07           181ÿ891 network-segmentation.svg
+20/07/2026  12:07            22ÿ626 segmentation-enterprise.svg
+20/07/2026  12:07            72ÿ773 services-and-workloads-highres.png
+20/07/2026  12:07           210ÿ671 services-and-workloads.svg
+               9 fichier(s)          830ÿ083 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\service-guides
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            51ÿ428 app-service-web-apps.md
+20/07/2026  12:07            29ÿ456 application-insights.md
+20/07/2026  12:07            49ÿ020 azure-api-management.md
+20/07/2026  12:07            32ÿ859 azure-application-gateway.md
+20/07/2026  12:07            42ÿ556 azure-blob-storage.md
+20/07/2026  12:07            38ÿ381 azure-container-apps.md
+20/07/2026  12:07            63ÿ231 azure-database-for-mysql.md
+20/07/2026  12:07            89ÿ631 azure-databricks.md
+20/07/2026  12:07            30ÿ025 azure-disk-storage.md
+20/07/2026  12:07            58ÿ898 azure-event-grid.md
+20/07/2026  12:07            50ÿ712 azure-event-hubs.md
+20/07/2026  12:07            45ÿ451 azure-expressroute.md
+20/07/2026  12:07            42ÿ151 azure-files.md
+20/07/2026  12:07            45ÿ566 azure-firewall.md
+20/07/2026  12:07            34ÿ404 azure-front-door.md
+20/07/2026  12:07            19ÿ104 azure-functions.md
+20/07/2026  12:07            46ÿ045 azure-kubernetes-service.md
+20/07/2026  12:07            26ÿ269 azure-load-balancer.md
+20/07/2026  12:07            57ÿ204 azure-local.md
+20/07/2026  12:07            43ÿ692 azure-log-analytics.md
+20/07/2026  12:07            34ÿ001 azure-machine-learning.md
+20/07/2026  12:07            58ÿ946 azure-netapp-files.md
+20/07/2026  12:07            56ÿ284 azure-service-bus.md
+20/07/2026  12:07            23ÿ531 azure-service-fabric.md
+20/07/2026  12:07            35ÿ042 azure-sql-database.md
+20/07/2026  12:07            57ÿ521 azure-sql-managed-instance.md
+20/07/2026  12:07            29ÿ097 azure-traffic-manager.md
+20/07/2026  12:07            60ÿ485 azure-virtual-wan.md
+20/07/2026  12:07            39ÿ322 cosmos-db.md
+20/07/2026  12:07            11ÿ495 index.yml
+20/07/2026  12:07            20ÿ607 postgresql.md
+20/07/2026  12:07            46ÿ101 virtual-machines.md
+20/07/2026  12:07            35ÿ269 virtual-network.md
+20/07/2026  12:07    <DIR>          _images
+              33 fichier(s)        1ÿ403ÿ784 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\service-guides\_images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            29ÿ162 autoscale-instance.svg
+20/07/2026  12:07    <DIR>          azure-load-balancer
+20/07/2026  12:07               901 azure-machine-learning.svg
+20/07/2026  12:07           119ÿ644 container-apps.svg
+20/07/2026  12:07            57ÿ748 front-door-overview.png
+20/07/2026  12:07            88ÿ481 traffic-manager-flow.png
+20/07/2026  12:07            51ÿ020 v-net.png
+20/07/2026  12:07           132ÿ962 virtual-machine-basic-deployment.svg
+               7 fichier(s)          479ÿ918 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\service-guides\_images\azure-load-balancer
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            64ÿ481 load-balancer.png
+               1 fichier(s)           64ÿ481 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\sustainability
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07    <DIR>          images
+20/07/2026  12:07             8ÿ265 index.yml
+20/07/2026  12:07            12ÿ513 overview.md
+20/07/2026  12:07            15ÿ672 sustainability-cost-optimization-recommendations.md
+20/07/2026  12:07             8ÿ682 sustainability-design-methodology.md
+20/07/2026  12:07            13ÿ418 sustainability-operational-excellence-recommendations.md
+20/07/2026  12:07            18ÿ936 sustainability-performance-efficiency-recommendations.md
+20/07/2026  12:07            13ÿ984 sustainability-reliability-recommendations.md
+20/07/2026  12:07             9ÿ630 sustainability-security-recommendations.md
+20/07/2026  12:07            14ÿ568 sustainable-ai-design.md
+20/07/2026  12:07               742 toc.yml
+              10 fichier(s)          116ÿ410 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\sustainability\images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            27ÿ546 sustainability-shared-responsibility-cloud-efficiency.png
+               1 fichier(s)           27ÿ546 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\github\well-architected\well-architected\_images
+
+20/07/2026  12:07    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+20/07/2026  12:07            20ÿ222 ai-application-layers.svg
+20/07/2026  12:07            62ÿ141 ai-operations.png
+20/07/2026  12:07           589ÿ312 ai-workload-architecture-pattern.png
+20/07/2026  12:07             2ÿ549 ai.svg
+20/07/2026  12:07            61ÿ955 checklists.png
+20/07/2026  12:07             7ÿ977 cost-optimization.svg
+20/07/2026  12:07            99ÿ519 disaster-recovery-criticality-tiers.png
+20/07/2026  12:07               952 github.png
+20/07/2026  12:07             2ÿ900 github.svg
+20/07/2026  12:07             2ÿ152 goal.svg
+20/07/2026  12:07            34ÿ775 guidance-overview.png
+20/07/2026  12:07            21ÿ639 operational-excellence.svg
+20/07/2026  12:07            56ÿ140 performance-efficiency.svg
+20/07/2026  12:07            56ÿ810 principles.png
+20/07/2026  12:07             9ÿ483 reliability.svg
+20/07/2026  12:07             3ÿ659 risk.svg
+20/07/2026  12:07            18ÿ853 security.svg
+20/07/2026  12:07             9ÿ067 trade-off.svg
+20/07/2026  12:07           343ÿ883 well-architected-hub.png
+20/07/2026  12:07           252ÿ632 well-architected-review.png
+              20 fichier(s)        1ÿ656ÿ620 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\html
+
+17/07/2026  18:50    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+17/07/2026  18:50            79ÿ057 en-us-azure-architecture-777fa9b92470.html
+17/07/2026  18:50            71ÿ963 en-us-azure-architecture-patterns-2da035768373.html
+17/07/2026  17:32            50ÿ836 en-us_azure_architecture.html
+17/07/2026  17:32            38ÿ385 en-us_azure_architecture_ai-ml.html
+17/07/2026  17:32               610 en-us_azure_architecture_browse.html
+17/07/2026  17:32            29ÿ911 en-us_azure_architecture_data-guide.html
+17/07/2026  17:32            30ÿ368 en-us_azure_architecture_patterns.html
+               7 fichier(s)          301ÿ130 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown
+
+17/07/2026  17:48    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+17/07/2026  17:44    <DIR>          well-architected
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:48    <DIR>          ..
+17/07/2026  17:06               114 .acrolinx-config.edn
+17/07/2026  17:44    <DIR>          .docutune
+17/07/2026  17:06               419 .gitattributes
+17/07/2026  17:44    <DIR>          .github
+17/07/2026  17:06               283 .gitignore
+17/07/2026  17:06             1ÿ473 .openpublishing.publish.config.json
+17/07/2026  17:06           117ÿ445 .openpublishing.redirection.json
+17/07/2026  17:06             9ÿ535 AGENTS.md
+17/07/2026  17:06               458 CODEOWNERS
+17/07/2026  17:06            19ÿ044 LICENSE
+17/07/2026  17:06             1ÿ106 LICENSE-CODE
+17/07/2026  17:06               377 README.md
+17/07/2026  17:06             2ÿ760 SECURITY.md
+17/07/2026  17:06             1ÿ222 ThirdPartyNotices.md
+17/07/2026  17:44    <DIR>          well-architected
+              12 fichier(s)          154ÿ236 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.docutune
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          config
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.docutune\config
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06               858 docutune-unattended.json
+17/07/2026  17:06               280 docutune-well-architected-pr.json
+               2 fichier(s)            1ÿ138 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git
+
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06               318 config
+17/07/2026  17:06                73 description
+17/07/2026  17:06                21 HEAD
+17/07/2026  17:44    <DIR>          hooks
+24/07/2026  15:54            51ÿ970 index
+17/07/2026  17:44    <DIR>          info
+17/07/2026  17:44    <DIR>          logs
+17/07/2026  17:44    <DIR>          objects
+17/07/2026  17:06               112 packed-refs
+17/07/2026  17:44    <DIR>          refs
+17/07/2026  17:06                41 shallow
+               6 fichier(s)           52ÿ535 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\hooks
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:06               478 applypatch-msg.sample
+17/07/2026  17:06             1ÿ972 commit-msg.sample
+17/07/2026  17:06             4ÿ611 fsmonitor-watchman.sample
+17/07/2026  17:06               189 post-update.sample
+17/07/2026  17:06               424 pre-applypatch.sample
+17/07/2026  17:06             1ÿ649 pre-commit.sample
+17/07/2026  17:06               416 pre-merge-commit.sample
+17/07/2026  17:06             1ÿ374 pre-push.sample
+17/07/2026  17:06             4ÿ898 pre-rebase.sample
+17/07/2026  17:06               544 pre-receive.sample
+17/07/2026  17:06             1ÿ492 prepare-commit-msg.sample
+17/07/2026  17:06             2ÿ783 push-to-checkout.sample
+17/07/2026  17:06             2ÿ308 sendemail-validate.sample
+17/07/2026  17:06             3ÿ650 update.sample
+              14 fichier(s)           26ÿ788 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\info
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:06               240 exclude
+               1 fichier(s)              240 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\logs
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:06               213 HEAD
+17/07/2026  17:44    <DIR>          refs
+               1 fichier(s)              213 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\logs\refs
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          heads
+17/07/2026  17:44    <DIR>          remotes
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\logs\refs\heads
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06               213 main
+               1 fichier(s)              213 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\logs\refs\remotes
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          origin
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\logs\refs\remotes\origin
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06               213 HEAD
+               1 fichier(s)              213 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\objects
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:06    <DIR>          info
+17/07/2026  17:44    <DIR>          pack
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\objects\info
+
+17/07/2026  17:06    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\objects\pack
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            13ÿ840 pack-9782cffe56eedc837b3fc58b04af9bbab8b1aa1e.idx
+17/07/2026  17:06        38ÿ211ÿ582 pack-9782cffe56eedc837b3fc58b04af9bbab8b1aa1e.pack
+17/07/2026  17:06             1ÿ876 pack-9782cffe56eedc837b3fc58b04af9bbab8b1aa1e.rev
+               3 fichier(s)       38ÿ227ÿ298 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\refs
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          heads
+17/07/2026  17:44    <DIR>          remotes
+17/07/2026  17:06    <DIR>          tags
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\refs\heads
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06                41 main
+               1 fichier(s)               41 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\refs\remotes
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          origin
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\refs\remotes\origin
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06                30 HEAD
+               1 fichier(s)               30 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.git\refs\tags
+
+17/07/2026  17:06    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\.github
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06             6ÿ859 pull_request_template.md
+               1 fichier(s)            6ÿ859 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          ai
+17/07/2026  17:44    <DIR>          architect-role
+17/07/2026  17:44    <DIR>          breadcrumb
+17/07/2026  17:44    <DIR>          cost-optimization
+17/07/2026  17:44    <DIR>          design-guides
+17/07/2026  17:06             3ÿ444 design.md
+17/07/2026  17:06             2ÿ592 docfx.json
+17/07/2026  17:06            12ÿ604 feed.atom
+17/07/2026  17:44    <DIR>          hpc
+17/07/2026  17:06             8ÿ174 index.yml
+17/07/2026  17:44    <DIR>          microsoft-fabric
+17/07/2026  17:44    <DIR>          mission-critical
+17/07/2026  17:44    <DIR>          operational-excellence
+17/07/2026  17:44    <DIR>          performance-efficiency
+17/07/2026  17:06             3ÿ579 pillars.md
+17/07/2026  17:44    <DIR>          reliability
+17/07/2026  17:44    <DIR>          saas
+17/07/2026  17:44    <DIR>          security
+17/07/2026  17:44    <DIR>          service-guides
+17/07/2026  17:44    <DIR>          sustainability
+17/07/2026  17:06            16ÿ314 TOC.yml
+17/07/2026  17:06            19ÿ069 what-is-well-architected-framework.md
+17/07/2026  17:06            61ÿ447 whats-new.md
+17/07/2026  17:06            16ÿ238 workloads.md
+17/07/2026  17:44    <DIR>          _images
+               9 fichier(s)          143ÿ461 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\ai
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            35ÿ764 application-design.md
+17/07/2026  17:06            21ÿ063 application-platform.md
+17/07/2026  17:06            29ÿ652 architecture-pattern.md
+17/07/2026  17:06             2ÿ473 assessment.md
+17/07/2026  17:06            33ÿ964 data-platform.md
+17/07/2026  17:06             5ÿ877 design-methodology.md
+17/07/2026  17:06            20ÿ557 design-principles.md
+17/07/2026  17:06            10ÿ561 get-started.md
+17/07/2026  17:06            34ÿ482 grounding-data-design.md
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06             3ÿ612 index.yml
+17/07/2026  17:06            26ÿ919 mlops-genaiops.md
+17/07/2026  17:06            15ÿ034 operations.md
+17/07/2026  17:06            16ÿ197 personas.md
+17/07/2026  17:06            26ÿ786 responsible-ai.md
+17/07/2026  17:06            19ÿ709 test.md
+17/07/2026  17:06             1ÿ051 toc.yml
+17/07/2026  17:06            26ÿ072 training-data-design.md
+              17 fichier(s)          329ÿ773 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\ai\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           230ÿ063 ai-architecture-pattern.png
+17/07/2026  17:06         1ÿ752ÿ046 ai-workload-architecture-pattern.png
+17/07/2026  17:06           150ÿ617 assessment-question.png
+17/07/2026  17:06           116ÿ107 assessment-recommendations.png
+17/07/2026  17:06         2ÿ581ÿ342 azure-analytics.svg
+17/07/2026  17:06           284ÿ919 baseline-microsoft-foundry-landing-zone.svg
+17/07/2026  17:06           269ÿ276 baseline-microsoft-foundry.svg
+17/07/2026  17:06            64ÿ325 gen-ai-workload.png
+17/07/2026  17:06           223ÿ205 gen-ai-workload.svg
+17/07/2026  17:06           204ÿ531 mlops-genaiops.png
+17/07/2026  17:06            80ÿ420 model-training-workload.png
+17/07/2026  17:06           209ÿ108 model-training-workload.svg
+17/07/2026  17:06           257ÿ189 organizational-governance-structure.png
+17/07/2026  17:06           762ÿ408 personas-to-architectures.png
+17/07/2026  17:06           340ÿ824 personas-to-processes.png
+17/07/2026  17:06           110ÿ018 responsible-ai.png
+              16 fichier(s)        7ÿ636ÿ398 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\architect-role
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06             4ÿ254 architecture-decision-record.md
+17/07/2026  17:06             5ÿ213 architecture-design-specification.md
+17/07/2026  17:06             4ÿ452 collaboration.md
+17/07/2026  17:06            13ÿ706 design-business-requirements.md
+17/07/2026  17:06            14ÿ759 design-diagrams.md
+17/07/2026  17:06            10ÿ884 fundamentals.md
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06             4ÿ633 ongoing-support.md
+               7 fichier(s)           57ÿ901 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\architect-role\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           138ÿ402 architecture-discovery.png
+               1 fichier(s)          138ÿ402 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\breadcrumb
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06             2ÿ276 toc.yml
+               1 fichier(s)            2ÿ276 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\cost-optimization
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            13ÿ789 align-usage-to-billing-increments.md
+17/07/2026  17:06             6ÿ388 checklist.md
+17/07/2026  17:06            22ÿ002 collect-review-cost-data.md
+17/07/2026  17:06            13ÿ129 consolidation.md
+17/07/2026  17:06            20ÿ896 cost-model.md
+17/07/2026  17:06            13ÿ030 create-culture-financial-responsibility.md
+17/07/2026  17:06             6ÿ998 design-patterns.md
+17/07/2026  17:06            28ÿ189 get-best-rates.md
+17/07/2026  17:06             4ÿ193 index.yml
+17/07/2026  17:06            38ÿ151 maturity-model.md
+17/07/2026  17:06            33ÿ096 optimize-code-costs.md
+17/07/2026  17:06            19ÿ619 optimize-component-costs.md
+17/07/2026  17:06            26ÿ491 optimize-data-costs.md
+17/07/2026  17:06            22ÿ908 optimize-environment-costs.md
+17/07/2026  17:06            16ÿ080 optimize-flow-costs.md
+17/07/2026  17:06            26ÿ014 optimize-personnel-time.md
+17/07/2026  17:06            25ÿ425 optimize-scaling-costs.md
+17/07/2026  17:06            14ÿ694 principles.md
+17/07/2026  17:06            18ÿ385 set-spending-guardrails.md
+17/07/2026  17:06            15ÿ221 tradeoffs.md
+              20 fichier(s)          384ÿ698 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\design-guides
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            41ÿ145 background-jobs.md
+17/07/2026  17:06            36ÿ863 disaster-recovery.md
+17/07/2026  17:06            32ÿ285 handle-transient-faults.md
+17/07/2026  17:06            26ÿ791 health-modeling.md
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06             8ÿ386 implementing-recommendations.md
+17/07/2026  17:06            29ÿ339 incident-management.md
+17/07/2026  17:06            33ÿ720 monitoring.md
+17/07/2026  17:06            20ÿ347 optimize-workload-using-flows.md
+17/07/2026  17:06            37ÿ295 partition-data.md
+17/07/2026  17:06            56ÿ961 regions-availability-zones.md
+17/07/2026  17:06            13ÿ475 release-engineering-continuous-integration.md
+17/07/2026  17:06            53ÿ677 throttling.md
+              12 fichier(s)          390ÿ284 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\design-guides\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           209ÿ938 azure-monitor-health-models-designer.png
+17/07/2026  17:06            92ÿ922 azure-monitor-health-models-traffic-light-system-demo.png
+17/07/2026  17:06            65ÿ676 business-workload-process.svg
+17/07/2026  17:06            23ÿ230 db-bottleneck-analysis.png
+17/07/2026  17:06            99ÿ519 disaster-recovery-criticality-tiers.png
+17/07/2026  17:06           208ÿ304 flow-design-process.svg
+17/07/2026  17:06            25ÿ774 health-impact.png
+17/07/2026  17:06           140ÿ608 health-model-activities.png
+17/07/2026  17:06            61ÿ320 health-model.png
+17/07/2026  17:06            27ÿ230 health-state-definition.png
+17/07/2026  17:06            26ÿ699 monitor-pipeline.png
+17/07/2026  17:06            16ÿ016 monitor-write-shared-storage.png
+17/07/2026  17:06            26ÿ995 order-failure-diagnosis.png
+17/07/2026  17:44    <DIR>          partition-data
+17/07/2026  17:44    <DIR>          regions-availability-zones
+17/07/2026  17:44    <DIR>          release-engineering-continuous-integration
+17/07/2026  17:06            75ÿ677 relecloud-flow.png
+17/07/2026  17:06            21ÿ744 service-instrumentation-data.png
+17/07/2026  17:44    <DIR>          throttling
+              15 fichier(s)        1ÿ121ÿ652 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\design-guides\images\partition-data
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            84ÿ204 multiple-shard-maps.svg
+17/07/2026  17:06            20ÿ300 partition-by-pattern.png
+17/07/2026  17:06            16ÿ752 partition-context-or-subdomain.png
+17/07/2026  17:06            22ÿ027 partition-data-key.png
+17/07/2026  17:06            52ÿ689 point-shardlet.svg
+17/07/2026  17:06            84ÿ199 range-shardlet.svg
+               6 fichier(s)          280ÿ171 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\design-guides\images\regions-availability-zones
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06             4ÿ511 application.png
+17/07/2026  17:06            10ÿ385 locally-redundant-backup-across-regions.png
+17/07/2026  17:06             5ÿ793 locally-redundant.png
+17/07/2026  17:06            14ÿ821 multi-region-asynchronous.png
+17/07/2026  17:06            15ÿ028 multi-region-synchronous.png
+17/07/2026  17:06            26ÿ196 regions-availability-zones.png
+17/07/2026  17:06            28ÿ015 zonal-multiple-zones.png
+17/07/2026  17:06            14ÿ564 zonal-single-zone.png
+17/07/2026  17:06            15ÿ791 zone-redundant-backup-across-regions.png
+17/07/2026  17:06             9ÿ858 zone-redundant.png
+              10 fichier(s)          144ÿ962 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\design-guides\images\release-engineering-continuous-integration
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            46ÿ397 azure-devops-github-status.png
+17/07/2026  17:06            34ÿ208 azure-devops-tests.png
+17/07/2026  17:06            65ÿ603 github-status-badge.png
+17/07/2026  17:06            91ÿ112 hotfix-branches.png
+17/07/2026  17:06            82ÿ670 release-branches.png
+               5 fichier(s)          319ÿ990 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\design-guides\images\throttling
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            63ÿ385 throttling-effect.png
+17/07/2026  17:06            43ÿ786 throttling-points.png
+17/07/2026  17:06            58ÿ013 throttling-request-dimensions.png
+               3 fichier(s)          165ÿ184 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\hpc
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06             9ÿ656 get-started-overview.md
+17/07/2026  17:06             8ÿ510 hpc-architecture-pattern.md
+17/07/2026  17:06             6ÿ592 hpc-design-methodology.md
+17/07/2026  17:06            17ÿ499 hpc-design-principles.md
+17/07/2026  17:06             2ÿ252 index.yml
+17/07/2026  17:44    <DIR>          media
+17/07/2026  17:06               320 toc.yml
+               6 fichier(s)           44ÿ829 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\hpc\media
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           102ÿ452 hpc-architecture.png
+17/07/2026  17:06            84ÿ063 hpc-finance-architecture-example.png
+17/07/2026  17:06           157ÿ520 hpc-finance-architecture-example.svg
+17/07/2026  17:06         1ÿ202ÿ043 hpc-identity-access-management-batch.png
+17/07/2026  17:06         1ÿ596ÿ490 hpc-identity-access-management-cyclecloud.png
+17/07/2026  17:06         1ÿ459ÿ315 hpc-manufacturing-architecture-example.png
+17/07/2026  17:06           205ÿ588 hpc-manufacturing-architecture-example.svg
+17/07/2026  17:06            81ÿ391 network-interconnect-compute-and-storage-seismic-analysis.png
+17/07/2026  17:06            69ÿ790 network-interconnect.png
+17/07/2026  17:06           345ÿ954 network-reference-architecture-reservoir-simulation.png
+17/07/2026  17:06           349ÿ874 network-reference-architecture-seismic-processing.png
+17/07/2026  17:06           100ÿ789 storage-selection-flow.svg
+              12 fichier(s)        5ÿ755ÿ269 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\microsoft-fabric
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            17ÿ434 cost-optimization.md
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06             4ÿ819 index.yml
+17/07/2026  17:06            15ÿ864 operational-excellence.md
+17/07/2026  17:06             5ÿ965 overview.md
+17/07/2026  17:06            12ÿ830 performance-efficiency.md
+17/07/2026  17:06            13ÿ988 reliability.md
+17/07/2026  17:06            16ÿ158 security.md
+17/07/2026  17:06               420 toc.yml
+               8 fichier(s)           87ÿ478 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\microsoft-fabric\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           305ÿ678 fabric-architecture.png
+17/07/2026  17:06            51ÿ552 fabric-cost-governance.png
+17/07/2026  17:06            60ÿ974 fabric-deployment-model.png
+17/07/2026  17:06            84ÿ057 fabric-security.png
+               4 fichier(s)          502ÿ261 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\mission-critical
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06             5ÿ522 index.yml
+17/07/2026  17:06            20ÿ114 mission-critical-application-design.md
+17/07/2026  17:06            27ÿ130 mission-critical-application-platform.md
+17/07/2026  17:06            11ÿ769 mission-critical-architecture-pattern.md
+17/07/2026  17:06             2ÿ127 mission-critical-assessment.md
+17/07/2026  17:06            35ÿ754 mission-critical-data-platform.md
+17/07/2026  17:06            31ÿ926 mission-critical-deployment-testing.md
+17/07/2026  17:06             6ÿ357 mission-critical-design-methodology.md
+17/07/2026  17:06            11ÿ930 mission-critical-design-principles.md
+17/07/2026  17:06            43ÿ031 mission-critical-networking-connectivity.md
+17/07/2026  17:06            14ÿ297 mission-critical-operational-procedures.md
+17/07/2026  17:06             7ÿ002 mission-critical-overview.md
+17/07/2026  17:06            27ÿ728 mission-critical-security.md
+17/07/2026  17:06             1ÿ137 toc.yml
+              14 fichier(s)          245ÿ824 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\mission-critical\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           179ÿ101 app-service-architecture.png
+17/07/2026  17:06           120ÿ171 assessment-recommendations.png
+17/07/2026  17:06           211ÿ602 assessment-review.png
+17/07/2026  17:06           122ÿ090 mission-critical-aiops-methodology.png
+17/07/2026  17:06           744ÿ790 mission-critical-architecture-landing-zone.svg
+17/07/2026  17:06           484ÿ942 mission-critical-architecture-network.svg
+17/07/2026  17:06            61ÿ785 mission-critical-architecture-online.png
+17/07/2026  17:06           139ÿ411 mission-critical-asynchronous-communication.png
+17/07/2026  17:06           258ÿ131 mission-critical-design-areas.svg
+17/07/2026  17:06           368ÿ151 mission-critical-design-principles.svg
+17/07/2026  17:06           188ÿ992 mission-critical-example-fault-states.png
+17/07/2026  17:06            92ÿ044 mission-critical-example-health-definitions.png
+17/07/2026  17:06         2ÿ123ÿ218 mission-critical-global-distribution.gif
+17/07/2026  17:06            25ÿ548 mission-critical-global-routing.gif
+17/07/2026  17:06           106ÿ095 mission-critical-health-data-collection.png
+17/07/2026  17:06           410ÿ946 mission-critical-high-level-architecture.png
+17/07/2026  17:06         5ÿ403ÿ257 mission-critical-landing-zones.gif
+17/07/2026  17:06            87ÿ280 mission-critical-pattern.png
+17/07/2026  17:06            45ÿ499 mission-critical-scale-units.png
+17/07/2026  17:06         3ÿ638ÿ703 mission-critical-slo.gif
+17/07/2026  17:06         1ÿ447ÿ884 mission-critical-subscription-organization.png
+17/07/2026  17:06         4ÿ413ÿ456 mission-critical-subscription-scale.gif
+17/07/2026  17:06            67ÿ531 mission-critical-zero-downtime-pipeline.png
+              23 fichier(s)       20ÿ740ÿ627 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\operational-excellence
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06             4ÿ315 checklist.md
+17/07/2026  17:06             8ÿ807 design-patterns.md
+17/07/2026  17:06             6ÿ213 devops-culture.md
+17/07/2026  17:06            29ÿ226 enable-automation.md
+17/07/2026  17:06            11ÿ831 formalize-development-practices.md
+17/07/2026  17:06             9ÿ000 formalize-operations-tasks.md
+17/07/2026  17:06            18ÿ302 incident-response.md
+17/07/2026  17:06             3ÿ988 index.yml
+17/07/2026  17:06            17ÿ818 infrastructure-as-code-design.md
+17/07/2026  17:06            76ÿ616 maturity-model.md
+17/07/2026  17:44    <DIR>          media
+17/07/2026  17:06            20ÿ298 observability.md
+17/07/2026  17:06            23ÿ304 principles.md
+17/07/2026  17:06            19ÿ553 safe-deployments.md
+17/07/2026  17:06            29ÿ689 testing.md
+17/07/2026  17:06            20ÿ501 tools-processes.md
+17/07/2026  17:06            14ÿ542 tradeoffs.md
+17/07/2026  17:06            19ÿ498 workload-supply-chain.md
+              17 fichier(s)          333ÿ501 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\operational-excellence\media
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          observability
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\operational-excellence\media\observability
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            27ÿ236 partition-move-data.png
+               1 fichier(s)           27ÿ236 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\performance-efficiency
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            17ÿ923 capacity-planning.md
+17/07/2026  17:06             4ÿ656 checklist.md
+17/07/2026  17:06            15ÿ979 continuous-performance-optimize.md
+17/07/2026  17:06            13ÿ942 design-patterns.md
+17/07/2026  17:06             3ÿ800 index.yml
+17/07/2026  17:06            37ÿ866 maturity-model.md
+17/07/2026  17:06            18ÿ434 monitoring.md
+17/07/2026  17:06            29ÿ991 optimize-code-infrastructure.md
+17/07/2026  17:06            33ÿ181 optimize-data-performance.md
+17/07/2026  17:06            17ÿ189 optimize-operational-tasks.md
+17/07/2026  17:06            12ÿ428 performance-targets.md
+17/07/2026  17:06            19ÿ282 performance-test.md
+17/07/2026  17:06            14ÿ026 principles.md
+17/07/2026  17:06            14ÿ455 prioritize-critical-flows.md
+17/07/2026  17:06            13ÿ268 respond-live-performance-issues.md
+17/07/2026  17:06            32ÿ674 scale-partition.md
+17/07/2026  17:06            23ÿ110 select-services.md
+17/07/2026  17:06            15ÿ241 tradeoffs.md
+              18 fichier(s)          337ÿ445 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\reliability
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06             4ÿ123 checklist.md
+17/07/2026  17:06            13ÿ634 design-patterns.md
+17/07/2026  17:06            16ÿ588 disaster-recovery.md
+17/07/2026  17:06            15ÿ782 failure-mode-analysis.md
+17/07/2026  17:06            14ÿ281 identify-flows.md
+17/07/2026  17:06             3ÿ601 index.yml
+17/07/2026  17:06            69ÿ220 maturity-model.md
+17/07/2026  17:44    <DIR>          media
+17/07/2026  17:06            29ÿ802 metrics.md
+17/07/2026  17:06            21ÿ303 monitoring.md
+17/07/2026  17:06            16ÿ067 principles.md
+17/07/2026  17:06            27ÿ914 redundancy.md
+17/07/2026  17:06            22ÿ202 reliability-test.md
+17/07/2026  17:06            16ÿ789 scaling.md
+17/07/2026  17:06            14ÿ144 self-preservation.md
+17/07/2026  17:06            13ÿ484 simplify.md
+17/07/2026  17:06            11ÿ387 tradeoffs.md
+              16 fichier(s)          310ÿ321 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\reliability\media
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          failure-mode-analysis
+17/07/2026  17:44    <DIR>          metrics
+17/07/2026  17:44    <DIR>          redundancy
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\reliability\media\failure-mode-analysis
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           170ÿ372 failure-mode-example.png
+               1 fichier(s)          170ÿ372 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\reliability\media\metrics
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           170ÿ455 example-architecture-targets.svg
+               1 fichier(s)          170ÿ455 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\reliability\media\redundancy
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            80ÿ730 reliable-web-app-dotnet.png
+               1 fichier(s)           80ÿ730 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\saas
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            38ÿ531 ai-strategy.md
+17/07/2026  17:06             2ÿ463 assessment.md
+17/07/2026  17:06            16ÿ138 billing-cost-management.md
+17/07/2026  17:06            17ÿ689 compute.md
+17/07/2026  17:06            27ÿ714 data.md
+17/07/2026  17:06             6ÿ688 design-methodology.md
+17/07/2026  17:06            10ÿ327 design-principles.md
+17/07/2026  17:06            14ÿ720 devops.md
+17/07/2026  17:06             9ÿ482 get-started.md
+17/07/2026  17:06            17ÿ054 governance.md
+17/07/2026  17:06            18ÿ987 identity-access.md
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06            13ÿ049 incident-management.md
+17/07/2026  17:06             2ÿ791 index.yml
+17/07/2026  17:06            24ÿ724 networking.md
+17/07/2026  17:06            11ÿ368 resource-organization.md
+17/07/2026  17:06               922 toc.yml
+              16 fichier(s)          232ÿ647 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\saas\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           134ÿ513 ai-progression.svg
+17/07/2026  17:06           160ÿ901 assessment-question.png
+17/07/2026  17:06           134ÿ116 assessment-recommendations.png
+17/07/2026  17:06            69ÿ992 federated-identity.svg
+17/07/2026  17:06            90ÿ189 identity-types.svg
+17/07/2026  17:06           200ÿ792 tags.png
+               6 fichier(s)          790ÿ503 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            15ÿ634 application-secrets.md
+17/07/2026  17:06             4ÿ124 checklist.md
+17/07/2026  17:06            15ÿ362 data-classification.md
+17/07/2026  17:06             7ÿ466 design-patterns.md
+17/07/2026  17:06            23ÿ238 encryption.md
+17/07/2026  17:06            15ÿ067 establish-baseline.md
+17/07/2026  17:06            16ÿ698 harden-resources.md
+17/07/2026  17:06            30ÿ397 identity-access.md
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06            13ÿ595 incident-response.md
+17/07/2026  17:06             4ÿ066 index.yml
+17/07/2026  17:06            33ÿ284 maturity-model.md
+17/07/2026  17:06            28ÿ528 monitor-threats.md
+17/07/2026  17:06            41ÿ968 networking.md
+17/07/2026  17:06            23ÿ988 principles.md
+17/07/2026  17:06            19ÿ977 secure-development-lifecycle.md
+17/07/2026  17:06            27ÿ666 segmentation.md
+17/07/2026  17:06            22ÿ528 test.md
+17/07/2026  17:06            13ÿ983 tradeoffs.md
+              18 fichier(s)          357ÿ569 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          baseline
+17/07/2026  17:44    <DIR>          data-classification
+17/07/2026  17:44    <DIR>          encryption
+17/07/2026  17:44    <DIR>          identity-access
+17/07/2026  17:44    <DIR>          incident-response
+17/07/2026  17:44    <DIR>          networking
+17/07/2026  17:44    <DIR>          secure-development-lifecycle
+17/07/2026  17:44    <DIR>          segmentation
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\baseline
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           189ÿ883 security-baseline.svg
+               1 fichier(s)          189ÿ883 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\data-classification
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           206ÿ367 data-classification-enterprise.svg
+17/07/2026  17:06            56ÿ688 data-classification-high-res.png
+17/07/2026  17:06           166ÿ948 data-classification.svg
+               3 fichier(s)          430ÿ003 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\encryption
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            82ÿ590 manage-keys-certificates-secrets-high-res.png
+17/07/2026  17:06           141ÿ927 manage-keys-certificates-secrets.svg
+               2 fichier(s)          224ÿ517 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\identity-access
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           116ÿ132 architecture-identity-highres.png
+17/07/2026  17:06           198ÿ680 architecture-identity.svg
+17/07/2026  17:06           237ÿ246 identity-architecture-design-highres.png
+17/07/2026  17:06           234ÿ961 identity-architecture-design.svg
+               4 fichier(s)          787ÿ019 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\incident-response
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06           226ÿ371 incident-response.png
+               1 fichier(s)          226ÿ371 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\networking
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            98ÿ365 controlled-egress.png
+17/07/2026  17:06           480ÿ732 controlled-egress.svg
+17/07/2026  17:06           251ÿ700 controlled-ingress-highres.png
+17/07/2026  17:06           564ÿ404 controlled-ingress.svg
+17/07/2026  17:06            45ÿ809 internet-network-public-highres.png
+17/07/2026  17:06            51ÿ878 internet-network-public.svg
+17/07/2026  17:06           247ÿ448 network-controls.svg
+17/07/2026  17:06            81ÿ223 network-defense-in-depth-private-highres.png
+17/07/2026  17:06            88ÿ747 network-defense-in-depth-private.svg
+17/07/2026  17:06           140ÿ204 private-endpoints-101-highres.png
+17/07/2026  17:06           250ÿ971 private-endpoints-101.svg
+17/07/2026  17:06            65ÿ363 vnet-isolation-peer-highres.png
+17/07/2026  17:06           158ÿ860 vnet-isolation-peer.svg
+              13 fichier(s)        2ÿ525ÿ704 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\secure-development-lifecycle
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            55ÿ872 devops-security.png
+17/07/2026  17:06           199ÿ080 threat-analysis.svg
+               2 fichier(s)          254ÿ952 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\security\images\segmentation
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            55ÿ305 az1-appgw-1-highres.png
+17/07/2026  17:06           101ÿ119 az1-appgw-1.svg
+17/07/2026  17:06            36ÿ333 az1-appgw-user-highres.png
+17/07/2026  17:06            65ÿ659 az1-appgw-user.svg
+17/07/2026  17:06            83ÿ706 network-segmentation-highres.png
+17/07/2026  17:06           181ÿ891 network-segmentation.svg
+17/07/2026  17:06            22ÿ626 segmentation-enterprise.svg
+17/07/2026  17:06            72ÿ773 services-and-workloads-highres.png
+17/07/2026  17:06           210ÿ671 services-and-workloads.svg
+               9 fichier(s)          830ÿ083 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\service-guides
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            51ÿ428 app-service-web-apps.md
+17/07/2026  17:06            29ÿ456 application-insights.md
+17/07/2026  17:06            49ÿ020 azure-api-management.md
+17/07/2026  17:06            32ÿ859 azure-application-gateway.md
+17/07/2026  17:06            42ÿ556 azure-blob-storage.md
+17/07/2026  17:06            38ÿ381 azure-container-apps.md
+17/07/2026  17:06            63ÿ231 azure-database-for-mysql.md
+17/07/2026  17:06            89ÿ631 azure-databricks.md
+17/07/2026  17:06            30ÿ025 azure-disk-storage.md
+17/07/2026  17:06            58ÿ898 azure-event-grid.md
+17/07/2026  17:06            50ÿ712 azure-event-hubs.md
+17/07/2026  17:06            45ÿ451 azure-expressroute.md
+17/07/2026  17:06            42ÿ151 azure-files.md
+17/07/2026  17:06            45ÿ566 azure-firewall.md
+17/07/2026  17:06            34ÿ404 azure-front-door.md
+17/07/2026  17:06            19ÿ104 azure-functions.md
+17/07/2026  17:06            46ÿ045 azure-kubernetes-service.md
+17/07/2026  17:06            26ÿ269 azure-load-balancer.md
+17/07/2026  17:06            57ÿ204 azure-local.md
+17/07/2026  17:06            43ÿ692 azure-log-analytics.md
+17/07/2026  17:06            34ÿ001 azure-machine-learning.md
+17/07/2026  17:06            58ÿ946 azure-netapp-files.md
+17/07/2026  17:06            56ÿ284 azure-service-bus.md
+17/07/2026  17:06            23ÿ531 azure-service-fabric.md
+17/07/2026  17:06            35ÿ042 azure-sql-database.md
+17/07/2026  17:06            57ÿ521 azure-sql-managed-instance.md
+17/07/2026  17:06            29ÿ097 azure-traffic-manager.md
+17/07/2026  17:06            60ÿ485 azure-virtual-wan.md
+17/07/2026  17:06            39ÿ322 cosmos-db.md
+17/07/2026  17:06            11ÿ495 index.yml
+17/07/2026  17:06            20ÿ607 postgresql.md
+17/07/2026  17:06            46ÿ101 virtual-machines.md
+17/07/2026  17:06            35ÿ269 virtual-network.md
+17/07/2026  17:44    <DIR>          _images
+              33 fichier(s)        1ÿ403ÿ784 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\service-guides\_images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            29ÿ162 autoscale-instance.svg
+17/07/2026  17:44    <DIR>          azure-load-balancer
+17/07/2026  17:06               901 azure-machine-learning.svg
+17/07/2026  17:06           119ÿ644 container-apps.svg
+17/07/2026  17:06            57ÿ748 front-door-overview.png
+17/07/2026  17:06            88ÿ481 traffic-manager-flow.png
+17/07/2026  17:06            51ÿ020 v-net.png
+17/07/2026  17:06           132ÿ962 virtual-machine-basic-deployment.svg
+               7 fichier(s)          479ÿ918 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\service-guides\_images\azure-load-balancer
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            64ÿ481 load-balancer.png
+               1 fichier(s)           64ÿ481 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\sustainability
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:44    <DIR>          images
+17/07/2026  17:06             8ÿ265 index.yml
+17/07/2026  17:06            12ÿ513 overview.md
+17/07/2026  17:06            15ÿ672 sustainability-cost-optimization-recommendations.md
+17/07/2026  17:06             8ÿ682 sustainability-design-methodology.md
+17/07/2026  17:06            13ÿ418 sustainability-operational-excellence-recommendations.md
+17/07/2026  17:06            18ÿ936 sustainability-performance-efficiency-recommendations.md
+17/07/2026  17:06            13ÿ984 sustainability-reliability-recommendations.md
+17/07/2026  17:06             9ÿ630 sustainability-security-recommendations.md
+17/07/2026  17:06            14ÿ568 sustainable-ai-design.md
+17/07/2026  17:06               742 toc.yml
+              10 fichier(s)          116ÿ410 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\sustainability\images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            27ÿ546 sustainability-shared-responsibility-cloud-efficiency.png
+               1 fichier(s)           27ÿ546 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\markdown\well-architected\well-architected\_images
+
+17/07/2026  17:44    <DIR>          .
+17/07/2026  17:44    <DIR>          ..
+17/07/2026  17:06            20ÿ222 ai-application-layers.svg
+17/07/2026  17:06            62ÿ141 ai-operations.png
+17/07/2026  17:06           589ÿ312 ai-workload-architecture-pattern.png
+17/07/2026  17:06             2ÿ549 ai.svg
+17/07/2026  17:06            61ÿ955 checklists.png
+17/07/2026  17:06             7ÿ977 cost-optimization.svg
+17/07/2026  17:06            99ÿ519 disaster-recovery-criticality-tiers.png
+17/07/2026  17:06               952 github.png
+17/07/2026  17:06             2ÿ900 github.svg
+17/07/2026  17:06             2ÿ152 goal.svg
+17/07/2026  17:06            34ÿ775 guidance-overview.png
+17/07/2026  17:06            21ÿ639 operational-excellence.svg
+17/07/2026  17:06            56ÿ140 performance-efficiency.svg
+17/07/2026  17:06            56ÿ810 principles.png
+17/07/2026  17:06             9ÿ483 reliability.svg
+17/07/2026  17:06             3ÿ659 risk.svg
+17/07/2026  17:06            18ÿ853 security.svg
+17/07/2026  17:06             9ÿ067 trade-off.svg
+17/07/2026  17:06           343ÿ883 well-architected-hub.png
+17/07/2026  17:06           252ÿ632 well-architected-review.png
+              20 fichier(s)        1ÿ656ÿ620 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\raw\pdf
+
+17/07/2026  17:48    <DIR>          .
+20/07/2026  12:07    <DIR>          ..
+17/07/2026  17:37        23ÿ634ÿ988 azure_serverless_computing_cookbook.pdf
+17/07/2026  17:37        15ÿ855ÿ991 enterprise_cloud_strategy.pdf
+               2 fichier(s)       39ÿ490ÿ979 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\rejected
+
+17/07/2026  17:47    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+               0 fichier(s)                0 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\staging
+
+20/07/2026  13:45    <DIR>          .
+24/07/2026  16:15    <DIR>          ..
+20/07/2026  11:57    <DIR>          manifest_test
+20/07/2026  13:31             4ÿ631 parsed_azure_reliability.json
+20/07/2026  13:15             4ÿ449 parsed_azure_retry.json
+20/07/2026  13:45             2ÿ624 parsed_azure_security.json
+20/07/2026  13:44    <DIR>          parser_test
+20/07/2026  12:16             3ÿ071 test_parsed_document.json
+               4 fichier(s)           14ÿ775 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\staging\manifest_test
+
+20/07/2026  11:57    <DIR>          .
+20/07/2026  13:45    <DIR>          ..
+20/07/2026  11:57                28 document_test.md
+               1 fichier(s)               28 octets
+
+ R‚pertoire de C:\Users\pc\Desktop\Azure corpus\data\staging\parser_test
+
+20/07/2026  13:44    <DIR>          .
+20/07/2026  13:45    <DIR>          ..
+20/07/2026  13:30             2ÿ000 azure_reliability.html
+20/07/2026  13:15               602 azure_retry.md
+20/07/2026  13:44             2ÿ330 azure_security.pdf
+               3 fichier(s)            4ÿ932 octets
+
+     Total des fichiers list‚sÿ:
+             915 fichier(s)      300ÿ504ÿ447 octets
+             429 R‚p(s)  32ÿ875ÿ298ÿ816 octets libres

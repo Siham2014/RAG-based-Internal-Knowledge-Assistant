@@ -1,0 +1,12 @@
+{
+    "selected_chunking_strategy": "fixed",
+    "chunk_size": 1024,
+    "chunk_overlap": 204,
+    "overlap_ratio": 0.2,
+    "number_of_chunks": 1478,
+    "number_of_questions": 30,
+    "questions_markdown": 12,
+    "questions_html": 10,
+    "questions_pdf": 8,
+    "selection_reason": "Fixed 1024 selected because Evidence Recall@5 reached 1.0."
+}

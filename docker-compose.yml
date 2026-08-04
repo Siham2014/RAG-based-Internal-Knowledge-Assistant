@@ -11,12 +11,12 @@ services:
     restart: unless-stopped
 
     ports:
-      - "5432:5432"
+      - "55433:5432"
 
     environment:
-      POSTGRES_DB: rag_benchmark
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
     volumes:
       - postgres_data:/var/lib/postgresql/data

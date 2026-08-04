@@ -1,0 +1,48 @@
+{
+  "benchmark_name": "vector_retrieval_pgvector",
+  "created_at_utc": "2026-07-25T16:19:42.645485+00:00",
+  "retrieval_method": "pgvector_exact",
+  "database": "PostgreSQL + pgvector",
+  "distance_operator": "<=>",
+  "distance_metric": "cosine",
+  "search_mode": "exact",
+  "embedding_model": "intfloat/e5-base-v2",
+  "embedding_dimension": 768,
+  "chunking_configuration": "fixed_1024",
+  "number_of_indexed_chunks": 1478,
+  "number_of_questions": 30,
+  "top_k": 10,
+  "input_files": {
+    "evaluation_questions": "C:\\Users\\pc\\Desktop\\Azure corpus\\data\\evaluation\\evaluation_30_questions.csv",
+    "query_embeddings": "C:\\Users\\pc\\Desktop\\Azure corpus\\data\\embeddings\\e5_base_query_embeddings.npy"
+  },
+  "output_files": {
+    "summary": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\03_retrieval_benchmark\\pgvector_summary.csv",
+    "details": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\03_retrieval_benchmark\\pgvector_details.csv",
+    "by_format": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\03_retrieval_benchmark\\pgvector_by_format.csv"
+  },
+  "summary": {
+    "retrieval_method": "pgvector_exact",
+    "embedding_model": "intfloat/e5-base-v2",
+    "embedding_dimension": 768,
+    "chunking_configuration": "fixed_1024",
+    "number_of_indexed_chunks": 1478,
+    "number_of_questions": 30,
+    "evidence_recall_at_1": 0.6,
+    "evidence_recall_at_3": 0.7667,
+    "evidence_recall_at_5": 0.8667,
+    "evidence_recall_at_10": 0.9333,
+    "evidence_mrr": 0.7131,
+    "source_recall_at_1": 0.9,
+    "source_recall_at_3": 1.0,
+    "source_recall_at_5": 1.0,
+    "source_recall_at_10": 1.0,
+    "source_mrr": 0.9444,
+    "mean_retrieval_time_ms": 66.5128,
+    "median_retrieval_time_ms": 61.8006,
+    "p95_retrieval_time_ms": 77.1189,
+    "minimum_retrieval_time_ms": 56.7247,
+    "maximum_retrieval_time_ms": 157.2583,
+    "total_benchmark_time_seconds": 2.0076
+  }
+}

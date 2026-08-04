@@ -1,0 +1,11 @@
+{
+    "model_key": "e5_base",
+    "model_name": "intfloat/e5-base-v2",
+    "number_of_documents": 1478,
+    "number_of_queries": 30,
+    "embedding_dimension": 768,
+    "normalize_embeddings": true,
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "batch_size": 32
+}

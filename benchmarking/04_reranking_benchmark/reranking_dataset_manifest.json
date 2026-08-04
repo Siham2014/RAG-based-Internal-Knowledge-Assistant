@@ -1,0 +1,15 @@
+{
+  "benchmark": "cross_encoder_reranking",
+  "number_of_questions": 30,
+  "number_of_indexed_chunks": 1478,
+  "retrieval_method": "hybrid_rrf",
+  "vector_candidate_k": 50,
+  "bm25_candidate_k": 50,
+  "reranking_candidate_k": 20,
+  "rrf_constant": 60,
+  "total_export_time_seconds": 4.5751,
+  "files": {
+    "candidates": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\04_reranking_benchmark\\hybrid_top20_candidates.jsonl",
+    "baseline": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\04_reranking_benchmark\\hybrid_top20_baseline.csv"
+  }
+}

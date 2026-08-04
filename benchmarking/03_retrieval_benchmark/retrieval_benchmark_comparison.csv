@@ -1,0 +1,4 @@
+﻿retrieval_method,number_of_questions,number_of_indexed_chunks,evidence_recall_at_1,evidence_recall_at_3,evidence_recall_at_5,evidence_recall_at_10,evidence_mrr,source_recall_at_5,source_mrr,mean_retrieval_time_ms,p95_retrieval_time_ms
+hybrid_rrf,30,1478,0.7,0.9,0.9,0.9667,0.8111,1.0,0.9667,100.6007,146.0697
+pgvector_exact,30,1478,0.6,0.7667,0.8667,0.9333,0.7131,1.0,0.9444,66.5128,77.1189
+sqlite_fts5_bm25,30,1478,0.5333,0.8667,0.9,0.9667,0.6826,0.9667,0.9148,8.1923,11.4596

@@ -1,0 +1,4 @@
+﻿retrieval_method,format,number_of_questions,evidence_recall_at_1,evidence_recall_at_3,evidence_recall_at_5,evidence_recall_at_10,evidence_mrr,source_recall_at_1,source_recall_at_3,source_recall_at_5,source_recall_at_10,source_mrr,mean_retrieval_time_ms,p95_retrieval_time_ms
+sqlite_fts5_bm25,html,10,0.6,0.9,0.9,1.0,0.7278,0.6,0.9,0.9,1.0,0.7444,8.4819,9.8507
+sqlite_fts5_bm25,markdown,12,0.5833,0.8333,0.8333,0.9167,0.7083,1.0,1.0,1.0,1.0,1.0,8.3634,13.9223
+sqlite_fts5_bm25,pdf,8,0.375,0.875,1.0,1.0,0.5875,1.0,1.0,1.0,1.0,1.0,7.5736,10.9399
