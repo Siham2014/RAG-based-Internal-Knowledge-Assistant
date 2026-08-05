@@ -1,0 +1,8 @@
+{
+    "benchmark": "HyDE",
+    "generator": "Qwen2.5-1.5B-Instruct",
+    "questions": 30,
+    "created_by": "ChatGPT",
+    "output_csv": "/kaggle/working/query_rewriting/hyde_documents.csv",
+    "output_jsonl": "/kaggle/working/query_rewriting/hyde_documents.jsonl"
+}

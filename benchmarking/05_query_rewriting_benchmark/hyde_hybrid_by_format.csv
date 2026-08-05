@@ -1,4 +1,4 @@
 ﻿retrieval_method,format,number_of_questions,evidence_recall_at_1,evidence_recall_at_3,evidence_recall_at_5,evidence_recall_at_10,evidence_mrr,source_recall_at_1,source_recall_at_3,source_recall_at_5,source_recall_at_10,source_mrr,mean_retrieval_time_ms,p95_retrieval_time_ms
-hybrid_rrf,html,10,0.9,1.0,1.0,1.0,0.95,0.9,1.0,1.0,1.0,0.95,116.9443,160.8829
-hybrid_rrf,markdown,12,0.5833,0.8333,0.8333,1.0,0.7361,0.9167,1.0,1.0,1.0,0.9583,157.8092,232.9596
-hybrid_rrf,pdf,8,0.75,1.0,1.0,1.0,0.875,1.0,1.0,1.0,1.0,1.0,116.1542,210.4277
+hyde_hybrid_rrf,html,10,0.8,1.0,1.0,1.0,0.9,0.9,1.0,1.0,1.0,0.95,154.8342,221.3998
+hyde_hybrid_rrf,markdown,12,0.5833,0.8333,0.8333,1.0,0.7083,0.9167,1.0,1.0,1.0,0.9444,155.9812,216.6033
+hyde_hybrid_rrf,pdf,8,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,141.1223,205.0186

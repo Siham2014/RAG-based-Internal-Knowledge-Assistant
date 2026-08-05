@@ -25,18 +25,40 @@ class RetrievalResult(Protocol):
 
 def normalize_text(text: str) -> str:
     """
-    Normalise un texte avant la comparaison d'une preuve.
-
-    La normalisation ignore :
-    - les majuscules/minuscules ;
-    - les espaces multiples ;
-    - les retours à la ligne ;
-    - certaines variantes Unicode.
+    Normalise un texte pour comparer les preuves malgré
+    les variantes Unicode, les espaces et la casse.
     """
 
     normalized = unicodedata.normalize(
         "NFKC",
         str(text),
+    )
+
+    translation_table = str.maketrans(
+        {
+            "\u2010": "-",  # hyphen
+            "\u2011": "-",  # non-breaking hyphen
+            "\u2012": "-",  # figure dash
+            "\u2013": "-",  # en dash
+            "\u2014": "-",  # em dash
+            "\u2212": "-",  # minus sign
+
+            "\u2018": "'",
+            "\u2019": "'",
+            "\u201A": "'",
+
+            "\u201C": '"',
+            "\u201D": '"',
+            "\u201E": '"',
+
+            "\u00A0": " ",
+            "\u202F": " ",
+            "\u2007": " ",
+        }
+    )
+
+    normalized = normalized.translate(
+        translation_table
     )
 
     normalized = normalized.lower()
@@ -46,7 +68,6 @@ def normalize_text(text: str) -> str:
     )
 
     return normalized.strip()
-
 
 def canonical_filename(source: str) -> str:
     """

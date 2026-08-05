@@ -1,0 +1,19 @@
+{
+  "company": "azure",
+  "settings_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\config\\settings.yaml",
+  "number_of_questions": 10,
+  "embedding_model": "intfloat/e5-base-v2",
+  "reranker_model": "BAAI/bge-reranker-base",
+  "embedding_device": "cpu",
+  "reranker_device": "cpu",
+  "model_load_time_ms": 11958.2588,
+  "warmup_time_ms": 11833.4827,
+  "mean_embedding_time_ms": 81.8104,
+  "mean_hybrid_retrieval_time_ms": 98.5306,
+  "mean_reranking_time_ms": 6384.1188,
+  "mean_total_time_ms": 6564.4643,
+  "median_total_time_ms": 6445.9652,
+  "p95_total_time_ms": 7198.664,
+  "minimum_total_time_ms": 5759.1924,
+  "maximum_total_time_ms": 7258.2999
+}

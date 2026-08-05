@@ -1,0 +1,16 @@
+{
+  "benchmark": "query_rewriting_hyde",
+  "created_at_utc": "2026-08-04T15:04:30.483232+00:00",
+  "generator_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "embedding_model": "intfloat/e5-base-v2",
+  "embedding_dimension": 768,
+  "number_of_questions": 30,
+  "normalization": true,
+  "embedding_input": "original question + hypothetical document",
+  "embedding_time_seconds": 0.3914,
+  "files": {
+    "documents_csv": "/kaggle/working/query_rewriting/hyde_documents.csv",
+    "documents_jsonl": "/kaggle/working/query_rewriting/hyde_documents.jsonl",
+    "embeddings": "/kaggle/working/query_rewriting/hyde_e5_query_embeddings.npy"
+  }
+}

@@ -53,3 +53,8 @@ desktop.ini
 # ==========================================================
 
 *.log
+
+# Fichiers temporaires du projet
+hyde_reranking_dataset.zip
+structure_src.txt
+data/query_rewriting/*.npy

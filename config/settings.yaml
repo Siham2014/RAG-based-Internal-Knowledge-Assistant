@@ -1,0 +1,57 @@
+project:
+  name: internal_knowledge_assistant
+  environment: development
+
+corpus:
+  company: azure
+  processed_directory: data/processed
+  chunks_path: data/chunks/fixed_1024_chunks.jsonl
+
+chunking:
+  strategy: fixed
+  chunk_size: 1024
+  overlap: 204
+
+embedding:
+  model_name: intfloat/e5-base-v2
+  dimension: 768
+  normalize: true
+  query_prefix: "query: "
+  document_prefix: "passage: "
+  batch_size: 16
+  device: auto
+
+retrieval:
+  vector_backend: pgvector
+  lexical_backend: sqlite_fts5
+  candidate_k: 50
+  hybrid_top_k: 20
+  final_top_k: 5
+  rrf_constant: 60
+
+reranking:
+  enabled: true
+  model_name: BAAI/bge-reranker-base
+  batch_size: 4
+  max_length: 512
+  device: auto
+
+confidence:
+  enabled: true
+  threshold: null
+  minimum_top1_score: null
+  minimum_margin: null
+
+generation:
+  enabled: false
+  provider: local
+  model_name: null
+  temperature: 0.0
+  max_tokens: 500
+
+storage:
+  bm25_index_path: indexes/lexical/bm25_index.db
+
+api:
+  host: 0.0.0.0
+  port: 8000

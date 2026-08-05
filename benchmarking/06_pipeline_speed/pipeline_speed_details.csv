@@ -1,0 +1,11 @@
+﻿id,question,number_of_results,embedding_time_ms,hybrid_retrieval_time_ms,reranking_time_ms,total_time_ms,top1_source,top1_reranker_score,top1_rrf_score,top1_cosine_similarity
+Q001,Who shares responsibility for the sustainability of cloud workloads?,5,77.2291,116.0891,6299.161,6492.486,well-architected__sustainability__overview.md,0.981162,0.03252247,0.883201
+Q002,How much less carbon efficient can on-premises workloads be compared with Azure workloads?,5,104.3579,95.8576,6086.668,6286.8874,well-architected__sustainability__overview.md,0.999764,0.03278689,0.892659
+Q003,How do architecture decisions influence the sustainability of an Azure workload?,5,75.7408,85.9059,6226.3645,6388.0152,well-architected__sustainability__overview.md,0.999294,0.03278689,0.920139
+Q004,What is a sustainable cloud workload?,5,73.0412,98.514,6954.2166,7125.7757,well-architected__sustainability__overview.md,0.998503,0.03252247,0.895227
+Q005,Which infrastructure practices can improve both cost optimization and sustainability?,5,73.3774,106.1462,5579.6647,5759.1924,well-architected__sustainability__overview.md,0.986844,0.03151365,0.865241
+Q006,What type of analytics platform is Azure Databricks?,5,80.7427,104.3407,7073.2122,7258.2999,well-architected__service-guides__azure-databricks.md,0.99403,0.03252247,0.89965
+Q007,What types of workloads can teams build with Azure Databricks?,5,89.8006,87.3274,6825.0357,7002.1686,well-architected__service-guides__azure-databricks.md,0.927112,0.03079839,0.876169
+Q008,Which Azure technologies are included in the scope of the Azure Databricks architecture review?,5,81.6357,99.8893,6141.8766,6323.4063,well-architected__service-guides__azure-databricks.md,0.997583,0.03278689,0.869036
+Q009,What is the purpose of the Reliability pillar?,5,85.1135,85.0502,6438.799,6608.967,well-architected__service-guides__azure-databricks.md,0.949476,0.03201844,0.819578
+Q010,How should Azure Databricks job execution failures be handled?,5,77.0647,106.1853,6216.1894,6399.4445,well-architected__service-guides__azure-databricks.md,0.951292,0.02844164,0.849689
