@@ -1,0 +1,69 @@
+﻿id,question,expected_answerable,category,expected_source,gold_evidence,label_reason
+Q001,Who shares responsibility for the sustainability of cloud workloads?,true,azure_answerable,markdown\well-architected__sustainability__overview.md,Sustainability for workloads in the cloud is a shared responsibility between the cloud provider and the organization.,Une source et une preuve de référence existent dans le corpus.
+Q002,How much less carbon efficient can on-premises workloads be compared with Azure workloads?,true,azure_answerable,markdown\well-architected__sustainability__overview.md,"running it on-premises, which can be between 50-98% less carbon efficient",Une source et une preuve de référence existent dans le corpus.
+Q003,How do architecture decisions influence the sustainability of an Azure workload?,true,azure_answerable,markdown\well-architected__sustainability__overview.md,your design decisions directly shape how efficiently a workload uses cloud resources,Une source et une preuve de référence existent dans le corpus.
+Q004,What is a sustainable cloud workload?,true,azure_answerable,markdown\well-architected__sustainability__overview.md,"A sustainable workload is designed to minimize unnecessary resource consumption while still meeting business, reliability, security, and performance requirements.",Une source et une preuve de référence existent dans le corpus.
+Q005,Which infrastructure practices can improve both cost optimization and sustainability?,true,azure_answerable,markdown\well-architected__sustainability__overview.md,"Right-sizing infrastructure, using autoscaling effectively, and eliminating idle or redundant resources",Une source et une preuve de référence existent dans le corpus.
+Q006,What type of analytics platform is Azure Databricks?,true,azure_answerable,markdown\well-architected__service-guides__azure-databricks.md,Azure Databricks is an Apache Spark-based analytics platform,Une source et une preuve de référence existent dans le corpus.
+Q007,What types of workloads can teams build with Azure Databricks?,true,azure_answerable,markdown\well-architected__service-guides__azure-databricks.md,"build and deploy data engineering, machine learning, and analytics workloads at scale",Une source et une preuve de référence existent dans le corpus.
+Q008,Which Azure technologies are included in the scope of the Azure Databricks architecture review?,true,azure_answerable,markdown\well-architected__service-guides__azure-databricks.md,"Azure Databricks
+
+Spark
+
+Delta Lake
+
+Unity Catalog
+
+MLflow",Une source et une preuve de référence existent dans le corpus.
+Q009,What is the purpose of the Reliability pillar?,true,azure_answerable,markdown\well-architected__service-guides__azure-databricks.md,The purpose of the Reliability pillar is to provide continued functionality by building enough resilience and the ability to recover fast from failures,Une source et une preuve de référence existent dans le corpus.
+Q010,How should Azure Databricks job execution failures be handled?,true,azure_answerable,markdown\well-architected__service-guides__azure-databricks.md,Implement retry policies with exponential backoff. Use Azure Databricks job orchestration with error handling. Set up appropriate timeout settings.,Une source et une preuve de référence existent dans le corpus.
+Q011,What is a cost model in the Azure Well-Architected Framework?,true,azure_answerable,markdown\well-architected__cost-optimization__cost-model.md,A cost model is an estimate that predicts the combined costs of services and their associated expenses.,Une source et une preuve de référence existent dans le corpus.
+Q012,Which events can interrupt long-running HPC jobs?,true,azure_answerable,markdown\well-architected__hpc__hpc-design-principles.md,"Long-running HPC jobs are vulnerable to infrastructure failures, spot evictions, and maintenance events.",Une source et une preuve de référence existent dans le corpus.
+Q013,What kinds of resources are included in the Azure Architecture Center?,true,azure_answerable,html\en-us-azure-architecture-777fa9b92470.html,"Azure Architecture Center is a catalog of solution ideas, example workloads, reference architectures, technology decision guides, and architecture guides for Azure workloads.",Une source et une preuve de référence existent dans le corpus.
+Q014,What does the Azure Architecture Center help architects explore when building Azure workloads?,true,azure_answerable,html\en-us-azure-architecture-777fa9b92470.html,Explore best practices and patterns for building workloads on Microsoft Azure.,Une source et une preuve de référence existent dans le corpus.
+Q015,What capabilities does Microsoft Foundry provide for generative AI development?,true,azure_answerable,html\en-us_azure_architecture_ai-ml.html,"Microsoft Foundry provides access to a model catalog, agent hosting through Foundry Agent Service, fine-tuning, evaluation tools, and responsible AI capabilities.",Une source et une preuve de référence existent dans le corpus.
+Q016,Which open-source frameworks are supported by Azure Machine Learning?,true,azure_answerable,html\en-us_azure_architecture_ai-ml.html,"Azure Machine Learning supports open-source frameworks like PyTorch, TensorFlow, and scikit-learn.",Une source et une preuve de référence existent dans le corpus.
+Q017,What type of platform is Microsoft Copilot Studio?,true,azure_answerable,html\en-us_azure_architecture_ai-ml.html,"A low-code platform for building, customizing, and deploying AI-powered agents.",Une source et une preuve de référence existent dans le corpus.
+Q018,Which factors should be considered when choosing a database for an Azure workload?,true,azure_answerable,html\en-us_azure_architecture_data-guide.html,"The right database for your scenario depends on your data model, consistency requirements, query patterns, and operational preferences.",Une source et une preuve de référence existent dans le corpus.
+Q019,Which database deployment models are included in the Azure database portfolio?,true,azure_answerable,html\en-us_azure_architecture_data-guide.html,"The Azure database portfolio spans fully managed platform as a service (PaaS) offerings, infrastructure as a service (IaaS) options, and specialized services for specific workload patterns.",Une source et une preuve de référence existent dans le corpus.
+Q020,Why can Azure cloud design patterns be used outside Azure?,true,azure_answerable,html\en-us_azure_architecture_patterns.html,"The following cloud design patterns are technology-agnostic, which makes them suitable for any distributed system.",Une source et une preuve de référence existent dans le corpus.
+Q021,What should guide the selection of a cloud design pattern?,true,azure_answerable,html\en-us_azure_architecture_patterns.html,"Choose a pattern based on the problem you need to solve, not the technology you want to use.",Une source et une preuve de référence existent dans le corpus.
+Q022,What information can users find when browsing Azure architectures?,true,azure_answerable,html\en-us_azure_architecture_browse.html,"Find architecture diagrams and technology descriptions for reference architectures, real world examples of cloud architectures, and solution ideas for common workloads on Azure.",Une source et une preuve de référence existent dans le corpus.
+Q023,Does cloud adoption require an organization to move all applications out of its local datacenter?,true,azure_answerable,pdf\enterprise_cloud_strategy.pdf,"the cloud is not an “either/or” proposition. It is certainly possible, and indeed in many cases desirable, to leave some applications running in a local, traditional datacenter while others are moved to the cloud.",Une source et une preuve de référence existent dans le corpus.
+Q024,What are the five modernization approaches described in Enterprise Cloud Strategy?,true,azure_answerable,pdf\enterprise_cloud_strategy.pdf,"the most convenient way to think about modernization, which is commonly called “the five R’s”",Une source et une preuve de référence existent dans le corpus.
+Q025,What does rehosting a legacy application involve?,true,azure_answerable,pdf\enterprise_cloud_strategy.pdf,"Rehosting involves keeping the same basic functionality, but moving it to the cloud where it is easier to manage and less expensive to run.",Une source et une preuve de référence existent dans le corpus.
+Q026,What initial responsibility was assigned to the Cloud Strategy Team?,true,azure_answerable,pdf\enterprise_cloud_strategy.pdf,The Cloud Strategy Team was chartered to lead the cloud analysis and experimentation phase previously described (see Figure 5-2).,Une source et une preuve de référence existent dans le corpus.
+Q027,What type of storage service is Azure Table Storage?,true,azure_answerable,pdf\azure_serverless_computing_cookbook.pdf,"Azure Table storage, a NoSQL key-value persistent medium for storing semi-structured data.",Une source et une preuve de référence existent dans le corpus.
+Q028,How does a SendGrid output binding authenticate when sending emails?,true,azure_answerable,pdf\azure_serverless_computing_cookbook.pdf,The SendGrid output (message) bindings will use the API key provided in the App settings to invoke the required APIs of the SendGrid library in order to send the emails.,Une source et une preuve de référence existent dans le corpus.
+Q029,What kind of Azure service is Azure Data Factory?,true,azure_answerable,pdf\azure_serverless_computing_cookbook.pdf,Azure Data Factory is another cloud-native serverless solution from Microsoft Azure.,Une source et une preuve de référence existent dans le corpus.
+Q030,Why can precompiled Azure Functions provide better performance?,true,azure_answerable,pdf\azure_serverless_computing_cookbook.pdf,"Precompiled functions have better performance, as they aren't required to be compiled on the fly.",Une source et une preuve de référence existent dans le corpus.
+U001,Who painted the Mona Lisa?,false,general_knowledge,,,Question artistique sans relation avec la documentation Azure.
+U002,What is the capital city of Brazil?,false,general_knowledge,,,Question géographique hors domaine.
+U003,Who wrote the novel Pride and Prejudice?,false,general_knowledge,,,Question littéraire hors domaine.
+U004,Which country won the 2022 FIFA World Cup?,false,general_knowledge,,,Question sportive hors domaine.
+U005,What is the tallest mountain in Africa?,false,general_knowledge,,,Question géographique hors domaine.
+U006,Who composed The Four Seasons?,false,general_knowledge,,,Question musicale hors domaine.
+U007,What language is primarily spoken in Argentina?,false,general_knowledge,,,Question linguistique hors domaine.
+U008,In which century was the Eiffel Tower built?,false,general_knowledge,,,Question historique hors domaine.
+U009,What is the largest ocean on Earth?,false,general_knowledge,,,Question géographique hors domaine.
+U010,Who was the first person to walk on the Moon?,false,general_knowledge,,,Question historique hors domaine.
+U011,How does photosynthesis work in green plants?,false,natural_science,,,Sujet de biologie absent du corpus technique.
+U012,What is the function of red blood cells?,false,natural_science,,,Sujet médical et biologique hors domaine.
+U013,Why do earthquakes occur?,false,natural_science,,,Sujet géologique hors domaine.
+U014,What causes ocean tides?,false,natural_science,,,Sujet de physique naturelle hors domaine.
+U015,How do bees produce honey?,false,natural_science,,,Sujet biologique hors domaine.
+U016,What ingredients are needed to make couscous?,false,daily_life,,,Question culinaire hors domaine.
+U017,How should a tomato plant be watered?,false,daily_life,,,Question de jardinage hors domaine.
+U018,What is the traditional recipe for Moroccan mint tea?,false,daily_life,,,Question culinaire hors domaine.
+U019,How long should pasta be cooked?,false,daily_life,,,Question culinaire hors domaine.
+U020,What is the best season for growing strawberries?,false,daily_life,,,Question agricole hors domaine.
+U021,What is Northwind Aerospace's annual travel reimbursement limit?,false,unsupported_company_policy,,,Politique interne fictive absente du corpus.
+U022,How many paid leave days does Fabrikam Mining grant to new employees?,false,unsupported_company_policy,,,Règle RH interne fictive absente du corpus.
+U023,Who is the current safety manager at Adventure Works Manufacturing?,false,unsupported_company_fact,,,Information organisationnelle fictive absente du corpus.
+U024,What is the emergency phone number for Contoso Chemicals Plant 4?,false,unsupported_company_fact,,,Coordonnée interne non présente dans la documentation évaluée.
+U025,"What approval process does Alpine Logistics use for purchases above 10,000 euros?",false,unsupported_company_policy,,,Processus financier interne fictif.
+U026,Which protective gloves are mandatory in Wingtip Energy's laboratory?,false,unsupported_company_policy,,,Consigne HSE propre à une entreprise fictive.
+U027,What is the maintenance interval for conveyor CV-204 at Blue Yonder Mining?,false,unsupported_company_fact,,,Donnée de maintenance interne fictive.
+U028,Where is the assembly point for employees at Litware Factory B?,false,unsupported_company_fact,,,Information d'urgence interne fictive.
+U029,What password rotation period is required by Tailspin Toys' internal security policy?,false,unsupported_company_policy,,,Exigence de sécurité interne fictive.
+U030,Which supplier provides hydraulic hoses for Proseware Industrial Services?,false,unsupported_company_fact,,,Information d'approvisionnement fictive absente du corpus.

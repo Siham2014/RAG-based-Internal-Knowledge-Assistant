@@ -74,9 +74,13 @@ class RerankingSettings:
 @dataclass(frozen=True)
 class ConfidenceSettings:
     enabled: bool
+
     threshold: float | None
     minimum_top1_score: float | None
     minimum_margin: float | None
+    minimum_cosine_similarity: float | None
+    minimum_rrf_score: float | None
+    minimum_supporting_results: int
 
 
 @dataclass(frozen=True)
@@ -125,7 +129,8 @@ def _require_mapping(
 ) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise ValueError(
-            f"La section '{section_name}' doit être un objet YAML."
+            f"La section '{section_name}' doit être "
+            "un objet YAML."
         )
 
     return value
@@ -147,12 +152,24 @@ def _require_text(
     return normalized
 
 
+def _optional_text(
+    value: Any,
+) -> str | None:
+    if value is None:
+        return None
+
+    normalized = str(value).strip()
+
+    return normalized or None
+
+
 def _require_positive_integer(
     value: Any,
     field_name: str,
 ) -> int:
     try:
         normalized = int(value)
+
     except (TypeError, ValueError) as error:
         raise ValueError(
             f"Le champ '{field_name}' doit être un entier."
@@ -160,7 +177,8 @@ def _require_positive_integer(
 
     if normalized <= 0:
         raise ValueError(
-            f"Le champ '{field_name}' doit être supérieur à zéro."
+            f"Le champ '{field_name}' doit être "
+            "supérieur à zéro."
         )
 
     return normalized
@@ -172,6 +190,7 @@ def _require_non_negative_integer(
 ) -> int:
     try:
         normalized = int(value)
+
     except (TypeError, ValueError) as error:
         raise ValueError(
             f"Le champ '{field_name}' doit être un entier."
@@ -179,7 +198,8 @@ def _require_non_negative_integer(
 
     if normalized < 0:
         raise ValueError(
-            f"Le champ '{field_name}' doit être positif ou nul."
+            f"Le champ '{field_name}' doit être "
+            "positif ou nul."
         )
 
     return normalized
@@ -225,10 +245,24 @@ def _optional_float(
 
     try:
         return float(value)
+
     except (TypeError, ValueError) as error:
         raise ValueError(
             f"Le champ '{field_name}' doit être "
             "un nombre ou null."
+        ) from error
+
+
+def _require_float(
+    value: Any,
+    field_name: str,
+) -> float:
+    try:
+        return float(value)
+
+    except (TypeError, ValueError) as error:
+        raise ValueError(
+            f"Le champ '{field_name}' doit être un nombre."
         ) from error
 
 
@@ -249,16 +283,23 @@ def _resolve_project_path(
     return path.resolve()
 
 
+# ============================================================
+# Variables d'environnement
+# ============================================================
+
 def _apply_environment_overrides(
     raw: dict[str, Any],
 ) -> dict[str, Any]:
     """
-    Permet de modifier quelques paramètres sans éditer le YAML.
+    Permet de modifier les principaux paramètres
+    sans éditer settings.yaml.
 
-    Exemples :
-        RAG_COMPANY=company_b
-        RAG_RERANKER_MODEL=cross-encoder/ms-marco-MiniLM-L6-v2
-        RAG_DEVICE=cpu
+    Exemples Windows :
+
+        set RAG_COMPANY=company_b
+        set RAG_DEVICE=cpu
+        set RAG_GENERATION_PROVIDER=openai
+        set RAG_GENERATION_MODEL=gpt-4.1-mini
     """
 
     corpus = raw.setdefault(
@@ -276,12 +317,20 @@ def _apply_environment_overrides(
         {},
     )
 
+    confidence = raw.setdefault(
+        "confidence",
+        {},
+    )
+
     generation = raw.setdefault(
         "generation",
         {},
     )
 
-    overrides = {
+    overrides: dict[
+        str,
+        tuple[dict[str, Any], str],
+    ] = {
         "RAG_COMPANY": (
             corpus,
             "company",
@@ -294,10 +343,6 @@ def _apply_environment_overrides(
             reranking,
             "model_name",
         ),
-        "RAG_DEVICE": (
-            embedding,
-            "device",
-        ),
         "RAG_GENERATION_PROVIDER": (
             generation,
             "provider",
@@ -305,6 +350,18 @@ def _apply_environment_overrides(
         "RAG_GENERATION_MODEL": (
             generation,
             "model_name",
+        ),
+        "RAG_CONFIDENCE_TOP1": (
+            confidence,
+            "minimum_top1_score",
+        ),
+        "RAG_CONFIDENCE_MARGIN": (
+            confidence,
+            "minimum_margin",
+        ),
+        "RAG_CONFIDENCE_RRF": (
+            confidence,
+            "minimum_rrf_score",
         ),
     }
 
@@ -322,6 +379,19 @@ def _apply_environment_overrides(
                 environment_value
             )
 
+    shared_device = os.getenv(
+        "RAG_DEVICE"
+    )
+
+    if shared_device is not None:
+        embedding["device"] = (
+            shared_device
+        )
+
+        reranking["device"] = (
+            shared_device
+        )
+
     return raw
 
 
@@ -335,11 +405,11 @@ def load_settings(
     """
     Charge, valide et retourne la configuration complète.
 
-    Le chemin peut être défini de trois façons :
+    Ordre de sélection :
 
     1. argument settings_path ;
     2. variable RAG_SETTINGS_PATH ;
-    3. config/settings.yaml par défaut.
+    3. config/settings.yaml.
     """
 
     environment_path = os.getenv(
@@ -362,7 +432,9 @@ def load_settings(
             / selected_path
         )
 
-    selected_path = selected_path.resolve()
+    selected_path = (
+        selected_path.resolve()
+    )
 
     if not selected_path.is_file():
         raise FileNotFoundError(
@@ -374,7 +446,9 @@ def load_settings(
         "r",
         encoding="utf-8",
     ) as file:
-        raw = yaml.safe_load(file)
+        raw = yaml.safe_load(
+            file
+        )
 
     if raw is None:
         raise ValueError(
@@ -443,7 +517,9 @@ def load_settings(
     settings = ApplicationSettings(
         project=ProjectSettings(
             name=_require_text(
-                project_raw.get("name"),
+                project_raw.get(
+                    "name"
+                ),
                 "project.name",
             ),
             environment=_require_text(
@@ -456,7 +532,9 @@ def load_settings(
 
         corpus=CorpusSettings(
             company=_require_text(
-                corpus_raw.get("company"),
+                corpus_raw.get(
+                    "company"
+                ),
                 "corpus.company",
             ),
             processed_directory=(
@@ -464,20 +542,27 @@ def load_settings(
                     corpus_raw.get(
                         "processed_directory"
                     ),
-                    "corpus.processed_directory",
+                    (
+                        "corpus."
+                        "processed_directory"
+                    ),
                 )
             ),
-            chunks_path=_resolve_project_path(
-                corpus_raw.get(
-                    "chunks_path"
-                ),
-                "corpus.chunks_path",
+            chunks_path=(
+                _resolve_project_path(
+                    corpus_raw.get(
+                        "chunks_path"
+                    ),
+                    "corpus.chunks_path",
+                )
             ),
         ),
 
         chunking=ChunkingSettings(
             strategy=_require_text(
-                chunking_raw.get("strategy"),
+                chunking_raw.get(
+                    "strategy"
+                ),
                 "chunking.strategy",
             ),
             chunk_size=(
@@ -540,7 +625,9 @@ def load_settings(
                 )
             ),
             device=_require_text(
-                embedding_raw.get("device"),
+                embedding_raw.get(
+                    "device"
+                ),
                 "embedding.device",
             ),
         ),
@@ -594,7 +681,9 @@ def load_settings(
 
         reranking=RerankingSettings(
             enabled=_require_boolean(
-                reranking_raw.get("enabled"),
+                reranking_raw.get(
+                    "enabled"
+                ),
                 "reranking.enabled",
             ),
             model_name=_require_text(
@@ -620,7 +709,9 @@ def load_settings(
                 )
             ),
             device=_require_text(
-                reranking_raw.get("device"),
+                reranking_raw.get(
+                    "device"
+                ),
                 "reranking.device",
             ),
         ),
@@ -649,11 +740,50 @@ def load_settings(
                     ),
                 )
             ),
-            minimum_margin=_optional_float(
-                confidence_raw.get(
-                    "minimum_margin"
-                ),
-                "confidence.minimum_margin",
+            minimum_margin=(
+                _optional_float(
+                    confidence_raw.get(
+                        "minimum_margin"
+                    ),
+                    (
+                        "confidence."
+                        "minimum_margin"
+                    ),
+                )
+            ),
+            minimum_cosine_similarity=(
+                _optional_float(
+                    confidence_raw.get(
+                        "minimum_cosine_similarity"
+                    ),
+                    (
+                        "confidence."
+                        "minimum_cosine_similarity"
+                    ),
+                )
+            ),
+            minimum_rrf_score=(
+                _optional_float(
+                    confidence_raw.get(
+                        "minimum_rrf_score"
+                    ),
+                    (
+                        "confidence."
+                        "minimum_rrf_score"
+                    ),
+                )
+            ),
+            minimum_supporting_results=(
+                _require_non_negative_integer(
+                    confidence_raw.get(
+                        "minimum_supporting_results",
+                        0,
+                    ),
+                    (
+                        "confidence."
+                        "minimum_supporting_results"
+                    ),
+                )
             ),
         ),
 
@@ -670,22 +800,17 @@ def load_settings(
                 ),
                 "generation.provider",
             ),
-            model_name=(
-                str(
-                    generation_raw[
-                        "model_name"
-                    ]
-                ).strip()
-                if generation_raw.get(
+            model_name=_optional_text(
+                generation_raw.get(
                     "model_name"
-                ) is not None
-                else None
+                )
             ),
-            temperature=float(
+            temperature=_require_float(
                 generation_raw.get(
                     "temperature",
                     0.0,
-                )
+                ),
+                "generation.temperature",
             ),
             max_tokens=(
                 _require_positive_integer(
@@ -713,12 +838,18 @@ def load_settings(
 
         api=APISettings(
             host=_require_text(
-                api_raw.get("host"),
+                api_raw.get(
+                    "host"
+                ),
                 "api.host",
             ),
-            port=_require_positive_integer(
-                api_raw.get("port"),
-                "api.port",
+            port=(
+                _require_positive_integer(
+                    api_raw.get(
+                        "port"
+                    ),
+                    "api.port",
+                )
             ),
         ),
 
@@ -731,6 +862,10 @@ def load_settings(
 
     return settings
 
+
+# ============================================================
+# Validation entre sections
+# ============================================================
 
 def _validate_cross_section_rules(
     settings: ApplicationSettings,
@@ -766,21 +901,25 @@ def _validate_cross_section_rules(
             "dépasser retrieval.hybrid_top_k."
         )
 
-    if settings.embedding.device not in {
+    allowed_devices = {
         "auto",
         "cpu",
         "cuda",
-    }:
+    }
+
+    if (
+        settings.embedding.device
+        not in allowed_devices
+    ):
         raise ValueError(
             "embedding.device doit être "
             "auto, cpu ou cuda."
         )
 
-    if settings.reranking.device not in {
-        "auto",
-        "cpu",
-        "cuda",
-    }:
+    if (
+        settings.reranking.device
+        not in allowed_devices
+    ):
         raise ValueError(
             "reranking.device doit être "
             "auto, cpu ou cuda."
@@ -792,14 +931,88 @@ def _validate_cross_section_rules(
             "dimension d'embedding égale à 768."
         )
 
-    if not 0.0 <= (
-        settings.generation.temperature
-    ) <= 2.0:
+    if not (
+        0.0
+        <= settings.generation.temperature
+        <= 2.0
+    ):
         raise ValueError(
             "generation.temperature doit être "
             "comprise entre 0 et 2."
         )
 
+    confidence = settings.confidence
+
+    probability_fields = {
+        "confidence.threshold": (
+            confidence.threshold
+        ),
+        "confidence.minimum_top1_score": (
+            confidence.minimum_top1_score
+        ),
+        "confidence.minimum_margin": (
+            confidence.minimum_margin
+        ),
+        "confidence.minimum_cosine_similarity": (
+            confidence.minimum_cosine_similarity
+        ),
+    }
+
+    for field_name, value in (
+        probability_fields.items()
+    ):
+        if (
+            value is not None
+            and not 0.0 <= value <= 1.0
+        ):
+            raise ValueError(
+                f"{field_name} doit être compris "
+                "entre 0 et 1."
+            )
+
+    if (
+        confidence.minimum_rrf_score
+        is not None
+        and confidence.minimum_rrf_score < 0.0
+    ):
+        raise ValueError(
+            "confidence.minimum_rrf_score doit "
+            "être positif ou nul."
+        )
+
+    if (
+        confidence.enabled
+        and confidence.minimum_top1_score
+        is None
+    ):
+        raise ValueError(
+            "confidence.minimum_top1_score est requis "
+            "lorsque le Confidence Gate est activé."
+        )
+
+    if (
+        confidence.enabled
+        and confidence.minimum_margin
+        is None
+    ):
+        raise ValueError(
+            "confidence.minimum_margin est requis "
+            "lorsque le Confidence Gate est activé."
+        )
+
+    if (
+        settings.generation.enabled
+        and not settings.generation.model_name
+    ):
+        raise ValueError(
+            "generation.model_name est requis lorsque "
+            "la génération est activée."
+        )
+
+
+# ============================================================
+# Cache de configuration
+# ============================================================
 
 _SETTINGS_CACHE: ApplicationSettings | None = None
 
@@ -810,8 +1023,8 @@ def get_settings(
     """
     Retourne une instance mise en cache.
 
-    Dans FastAPI, la configuration sera ainsi chargée
-    une seule fois au démarrage.
+    Dans FastAPI, la configuration est chargée une seule fois
+    au démarrage, sauf si force_reload=True.
     """
 
     global _SETTINGS_CACHE
@@ -820,6 +1033,8 @@ def get_settings(
         _SETTINGS_CACHE is None
         or force_reload
     ):
-        _SETTINGS_CACHE = load_settings()
+        _SETTINGS_CACHE = (
+            load_settings()
+        )
 
     return _SETTINGS_CACHE

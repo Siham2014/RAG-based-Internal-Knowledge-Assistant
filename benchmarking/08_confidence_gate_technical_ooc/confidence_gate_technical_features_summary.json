@@ -1,0 +1,17 @@
+{
+  "number_of_questions": 60,
+  "number_of_answerable_questions": 30,
+  "number_of_unanswerable_questions": 30,
+  "model_load_time_ms": 12714.6861,
+  "warmup_time_ms": 12767.8225,
+  "mean_total_time_ms": 6700.4716,
+  "median_total_time_ms": 6662.9083,
+  "answerable_mean_top1_score": 0.946141,
+  "answerable_median_top1_score": 0.982183,
+  "unanswerable_mean_top1_score": 0.165851,
+  "unanswerable_median_top1_score": 0.039705,
+  "answerable_mean_rrf_score": 0.03170423,
+  "unanswerable_mean_rrf_score": 0.02230725,
+  "answerable_mean_margin": 0.212414,
+  "unanswerable_mean_margin": 0.099822
+}

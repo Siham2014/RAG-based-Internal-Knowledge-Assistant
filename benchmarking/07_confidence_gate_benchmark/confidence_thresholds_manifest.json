@@ -1,0 +1,88 @@
+{
+  "benchmark_name": "confidence_gate_threshold_search",
+  "created_at_utc": "2026-08-05T14:22:34.936119+00:00",
+  "number_of_questions": 60,
+  "number_of_configurations": 8400,
+  "selection_priority": [
+    "minimum_false_acceptance_rate",
+    "maximum_f1_score",
+    "maximum_accuracy",
+    "minimum_balanced_error_rate",
+    "maximum_recall",
+    "maximum_coverage"
+  ],
+  "threshold_grids": {
+    "top1": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "margin": [
+      0.0,
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3
+    ],
+    "cosine": [
+      null,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85
+    ],
+    "rrf": [
+      null,
+      0.015,
+      0.02,
+      0.025,
+      0.03
+    ],
+    "supporting_results": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "files": {
+    "features": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\07_confidence_gate_benchmark\\confidence_gate_features.csv",
+    "results": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\07_confidence_gate_benchmark\\confidence_thresholds_results.csv",
+    "top20": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\07_confidence_gate_benchmark\\confidence_thresholds_top20.csv",
+    "best": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\07_confidence_gate_benchmark\\confidence_thresholds_best.json"
+  },
+  "best_result": {
+    "minimum_top1_score": 0.3,
+    "minimum_margin": 0.0,
+    "minimum_cosine_similarity": null,
+    "minimum_rrf_score": 0.015,
+    "minimum_supporting_results": 0,
+    "true_positive": 30,
+    "true_negative": 30,
+    "false_positive": 0,
+    "false_negative": 0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "f1_score": 1.0,
+    "false_acceptance_rate": 0.0,
+    "false_rejection_rate": 0.0,
+    "coverage": 0.5,
+    "rejection_rate": 0.5,
+    "number_of_questions": 60,
+    "number_of_accepted_questions": 30,
+    "number_of_rejected_questions": 30,
+    "balanced_error_rate": 0.0
+  }
+}

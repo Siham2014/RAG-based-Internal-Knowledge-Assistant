@@ -1,0 +1,14 @@
+{
+  "benchmark_name": "technical_out_of_corpus_scan",
+  "chunks_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\data\\chunks\\fixed_1024_chunks.jsonl",
+  "number_of_chunks": 1478,
+  "number_of_candidates": 34,
+  "number_of_absent_technologies": 31,
+  "number_of_present_technologies": 3,
+  "search_method": "case-insensitive exact alias matching over content, source, title and metadata",
+  "files": {
+    "all_results": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\08_confidence_gate_technical_ooc\\technology_presence_results.csv",
+    "absent_results": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\08_confidence_gate_technical_ooc\\absent_technologies.csv",
+    "present_results": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\08_confidence_gate_technical_ooc\\present_technologies.csv"
+  }
+}

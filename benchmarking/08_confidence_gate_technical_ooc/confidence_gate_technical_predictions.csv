@@ -1,0 +1,61 @@
+﻿id,question,category,expected_answerable,predicted_answerable,correct,top1_reranker_score,reranker_margin,top1_cosine_similarity,top1_rrf_score,supporting_results_count
+Q001,Who shares responsibility for the sustainability of cloud workloads?,azure_answerable,True,True,True,0.98116243,0.64525354,0.88320071,0.0325224749,1
+Q002,How much less carbon efficient can on-premises workloads be compared with Azure workloads?,azure_answerable,True,True,True,0.99976367,0.01163918,0.89265892,0.0327868852,2
+Q003,How do architecture decisions influence the sustainability of an Azure workload?,azure_answerable,True,True,True,0.99929368,0.08053243,0.92013902,0.0327868852,5
+Q004,What is a sustainable cloud workload?,azure_answerable,True,True,True,0.99850261,0.24381739,0.89522732,0.0325224749,2
+Q005,Which infrastructure practices can improve both cost optimization and sustainability?,azure_answerable,True,True,True,0.98684406,0.01256526,0.86524105,0.0315136476,5
+Q006,What type of analytics platform is Azure Databricks?,azure_answerable,True,True,True,0.99402964,0.00312948,0.89964957,0.0325224749,5
+Q007,What types of workloads can teams build with Azure Databricks?,azure_answerable,True,True,True,0.92711246,0.03532904,0.87616926,0.030798389,5
+Q008,Which Azure technologies are included in the scope of the Azure Databricks architecture review?,azure_answerable,True,True,True,0.99758291,0.25192887,0.86903557,0.0327868852,4
+Q009,What is the purpose of the Reliability pillar?,azure_answerable,True,True,True,0.94947559,0.83808818,0.81957759,0.0320184426,1
+Q010,How should Azure Databricks job execution failures be handled?,azure_answerable,True,True,True,0.95129192,0.08757746,0.8496894,0.0284416354,5
+Q011,What is a cost model in the Azure Well-Architected Framework?,azure_answerable,True,True,True,0.99770701,0.86386761,0.87436492,0.0325224749,1
+Q012,Which events can interrupt long-running HPC jobs?,azure_answerable,True,True,True,0.96709913,0.86251692,0.85700245,0.0325224749,1
+Q013,What kinds of resources are included in the Azure Architecture Center?,azure_answerable,True,True,True,0.83613974,0.118662,0.86912753,0.0320020481,2
+Q014,What does the Azure Architecture Center help architects explore when building Azure workloads?,azure_answerable,True,True,True,0.99801362,0.00069851,0.88041729,0.0322580645,5
+Q015,What capabilities does Microsoft Foundry provide for generative AI development?,azure_answerable,True,True,True,0.98185754,0.22230929,0.85955742,0.0325224749,3
+Q016,Which open-source frameworks are supported by Azure Machine Learning?,azure_answerable,True,True,True,0.99863869,0.00326788,0.85775628,0.0325224749,4
+Q017,What type of platform is Microsoft Copilot Studio?,azure_answerable,True,True,True,0.83867931,0.34514248,0.84651869,0.0327868852,1
+Q018,Which factors should be considered when choosing a database for an Azure workload?,azure_answerable,True,True,True,0.96261263,0.07653654,0.87069232,0.0306217859,3
+Q019,Which database deployment models are included in the Azure database portfolio?,azure_answerable,True,True,True,0.98778665,0.18714339,0.84341704,0.0320020481,4
+Q020,Why can Azure cloud design patterns be used outside Azure?,azure_answerable,True,True,True,0.96443951,0.03155953,0.85520306,0.0315449578,5
+Q021,What should guide the selection of a cloud design pattern?,azure_answerable,True,True,True,0.78738058,0.19371849,0.88276274,0.0255677545,3
+Q022,What information can users find when browsing Azure architectures?,azure_answerable,True,True,True,0.99377006,0.06421208,0.85527289,0.0322664585,3
+Q023,Does cloud adoption require an organization to move all applications out of its local datacenter?,azure_answerable,True,True,True,0.94838977,0.52995285,0.83708341,0.0314980159,1
+Q024,What are the five modernization approaches described in Enterprise Cloud Strategy?,azure_answerable,True,True,True,0.73758322,0.36769971,0.83046581,0.0294181268,1
+Q025,What does rehosting a legacy application involve?,azure_answerable,True,True,True,0.99633718,0.0039351,0.88401789,0.0327868852,3
+Q026,What initial responsibility was assigned to the Cloud Strategy Team?,azure_answerable,True,True,True,0.70720571,0.06139094,0.83302444,0.0294691224,4
+Q027,What type of storage service is Azure Table Storage?,azure_answerable,True,True,True,0.91570795,0.08358896,0.85487093,0.0320184426,5
+Q028,How does a SendGrid output binding authenticate when sending emails?,azure_answerable,True,True,True,0.99842715,0.00132835,0.91154819,0.0327868852,5
+Q029,What kind of Azure service is Azure Data Factory?,azure_answerable,True,True,True,0.98250914,0.03620291,0.88010175,0.0325224749,4
+Q030,Why can precompiled Azure Functions provide better performance?,azure_answerable,True,True,True,0.99887496,0.10883766,0.89456362,0.0327868852,3
+T001,How do I configure a VLAN on a Cisco IOS switch?,technical_networking,False,False,True,0.07688442,0.00363396,0.79485467,0.0153846154,0
+T002,How do I configure OSPF routing on Juniper JunOS?,technical_networking,False,False,True,0.00723104,0.00239791,0.78747958,0.0243937854,0
+T003,How do I create a firewall rule in MikroTik RouterOS?,technical_networking,False,False,True,0.04715298,0.01246764,0.79018083,0.0275009228,0
+T004,How do I configure an IPsec VPN on a FortiGate firewall?,technical_network_security,False,False,True,0.056038,0.03081995,0.80595704,0.0308861962,0
+T005,How do I configure a site-to-site VPN with pfSense?,technical_network_security,False,True,False,0.46947181,0.00870764,0.82110549,0.0317460317,0
+T006,How do I install VMware ESXi on a physical server?,technical_virtualization,False,False,True,0.05416418,0.04929247,0.79674628,0.027820122,0
+T007,How do I add an ESXi host to VMware vCenter?,technical_virtualization,False,False,True,0.00513004,0.00256961,0.8024708,0.0151515152,0
+T008,How do I create a virtual machine in Proxmox VE?,technical_virtualization,False,False,True,0.00106155,0.000227,0.80692334,0.0151515152,0
+T009,How do I create a virtual machine in XenServer?,technical_virtualization,False,False,True,0.01152979,0.00562407,,0.0144927536,0
+T010,How do I configure Hyper-V Replica between two hosts?,technical_virtualization,False,False,True,0.00042816,1.235e-05,,0.0147058824,0
+T011,How do I create a declarative pipeline in Jenkins?,technical_devops,False,False,True,0.00995684,0.00434484,0.80661297,0.025739237,0
+T012,How do I register a runner for GitLab CI/CD?,technical_devops,False,True,False,0.42484868,0.30907153,0.81670147,0.0158730159,0
+T013,How do I configure a build agent in TeamCity?,technical_devops,False,False,True,0.03982979,0.0209447,0.80492921,0.0298276624,0
+T014,How do I create a deployment plan in Atlassian Bamboo?,technical_devops,False,True,False,0.68705916,0.60394674,,0.015625,1
+T015,How do I synchronize an application with Argo CD?,technical_devops,False,False,True,0.00804614,0.00313933,,0.0163934426,0
+T016,How do I configure a MariaDB Galera Cluster?,technical_database,False,True,False,0.99967504,0.00922883,0.79942694,0.0226549574,5
+T017,How do I create a database and table space in IBM Db2?,technical_database,False,False,True,0.01488451,0.004496,0.8139621,0.0277569392,0
+T018,How do I configure PostgreSQL streaming replication?,technical_database,False,True,False,0.79923826,0.77132242,0.83138747,0.0312805474,1
+T019,How do I register a Linux server with Red Hat Satellite?,technical_system_administration,False,False,True,0.01078568,0.00735118,0.80145938,0.0163934426,0
+T020,How do I create and launch a job template in Ansible Tower?,technical_automation,False,False,True,0.00447139,0.00345365,0.80561519,0.0258937521,0
+T021,How do I deploy an agent with Puppet Enterprise?,technical_automation,False,False,True,0.04970696,0.04603509,0.79191828,0.0260770975,0
+T022,How do I bootstrap a node with Chef Infra?,technical_automation,False,False,True,0.00100966,7.158e-05,0.80275168,0.0294623656,0
+T023,How do I create a project in Red Hat OpenShift?,technical_containers,False,True,False,0.93649656,0.91624447,0.80285895,0.0281913838,1
+T024,How do I import a Kubernetes cluster into Rancher?,technical_containers,False,False,True,0.04350686,0.04021908,,0.0149253731,0
+T025,How do I submit a job to a HashiCorp Nomad cluster?,technical_containers,False,False,True,0.00031073,3.635e-05,0.79825532,0.0163934426,0
+T026,How do I build and run a container using Podman?,technical_containers,False,False,True,0.03958056,0.00622882,0.80699766,0.0243938498,0
+T027,How do I configure a host for monitoring in Zabbix?,technical_monitoring,False,False,True,0.01918646,0.01252957,0.80337763,0.0153846154,0
+T028,How do I define a service check in Nagios Core?,technical_monitoring,False,False,True,0.03572186,0.02608044,0.80556619,0.0161290323,0
+T029,How do I create a log input in Graylog?,technical_logging,False,False,True,0.05447223,0.03723833,0.82788265,0.0327868852,0
+T030,How do I create an index and ingest logs into Splunk Enterprise?,technical_logging,False,False,True,0.06764058,0.05692553,0.806021,0.0208022189,0

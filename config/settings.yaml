@@ -38,16 +38,19 @@ reranking:
 
 confidence:
   enabled: true
-  threshold: null
-  minimum_top1_score: null
-  minimum_margin: null
+  threshold: 0.30
+  minimum_top1_score: 0.30
+  minimum_margin: 0.00
+  minimum_cosine_similarity: null
+  minimum_rrf_score: 0.015
+  minimum_supporting_results: 0
 
 generation:
-  enabled: false
-  provider: local
-  model_name: null
+  enabled: true
+  provider: mock
+  model_name: mock-rag-generator
   temperature: 0.0
-  max_tokens: 500
+  max_tokens: 250
 
 storage:
   bm25_index_path: indexes/lexical/bm25_index.db

@@ -1,0 +1,17 @@
+{
+  "benchmark_name": "confidence_gate_technical_ooc_feature_collection",
+  "created_at_utc": "2026-08-05T14:57:34.874335+00:00",
+  "company": "azure",
+  "settings_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\config\\settings.yaml",
+  "number_of_questions": 60,
+  "embedding_model": "intfloat/e5-base-v2",
+  "reranker_model": "BAAI/bge-reranker-base",
+  "candidate_k": 50,
+  "hybrid_top_k": 20,
+  "final_top_k": 5,
+  "files": {
+    "questions": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\08_confidence_gate_technical_ooc\\confidence_gate_technical_questions.csv",
+    "features": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\08_confidence_gate_technical_ooc\\confidence_gate_technical_features.csv",
+    "summary": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\08_confidence_gate_technical_ooc\\confidence_gate_technical_features_summary.json"
+  }
+}

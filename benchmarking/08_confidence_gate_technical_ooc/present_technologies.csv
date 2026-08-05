@@ -1,0 +1,4 @@
+﻿technology_key,technology,category,aliases_checked,present_in_corpus,matching_chunks,matched_aliases,example_sources
+oracle_database,Oracle Database,database,Oracle Database | Oracle DB | Oracle RAC | Oracle Data Guard,True,4,Oracle Database,en-us_azure_architecture.html | en-us-azure-architecture-777fa9b92470.html | en-us_azure_architecture_data-guide.html
+sap_hana,SAP HANA,database,SAP HANA | HANA Database,True,4,SAP HANA,enterprise_cloud_strategy.pdf
+docker_swarm,Docker Swarm,containers,Docker Swarm | Swarm Mode,True,1,Docker Swarm,enterprise_cloud_strategy.pdf
