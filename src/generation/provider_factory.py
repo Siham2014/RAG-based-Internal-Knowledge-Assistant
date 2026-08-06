@@ -5,6 +5,9 @@ from typing import Any
 from src.generation.base import (
     BaseLLMProvider,
 )
+from src.generation.huggingface_provider import (
+    HuggingFaceProvider,
+)
 from src.generation.mock_provider import (
     MockLLMProvider,
 )
@@ -12,10 +15,8 @@ from src.generation.mock_provider import (
 
 class LLMProviderFactory:
     """
-    Fabrique le fournisseur LLM demandé.
-
-    Les fournisseurs sont sélectionnés par leur nom,
-    sans modifier le pipeline RAG.
+    Fabrique un fournisseur LLM à partir
+    du nom défini dans settings.yaml.
     """
 
     _PROVIDERS: dict[
@@ -23,6 +24,9 @@ class LLMProviderFactory:
         type[BaseLLMProvider],
     ] = {
         "mock": MockLLMProvider,
+        "huggingface": (
+            HuggingFaceProvider
+        ),
     }
 
     @classmethod
@@ -33,17 +37,14 @@ class LLMProviderFactory:
             BaseLLMProvider
         ],
     ) -> None:
-        """
-        Enregistre dynamiquement un nouveau fournisseur.
-        """
-
         normalized_name = str(
             provider_name
         ).strip().lower()
 
         if not normalized_name:
             raise ValueError(
-                "provider_name ne peut pas être vide."
+                "provider_name ne peut pas "
+                "être vide."
             )
 
         if not issubclass(
@@ -51,8 +52,8 @@ class LLMProviderFactory:
             BaseLLMProvider,
         ):
             raise TypeError(
-                "provider_class doit hériter de "
-                "BaseLLMProvider."
+                "provider_class doit hériter "
+                "de BaseLLMProvider."
             )
 
         cls._PROVIDERS[
@@ -63,10 +64,6 @@ class LLMProviderFactory:
     def available_providers(
         cls,
     ) -> tuple[str, ...]:
-        """
-        Retourne les fournisseurs actuellement disponibles.
-        """
-
         return tuple(
             sorted(
                 cls._PROVIDERS.keys()
@@ -79,17 +76,14 @@ class LLMProviderFactory:
         provider_name: str,
         **provider_kwargs: Any,
     ) -> BaseLLMProvider:
-        """
-        Crée un fournisseur à partir de son nom.
-        """
-
         normalized_name = str(
             provider_name
         ).strip().lower()
 
         if not normalized_name:
             raise ValueError(
-                "provider_name ne peut pas être vide."
+                "provider_name ne peut pas "
+                "être vide."
             )
 
         provider_class = (
@@ -104,9 +98,10 @@ class LLMProviderFactory:
             )
 
             raise ValueError(
-                "Fournisseur LLM non disponible : "
-                f"{provider_name}. "
-                f"Fournisseurs disponibles : {available}."
+                "Fournisseur LLM non "
+                f"disponible : {provider_name}. "
+                "Fournisseurs disponibles : "
+                f"{available}."
             )
 
         return provider_class(

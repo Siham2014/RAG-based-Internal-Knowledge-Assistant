@@ -5,6 +5,14 @@ from src.generation.citation_validator import (
     CitationValidationResult,
     CitationValidator,
 )
+from src.generation.huggingface_provider import (
+    HuggingFaceProvider,
+)
+from src.generation.llm_manager import (
+    LLMGenerationError,
+    LLMManager,
+    LLMProviderAttempt,
+)
 from src.generation.mock_provider import (
     MockLLMProvider,
 )
@@ -31,6 +39,10 @@ __all__ = [
     "GenerationRequest",
     "GenerationResponse",
     "GenerationUsage",
+    "HuggingFaceProvider",
+    "LLMGenerationError",
+    "LLMManager",
+    "LLMProviderAttempt",
     "LLMProviderFactory",
     "MockLLMProvider",
     "RAGPromptBuilder",

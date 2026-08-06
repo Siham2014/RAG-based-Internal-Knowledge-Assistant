@@ -10,15 +10,15 @@ from src.generation.models import (
 )
 
 
-CITATION_PATTERN = re.compile(
-    r"\[([^\[\]:]+):([^\[\]]+)\]"
+BRACKET_PATTERN = re.compile(
+    r"\[([^\[\]]+)\]"
 )
 
 
 @dataclass(frozen=True)
 class CitationValidationResult:
     """
-    Résultat de la validation des citations d'une réponse.
+    Résultat de la validation des citations.
     """
 
     valid: bool
@@ -51,12 +51,19 @@ class CitationValidationResult:
 
 class CitationValidator:
     """
-    Vérifie que les citations produites par le générateur
-    correspondent uniquement aux contextes autorisés.
+    Vérifie que les citations générées correspondent
+    aux contextes réellement transmis au modèle.
 
-    Format attendu :
+    Le validateur accepte :
 
-        [source:chunk_id]
+    - la citation exacte ;
+    - certains préfixes ajoutés par le modèle, comme
+      ``source:`` ou ``citation:`` ;
+    - certaines variations sûres de l'extension dans
+      l'identifiant du chunk, comme ``__md__chunk_0``.
+
+    Une citation n'est acceptée que si sa version normalisée
+    correspond exactement à une citation autorisée.
     """
 
     def __init__(
@@ -77,11 +84,97 @@ class CitationValidator:
         )
 
     @staticmethod
+    def authorized_citations(
+        contexts: tuple[
+            GenerationContext,
+            ...,
+        ],
+    ) -> tuple[str, ...]:
+        """
+        Retourne les citations autorisées provenant
+        des contextes transmis au LLM.
+        """
+
+        return tuple(
+            context.citation_id
+            for context in contexts
+        )
+
+    @staticmethod
+    def _normalize_inner_text(
+        inner_text: str,
+    ) -> str:
+        """
+        Retire uniquement certains préfixes ajoutés
+        par les modèles.
+
+        Exemple :
+
+            source: document.md:chunk_0
+
+        devient :
+
+            document.md:chunk_0
+        """
+
+        normalized = str(
+            inner_text or ""
+        ).strip()
+
+        normalized = re.sub(
+            r"^(?:source|citation|reference|ref)\s*:\s*",
+            "",
+            normalized,
+            flags=re.IGNORECASE,
+        )
+
+        return normalized.strip()
+
+    @staticmethod
+    def _canonicalize_citation(
+        citation: str,
+    ) -> str:
+        """
+        Normalise uniquement certaines variations sûres
+        introduites par les modèles de langage.
+
+        Exemple :
+
+            overview__md__chunk_0
+
+        devient :
+
+            overview.md__chunk_0
+        """
+
+        normalized = str(
+            citation or ""
+        ).strip()
+
+        replacements = {
+            "__md__chunk_": ".md__chunk_",
+            "__pdf__chunk_": ".pdf__chunk_",
+            "__html__chunk_": ".html__chunk_",
+            "__htm__chunk_": ".htm__chunk_",
+            "__txt__chunk_": ".txt__chunk_",
+        }
+
+        for incorrect, correct in replacements.items():
+            normalized = normalized.replace(
+                incorrect,
+                correct,
+            )
+
+        return normalized
+
+    @classmethod
     def extract_citations(
+        cls,
         answer: str,
     ) -> tuple[str, ...]:
         """
-        Extrait toutes les citations présentes dans une réponse.
+        Extrait les éléments entre crochets et normalise
+        les préfixes de forme connus.
         """
 
         normalized_answer = str(
@@ -90,41 +183,24 @@ class CitationValidator:
 
         citations: list[str] = []
 
-        for match in CITATION_PATTERN.finditer(
+        for match in BRACKET_PATTERN.finditer(
             normalized_answer
         ):
-            source = match.group(1).strip()
-            chunk_id = match.group(2).strip()
-
-            citation = (
-                f"[{source}:{chunk_id}]"
+            inner_text = cls._normalize_inner_text(
+                match.group(1)
             )
+
+            if ":" not in inner_text:
+                continue
+
+            citation = f"[{inner_text}]"
 
             if citation not in citations:
                 citations.append(
                     citation
                 )
 
-        return tuple(
-            citations
-        )
-
-    @staticmethod
-    def authorized_citations(
-        contexts: tuple[
-            GenerationContext,
-            ...,
-        ],
-    ) -> tuple[str, ...]:
-        """
-        Retourne les citations autorisées à partir
-        des contextes transmis au LLM.
-        """
-
-        return tuple(
-            context.citation_id
-            for context in contexts
-        )
+        return tuple(citations)
 
     def validate_answer(
         self,
@@ -135,7 +211,7 @@ class CitationValidator:
         ],
     ) -> CitationValidationResult:
         """
-        Valide les citations d'un texte généré.
+        Valide les citations présentes dans une réponse.
         """
 
         if not str(answer).strip():
@@ -161,26 +237,37 @@ class CitationValidator:
                 ),
             )
 
-        detected = self.extract_citations(
+        raw_detected = self.extract_citations(
             answer
         )
 
-        authorized = set(
+        detected = tuple(
+            self._canonicalize_citation(
+                citation
+            )
+            for citation in raw_detected
+        )
+
+        authorized_ordered = (
             self.authorized_citations(
                 contexts
             )
         )
 
+        authorized_set = set(
+            authorized_ordered
+        )
+
         valid_citations = tuple(
             citation
             for citation in detected
-            if citation in authorized
+            if citation in authorized_set
         )
 
         invalid_citations = tuple(
             citation
             for citation in detected
-            if citation not in authorized
+            if citation not in authorized_set
         )
 
         if (
@@ -189,11 +276,11 @@ class CitationValidator:
         ):
             return CitationValidationResult(
                 valid=False,
-                detected_citations=detected,
-                valid_citations=valid_citations,
-                invalid_citations=invalid_citations,
-                missing_citations=tuple(
-                    authorized
+                detected_citations=(),
+                valid_citations=(),
+                invalid_citations=(),
+                missing_citations=(
+                    authorized_ordered
                 ),
                 reason=(
                     "La réponse ne contient aucune citation."
@@ -205,11 +292,31 @@ class CitationValidator:
                 valid=False,
                 detected_citations=detected,
                 valid_citations=valid_citations,
-                invalid_citations=invalid_citations,
+                invalid_citations=(
+                    invalid_citations
+                ),
                 missing_citations=(),
                 reason=(
                     "La réponse contient une ou plusieurs "
-                    "citations non autorisées."
+                    "citations qui ne correspondent à aucun "
+                    "contexte autorisé."
+                ),
+            )
+
+        if (
+            self.require_at_least_one_citation
+            and not valid_citations
+        ):
+            return CitationValidationResult(
+                valid=False,
+                detected_citations=detected,
+                valid_citations=(),
+                invalid_citations=detected,
+                missing_citations=(
+                    authorized_ordered
+                ),
+                reason=(
+                    "Aucune citation valide n'a été trouvée."
                 ),
             )
 
@@ -221,7 +328,7 @@ class CitationValidator:
             missing_citations=(),
             reason=(
                 "Toutes les citations détectées "
-                "sont valides."
+                "correspondent aux contextes autorisés."
             ),
         )
 
@@ -234,8 +341,17 @@ class CitationValidator:
         ],
     ) -> CitationValidationResult:
         """
-        Valide directement un objet GenerationResponse.
+        Valide directement une GenerationResponse.
         """
+
+        if not isinstance(
+            response,
+            GenerationResponse,
+        ):
+            raise TypeError(
+                "response doit être une instance "
+                "de GenerationResponse."
+            )
 
         return self.validate_answer(
             answer=response.answer,

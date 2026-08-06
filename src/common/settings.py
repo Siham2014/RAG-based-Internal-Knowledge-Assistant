@@ -86,8 +86,21 @@ class ConfidenceSettings:
 @dataclass(frozen=True)
 class GenerationSettings:
     enabled: bool
+
+    # Fournisseur logiciel :
+    # mock, huggingface, openai, ollama...
     provider: str
+
     model_name: str | None
+
+    # Fournisseur d'inférence réel utilisé à l'intérieur
+    # d'un provider comme Hugging Face.
+    #
+    # Exemple :
+    # provider = huggingface
+    # inference_provider = featherless-ai
+    inference_provider: str | None
+
     temperature: float
     max_tokens: int
 
@@ -291,15 +304,16 @@ def _apply_environment_overrides(
     raw: dict[str, Any],
 ) -> dict[str, Any]:
     """
-    Permet de modifier les principaux paramètres
-    sans éditer settings.yaml.
+    Permet de modifier les principaux paramètres sans
+    éditer config/settings.yaml.
 
-    Exemples Windows :
+    Exemples Windows CMD :
 
         set RAG_COMPANY=company_b
         set RAG_DEVICE=cpu
-        set RAG_GENERATION_PROVIDER=openai
-        set RAG_GENERATION_MODEL=gpt-4.1-mini
+        set RAG_GENERATION_PROVIDER=huggingface
+        set RAG_GENERATION_MODEL=google/gemma-2-2b-it
+        set RAG_INFERENCE_PROVIDER=featherless-ai
     """
 
     corpus = raw.setdefault(
@@ -351,6 +365,10 @@ def _apply_environment_overrides(
             generation,
             "model_name",
         ),
+        "RAG_INFERENCE_PROVIDER": (
+            generation,
+            "inference_provider",
+        ),
         "RAG_CONFIDENCE_TOP1": (
             confidence,
             "minimum_top1_score",
@@ -369,28 +387,20 @@ def _apply_environment_overrides(
         section,
         field_name,
     ) in overrides.items():
-
         environment_value = os.getenv(
             environment_name
         )
 
         if environment_value is not None:
-            section[field_name] = (
-                environment_value
-            )
+            section[field_name] = environment_value
 
     shared_device = os.getenv(
         "RAG_DEVICE"
     )
 
     if shared_device is not None:
-        embedding["device"] = (
-            shared_device
-        )
-
-        reranking["device"] = (
-            shared_device
-        )
+        embedding["device"] = shared_device
+        reranking["device"] = shared_device
 
     return raw
 
@@ -432,9 +442,7 @@ def load_settings(
             / selected_path
         )
 
-    selected_path = (
-        selected_path.resolve()
-    )
+    selected_path = selected_path.resolve()
 
     if not selected_path.is_file():
         raise FileNotFoundError(
@@ -805,6 +813,11 @@ def load_settings(
                     "model_name"
                 )
             ),
+            inference_provider=_optional_text(
+                generation_raw.get(
+                    "inference_provider"
+                )
+            ),
             temperature=_require_float(
                 generation_raw.get(
                     "temperature",
@@ -1000,13 +1013,33 @@ def _validate_cross_section_rules(
             "lorsque le Confidence Gate est activé."
         )
 
+    generation = settings.generation
+
     if (
-        settings.generation.enabled
-        and not settings.generation.model_name
+        generation.enabled
+        and not generation.model_name
     ):
         raise ValueError(
             "generation.model_name est requis lorsque "
             "la génération est activée."
+        )
+
+    normalized_generation_provider = (
+        generation.provider
+        .strip()
+        .lower()
+    )
+
+    if (
+        generation.enabled
+        and normalized_generation_provider
+        == "huggingface"
+        and not generation.inference_provider
+    ):
+        raise ValueError(
+            "generation.inference_provider est requis "
+            "lorsque generation.provider vaut "
+            "'huggingface'."
         )
 
 
@@ -1033,8 +1066,6 @@ def get_settings(
         _SETTINGS_CACHE is None
         or force_reload
     ):
-        _SETTINGS_CACHE = (
-            load_settings()
-        )
+        _SETTINGS_CACHE = load_settings()
 
     return _SETTINGS_CACHE
