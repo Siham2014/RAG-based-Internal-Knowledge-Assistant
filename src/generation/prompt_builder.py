@@ -49,6 +49,11 @@ class RAGPromptBuilder:
                 "a source name or chunk identifier. "
                 "An authorized citation may look like: "
                 "[document.md:fixed__document.md__chunk_0]. "
+                "If at least one supplied context directly answers "
+                "the question, you must answer using that context "
+                "and its authorized citation. "
+                "Do not use the refusal sentence when relevant "
+                "evidence is present. "
                 "If the available evidence is insufficient, "
                 "answer exactly with this sentence and nothing else: "
                 f"'{REFUSAL_MESSAGE_EN}'"
@@ -71,6 +76,11 @@ class RAGPromptBuilder:
             "jamais un nom de source ou un identifiant de chunk. "
             "Une citation autorisée peut ressembler à : "
             "[document.md:fixed__document.md__chunk_0]. "
+            "Si au moins un contexte fourni répond directement "
+            "à la question, tu dois répondre en utilisant ce "
+            "contexte et sa citation autorisée. "
+            "N'utilise pas la phrase de refus lorsque des preuves "
+            "pertinentes sont présentes. "
             "Si les preuves disponibles sont insuffisantes, "
             "réponds exactement avec cette phrase et rien d'autre : "
             f"« {REFUSAL_MESSAGE_FR} »"
@@ -89,6 +99,20 @@ class RAGPromptBuilder:
                 "de GenerationRequest."
             )
 
+        normalized_question = str(
+            request.question or ""
+        ).strip()
+
+        if not normalized_question:
+            raise ValueError(
+                "La question ne peut pas être vide."
+            )
+
+        if not request.contexts:
+            raise ValueError(
+                "Au moins un contexte documentaire est requis."
+            )
+
         context_blocks = [
             self._format_context(
                 context
@@ -100,16 +124,25 @@ class RAGPromptBuilder:
             context_blocks
         )
 
-        if request.language.strip().lower() == "en":
+        normalized_language = (
+            str(request.language)
+            .strip()
+            .lower()
+        )
+
+        if normalized_language == "en":
             return (
                 "QUESTION\n"
-                f"{request.question.strip()}\n\n"
+                f"{normalized_question}\n\n"
                 "DOCUMENTARY CONTEXTS\n"
                 f"{contexts_text}\n\n"
                 "FINAL INSTRUCTIONS\n"
                 "- Give a clear and concise answer.\n"
                 "- Use only information explicitly present "
                 "in the contexts.\n"
+                "- If at least one context contains direct evidence, "
+                "answer the question.\n"
+                "- Do not refuse when relevant evidence is present.\n"
                 "- Place each citation immediately after "
                 "the supported statement.\n"
                 "- Copy the authorized citation exactly.\n"
@@ -122,13 +155,17 @@ class RAGPromptBuilder:
 
         return (
             "QUESTION\n"
-            f"{request.question.strip()}\n\n"
+            f"{normalized_question}\n\n"
             "CONTEXTES DOCUMENTAIRES\n"
             f"{contexts_text}\n\n"
             "INSTRUCTIONS FINALES\n"
             "- Produis une réponse claire et concise.\n"
             "- Utilise uniquement les informations explicitement "
             "présentes dans les contextes.\n"
+            "- Si au moins un contexte contient une preuve directe, "
+            "réponds à la question.\n"
+            "- Ne refuse pas lorsque des preuves pertinentes "
+            "sont présentes.\n"
             "- Place chaque citation immédiatement après "
             "l'affirmation qu'elle justifie.\n"
             "- Copie exactement la citation autorisée.\n"
@@ -151,6 +188,15 @@ class RAGPromptBuilder:
         en charge le rôle system, comme certains modèles Gemma,
         est gérée dans HuggingFaceProvider._prepare_messages().
         """
+
+        if not isinstance(
+            request,
+            GenerationRequest,
+        ):
+            raise TypeError(
+                "request doit être une instance "
+                "de GenerationRequest."
+            )
 
         return [
             {
@@ -178,6 +224,15 @@ class RAGPromptBuilder:
             raise TypeError(
                 "context doit être une instance "
                 "de GenerationContext."
+            )
+
+        normalized_content = str(
+            context.content or ""
+        ).strip()
+
+        if not normalized_content:
+            raise ValueError(
+                "Le contenu du contexte ne peut pas être vide."
             )
 
         source_url_line = (
@@ -215,5 +270,5 @@ class RAGPromptBuilder:
             f"{page_line}"
             f"{score_line}"
             "Content:\n"
-            f"{context.content.strip()}"
+            f"{normalized_content}"
         )

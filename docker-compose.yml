@@ -1,13 +1,8 @@
-version: "3.9"
-
 services:
 
   postgres:
-
     image: pgvector/pgvector:pg17
-
     container_name: rag_pgvector
-
     restart: unless-stopped
 
     ports:
@@ -20,6 +15,30 @@ services:
 
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
+
+  rag-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: azure_rag_api
+    restart: unless-stopped
+
+    ports:
+      - "8001:8001"
+
+    env_file:
+      - .env
+
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+
+    depends_on:
+      - postgres
+
 
 volumes:
   postgres_data:

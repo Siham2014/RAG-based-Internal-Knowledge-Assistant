@@ -86,6 +86,12 @@ class ConfidenceSettings:
 @dataclass(frozen=True)
 class GenerationSettings:
     enabled: bool
+    provider: str
+    model_name: str | None
+    inference_provider: str | None
+    temperature: float
+    max_tokens: int
+    context_count: int
 
     # Fournisseur logiciel :
     # mock, huggingface, openai, ollama...
@@ -831,6 +837,15 @@ def load_settings(
                         "max_tokens"
                     ),
                     "generation.max_tokens",
+                )
+            ),
+            context_count=(
+                _require_positive_integer(
+                    generation_raw.get(
+                        "context_count",
+                        2,
+                    ),
+                    "generation.context_count",
                 )
             ),
         ),

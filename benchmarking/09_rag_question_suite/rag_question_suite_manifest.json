@@ -1,0 +1,81 @@
+{
+  "benchmark_name": "rag_question_suite",
+  "created_at_utc": "2026-08-06T15:16:42.120223+00:00",
+  "provider": "huggingface",
+  "model_name": "google/gemma-2-2b-it",
+  "number_of_questions": 10,
+  "questions": [
+    {
+      "question_id": "RAG001",
+      "category": "azure_simple",
+      "question": "Who shares responsibility for the sustainability of cloud workloads?",
+      "expected_answerable": true,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG002",
+      "category": "azure_simple",
+      "question": "What is a sustainable workload on Azure?",
+      "expected_answerable": true,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG003",
+      "category": "azure_simple",
+      "question": "How can unnecessary resource consumption be reduced in an Azure workload?",
+      "expected_answerable": true,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG004",
+      "category": "azure_complex",
+      "question": "How are sustainability, reliability, security, and performance related in Azure workloads?",
+      "expected_answerable": true,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG005",
+      "category": "azure_complex",
+      "question": "Which Azure services can help organizations understand and reduce carbon emissions?",
+      "expected_answerable": true,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG006",
+      "category": "technical_out_of_corpus",
+      "question": "How do I configure Cisco IOS BGP route reflection?",
+      "expected_answerable": false,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG007",
+      "category": "technical_out_of_corpus",
+      "question": "How do I configure a VMware ESXi high-availability cluster?",
+      "expected_answerable": false,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG008",
+      "category": "technical_out_of_corpus",
+      "question": "How do I create a Jenkins declarative pipeline?",
+      "expected_answerable": false,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG009",
+      "category": "general_out_of_domain",
+      "question": "Who won the FIFA World Cup in 2022?",
+      "expected_answerable": false,
+      "language": "en"
+    },
+    {
+      "question_id": "RAG010",
+      "category": "general_out_of_domain",
+      "question": "How do I prepare homemade lasagna?",
+      "expected_answerable": false,
+      "language": "en"
+    }
+  ],
+  "details_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\09_rag_question_suite\\rag_question_suite_details.csv",
+  "summary_path": "C:\\Users\\pc\\Desktop\\Azure corpus\\benchmarking\\09_rag_question_suite\\rag_question_suite_summary.json"
+}

@@ -461,7 +461,7 @@ class RAGPipeline:
         )
 
         generation_contexts = min(
-            DEFAULT_GENERATION_CONTEXTS,
+            generation_settings.context_count,
             application_settings
             .retrieval
             .final_top_k,

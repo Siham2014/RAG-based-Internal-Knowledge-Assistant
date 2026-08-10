@@ -11,6 +11,12 @@ from src.generation.huggingface_provider import (
 from src.generation.mock_provider import (
     MockLLMProvider,
 )
+from src.generation.kimi_provider import (
+    KimiProvider,
+)
+from src.generation.openai_provider import (
+    OpenAIProvider,
+)
 
 
 class LLMProviderFactory:
@@ -27,6 +33,8 @@ class LLMProviderFactory:
         "huggingface": (
             HuggingFaceProvider
         ),
+        "kimi": KimiProvider,
+        "openai": OpenAIProvider,
     }
 
     @classmethod

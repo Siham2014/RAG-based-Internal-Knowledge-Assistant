@@ -30,6 +30,12 @@ from src.generation.prompt_builder import (
 from src.generation.provider_factory import (
     LLMProviderFactory,
 )
+from src.generation.kimi_provider import (
+    KimiProvider,
+)
+from src.generation.openai_provider import (
+    OpenAIProvider,
+)
 
 __all__ = [
     "BaseLLMProvider",
@@ -48,4 +54,6 @@ __all__ = [
     "RAGPromptBuilder",
     "REFUSAL_MESSAGE_EN",
     "REFUSAL_MESSAGE_FR",
+    "KimiProvider",
+    "OpenAIProvider",
 ]
