@@ -58,3 +58,27 @@ desktop.ini
 hyde_reranking_dataset.zip
 structure_src.txt
 data/query_rewriting/*.npy.env
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Temporary frontend prototype
+frontend_test/
+
+# SQLite temporary files
+*.db-shm
+*.db-wal
+
+# Logs
+*.log

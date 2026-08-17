@@ -1,0 +1,5 @@
+import { AnimatePresence, motion } from 'framer-motion'
+import { FiFile, FiUploadCloud, FiX } from 'react-icons/fi'
+export function UploadModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  return <AnimatePresence>{open && <><motion.button className="overlay" aria-label="Close upload" onClick={onClose} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} /><motion.div className="modal" role="dialog" aria-modal="true" initial={{ opacity: 0, scale: .96, y: 16 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: .96 }}><div className="modal-head"><div><span><FiFile /></span><div><h2>Add document</h2><p>Expand your knowledge base</p></div></div><button className="icon-button" onClick={onClose}><FiX /></button></div><div className="dropzone"><FiUploadCloud /><strong>Drop your document here</strong><p>PDF, DOCX, TXT or Markdown</p><button disabled>Choose file</button></div><div className="coming-notice"><span>Coming Soon</span> Document upload is waiting for backend support.</div></motion.div></>}</AnimatePresence>
+}
