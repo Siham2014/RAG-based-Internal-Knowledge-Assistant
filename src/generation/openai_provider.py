@@ -481,6 +481,41 @@ class OpenAIProvider(BaseLLMProvider):
     # Génération
     # ========================================================
 
+    def complete_text(
+        self,
+        *,
+        system_prompt: str,
+        user_input: str,
+        max_output_tokens: int,
+        temperature: float = 0.0,
+    ) -> str:
+        """Run a short non-RAG text transformation using the shared client."""
+        request_kwargs: dict[str, Any] = {
+            "model": self._model_name,
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input},
+            ],
+            "max_completion_tokens": int(max_output_tokens),
+            "stream": False,
+        }
+
+        if self._reasoning_effort is not None:
+            request_kwargs["reasoning_effort"] = self._reasoning_effort
+
+        if temperature > 0.0:
+            request_kwargs["temperature"] = float(temperature)
+
+        try:
+            response = self._client.chat.completions.create(**request_kwargs)
+        except Exception as error:
+            raise RuntimeError(
+                "OpenAI text completion failed: "
+                f"{type(error).__name__}: {error}"
+            ) from error
+
+        return self._extract_answer(response)
+
     def generate(
         self,
         request: GenerationRequest,

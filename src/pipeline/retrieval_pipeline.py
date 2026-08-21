@@ -911,6 +911,7 @@ class RetrievalPipeline:
         question: str,
         document_format: str | None = None,
         final_top_k: int | None = None,
+        lexical_question: str | None = None,
     ) -> RetrievalPipelineResponse:
         """
         Exécute le pipeline documentaire complet.
@@ -935,6 +936,12 @@ class RetrievalPipeline:
             self._validate_question(
                 question
             )
+        )
+
+        normalized_lexical_question = (
+            normalized_question
+            if lexical_question is None
+            else self._validate_question(lexical_question)
         )
 
         normalized_format = (
@@ -998,7 +1005,7 @@ class RetrievalPipeline:
         hybrid_results = (
             self.hybrid_retriever.search(
                 question=(
-                    normalized_question
+                    normalized_lexical_question
                 ),
                 query_embedding=(
                     query_embedding

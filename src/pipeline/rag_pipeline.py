@@ -29,6 +29,10 @@ from src.pipeline.retrieval_pipeline import (
     RetrievalPipeline,
     RetrievalPipelineResponse,
 )
+from src.query_processing import (
+    QueryNormalizationResult,
+    QueryNormalizer,
+)
 from src.reranking import (
     RerankedSearchResult,
 )
@@ -200,6 +204,7 @@ class RAGPipeline:
         language: str = DEFAULT_LANGUAGE,
         max_output_tokens: int = 250,
         temperature: float = 0.0,
+        query_normalizer: QueryNormalizer | None = None,
     ) -> None:
         if not isinstance(
             retrieval_pipeline,
@@ -315,6 +320,8 @@ class RAGPipeline:
             normalized_max_output_tokens
         )
         self.temperature = normalized_temperature
+        self.query_normalizer = query_normalizer
+        self.last_query_normalization: QueryNormalizationResult | None = None
 
     # ========================================================
     # Construction depuis settings.yaml
@@ -411,45 +418,68 @@ class RAGPipeline:
             application_settings.generation
         )
 
-        provider_kwargs: dict[str, Any] = {}
-
-        if generation_settings.model_name:
-            provider_kwargs["model_name"] = (
-                generation_settings.model_name
-            )
-
         normalized_provider_name = (
             generation_settings.provider
             .strip()
             .lower()
         )
 
-        if (
-            normalized_provider_name == "huggingface"
-            and generation_settings.inference_provider
-        ):
-            provider_kwargs["provider"] = (
-                generation_settings.inference_provider
+        def build_provider(provider_name: str, fallback: bool = False):
+            normalized_name = str(provider_name).strip().lower()
+            kwargs: dict[str, Any] = {}
+            if normalized_name == "qwen":
+                qwen = generation_settings.qwen
+                kwargs = {
+                    "model_name": qwen.model_name,
+                    "base_url": qwen.base_url,
+                    "enable_thinking": qwen.enable_thinking,
+                    "thinking_budget": qwen.thinking_budget,
+                    "timeout_seconds": qwen.timeout_seconds,
+                }
+            elif normalized_name == "openai":
+                model = (
+                    generation_settings.fallback_openai_model
+                    if fallback
+                    else generation_settings.model_name
+                )
+                if model:
+                    kwargs["model_name"] = model
+            else:
+                if generation_settings.model_name:
+                    kwargs["model_name"] = generation_settings.model_name
+                if (
+                    normalized_name == "huggingface"
+                    and generation_settings.inference_provider
+                ):
+                    kwargs["provider"] = generation_settings.inference_provider
+            return LLMProviderFactory.create(
+                provider_name=normalized_name,
+                **kwargs,
             )
 
         primary_provider = (
-            LLMProviderFactory.create(
-                provider_name=(
-                    generation_settings.provider
-                ),
-                **provider_kwargs,
-            )
+            build_provider(normalized_provider_name)
+        )
+
+        fallback_providers = tuple(
+            build_provider(provider_name, fallback=True)
+            for provider_name in generation_settings.fallback_providers
+            if provider_name != normalized_provider_name
         )
 
         llm_manager = LLMManager(
             primary_provider=primary_provider,
-            fallback_providers=(),
+            fallback_providers=fallback_providers,
             max_attempts_per_provider=(
                 DEFAULT_MAX_ATTEMPTS_PER_PROVIDER
             ),
             retry_delay_seconds=(
                 DEFAULT_RETRY_DELAY_SECONDS
             ),
+        )
+
+        query_normalizer = QueryNormalizer.from_settings(
+            application_settings
         )
 
         # ----------------------------------------------------
@@ -485,6 +515,7 @@ class RAGPipeline:
             temperature=(
                 generation_settings.temperature
             ),
+            query_normalizer=query_normalizer,
         )
 
     # ========================================================
@@ -588,9 +619,13 @@ class RAGPipeline:
             ),
         )
 
-    def _refusal_message(self) -> str:
-        if self.language == "en":
+    def _refusal_message(self, language: str | None = None) -> str:
+        selected_language = language or self.language
+        if selected_language == "en":
             return REFUSAL_MESSAGE_EN
+
+        if selected_language == "ar":
+            return "لا أعرف بناءً على المستندات الداخلية المتاحة."
 
         return REFUSAL_MESSAGE_FR
 
@@ -634,21 +669,45 @@ class RAGPipeline:
         question: str,
         document_format: str | None = None,
         final_top_k: int | None = None,
+        reply_language: str | None = None,
+        response_style: str = "concise",
+        normalize_query: bool = True,
     ) -> RAGResponse:
         """
         Exécute l'ensemble du pipeline RAG.
         """
 
-        normalized_question = str(
+        original_query = str(
             question
         ).strip()
 
-        if not normalized_question:
+        if not original_query:
             raise ValueError(
                 "La question ne peut pas être vide."
             )
 
         total_start = time.perf_counter()
+
+        effective_language = str(reply_language or self.language).strip().lower()
+        if effective_language not in {"en", "fr", "ar"}:
+            effective_language = "en"
+
+        if self.query_normalizer is None or not normalize_query:
+            normalization = QueryNormalizationResult(
+                original_query=original_query,
+                normalized_query=original_query,
+                changed=False,
+            )
+        else:
+            normalization = self.query_normalizer.normalize(original_query)
+
+        self.last_query_normalization = normalization
+        retrieval_query = normalization.normalized_query
+        lexical_query = (
+            f"{normalization.normalized_query}\n{normalization.original_query}"
+            if normalization.changed
+            else normalization.normalized_query
+        )
 
         # ----------------------------------------------------
         # 1. Retrieval et reranking
@@ -658,7 +717,8 @@ class RAGPipeline:
 
         retrieval_response = (
             self.retrieval_pipeline.retrieve(
-                question=normalized_question,
+                question=retrieval_query,
+                lexical_question=lexical_query,
                 document_format=document_format,
                 final_top_k=final_top_k,
             )
@@ -714,9 +774,9 @@ class RAGPipeline:
             )
 
             return RAGResponse(
-                question=normalized_question,
+                question=original_query,
                 accepted=False,
-                answer=self._refusal_message(),
+                answer=self._refusal_message(effective_language),
                 confidence=confidence_decision,
                 sources=sources,
                 citations=(),
@@ -757,7 +817,7 @@ class RAGPipeline:
             ) * 1000
 
             return RAGResponse(
-                question=normalized_question,
+                question=original_query,
                 accepted=True,
                 answer=(
                     "La question est suffisamment documentée, "
@@ -803,13 +863,14 @@ class RAGPipeline:
         )
 
         generation_request = GenerationRequest(
-            question=normalized_question,
+            question=original_query,
             contexts=generation_contexts,
-            language=self.language,
+            language=effective_language,
             max_output_tokens=(
                 self.max_output_tokens
             ),
             temperature=self.temperature,
+            response_style=response_style,
         )
 
         # ----------------------------------------------------
@@ -821,7 +882,13 @@ class RAGPipeline:
         try:
             generation_response = (
                 self.llm_manager.generate(
-                    generation_request
+                    generation_request,
+                    response_validator=lambda candidate: (
+                        self.citation_validator.validate_response(
+                            response=candidate,
+                            contexts=generation_contexts,
+                        ).valid
+                    ),
                 )
             )
 
@@ -837,9 +904,9 @@ class RAGPipeline:
             ) * 1000
 
             return RAGResponse(
-                question=normalized_question,
+                question=original_query,
                 accepted=False,
-                answer=self._refusal_message(),
+                answer=self._refusal_message(effective_language),
                 confidence=confidence_decision,
                 sources=sources,
                 citations=(),
@@ -908,9 +975,9 @@ class RAGPipeline:
 
         if not citation_validation.valid:
             return RAGResponse(
-                question=normalized_question,
+                question=original_query,
                 accepted=False,
-                answer=self._refusal_message(),
+                answer=self._refusal_message(effective_language),
                 confidence=confidence_decision,
                 sources=sources,
                 citations=(),
@@ -951,7 +1018,7 @@ class RAGPipeline:
         # ----------------------------------------------------
 
         return RAGResponse(
-            question=normalized_question,
+            question=original_query,
             accepted=True,
             answer=generation_response.answer,
             confidence=confidence_decision,

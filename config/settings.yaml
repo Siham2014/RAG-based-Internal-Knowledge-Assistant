@@ -47,12 +47,38 @@ confidence:
 
 generation:
   enabled: true
-  provider: openai
-  model_name: gpt-5-nano
+  provider: qwen
+  model_name: qwen3.8-max
+  fallback_providers:
+    - openai
+  fallback_openai_model: gpt-5-nano
   inference_provider: null
   temperature: 0.0
-  max_tokens: 200
+  max_tokens: 512
   context_count: 2
+  qwen:
+    model_name: qwen3.8-max
+    base_url: https://dashscope-intl.aliyuncs.com/compatible-mode/v1
+    enable_thinking: true
+    thinking_budget: 128
+    timeout_seconds: 60.0
+
+query_processing:
+  normalization:
+    enabled: true
+    provider: openai
+    model_name: gpt-5-nano
+    reasoning_effort: minimal
+    temperature: 0.0
+    max_tokens: 64
+
+conversation:
+  enabled: true
+  max_conversations: 1000
+  max_messages: 12
+  max_context_messages: 4
+  max_context_chars: 4000
+  rewrite_max_tokens: 128
 
 storage:
   bm25_index_path: indexes/lexical/bm25_index.db

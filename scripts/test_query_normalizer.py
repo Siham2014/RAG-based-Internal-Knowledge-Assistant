@@ -3,36 +3,66 @@ from __future__ import annotations
 from src.query_processing.query_normalizer import (
     QueryNormalizer,
 )
+from src.common.settings import get_settings
 
 
-QUESTIONS = [
-    "what is clod computin",
-    "what is claud compoting",
-    "How cn I improve Azure reliabiliti?",
-    "What is Azure Databrikc?",
-    "explan kubirnitis archtectur",
-    "What is AKS?",
-    "Explain cloud scalabiliti",
-    "How to imprauve reliability",
-]
+CASES = (
+    ("what is clod computin", "what is cloud computing"),
+    (
+        "How cn I improve Azure reliabiliti?",
+        "How can I improve Azure reliability?",
+    ),
+    ("explan kubernetes archtectur", "explain Kubernetes architecture"),
+    ("What is AKS?", "What is AKS?"),
+    ("What is cloud computing?", "What is cloud computing?"),
+)
+
+
+class FailingProvider:
+    provider_name = "failing-test-provider"
+    model_name = "failing-test-model"
+
+    def complete_text(self, **_: object) -> str:
+        raise TimeoutError("simulated provider timeout")
 
 
 def main() -> None:
-    normalizer = QueryNormalizer()
+    settings = get_settings()
+
+    normalizer = QueryNormalizer.from_settings(
+        settings
+    )
 
     print("=" * 100)
-    print("QUERY NORMALIZATION TEST")
+    print("QUERY NORMALIZER TEST")
     print("=" * 100)
 
-    for question in QUESTIONS:
-        normalized = normalizer.normalize(
+    for question, expected in CASES:
+        print()
+        print("ORIGINAL   :", question)
+
+        result = normalizer.normalize(
             question
         )
 
-        print()
-        print("ORIGINAL   :", question)
-        print("NORMALIZED :", normalized)
+        print("NORMALIZED :", result.normalized_query)
+        print("CHANGED    :", result.changed)
+        print("PROVIDER   :", result.provider)
+        print("MODEL      :", result.model_name)
+        assert result.original_query == question
+        assert result.normalized_query == expected
         print("-" * 100)
+
+    failing_normalizer = QueryNormalizer(
+        provider=FailingProvider(),
+        settings=settings.query_processing.normalization,
+    )
+    original = "what is clod computin"
+    fallback = failing_normalizer.normalize(original)
+    assert fallback.original_query == original
+    assert fallback.normalized_query == original
+    assert fallback.changed is False
+    print("Fail-safe provider test passed.")
 
 
 if __name__ == "__main__":

@@ -17,6 +17,7 @@ from src.generation.kimi_provider import (
 from src.generation.openai_provider import (
     OpenAIProvider,
 )
+from src.generation.qwen_provider import QwenProvider
 
 
 class LLMProviderFactory:
@@ -35,6 +36,7 @@ class LLMProviderFactory:
         ),
         "kimi": KimiProvider,
         "openai": OpenAIProvider,
+        "qwen": QwenProvider,
     }
 
     @classmethod

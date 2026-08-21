@@ -15,6 +15,8 @@ REFUSAL_MESSAGE_EN = (
     "I don't know based on the available internal documents."
 )
 
+REFUSAL_MESSAGE_AR = "لا أعرف بناءً على المستندات الداخلية المتاحة."
+
 
 class RAGPromptBuilder:
     """
@@ -52,6 +54,13 @@ class RAGPromptBuilder:
                 "If at least one supplied context directly answers "
                 "the question, you must answer using that context "
                 "and its authorized citation. "
+                "An explicit enumeration in a context is direct evidence, "
+                "even when the context introduces the listed items with "
+                "different wording than the question. Synthesize only the "
+                "items actually enumerated in that context. When a context "
+                "states a requested count or category and later enumerates "
+                "that same number of relevant items, use that enumeration "
+                "as the answer; do not require a repeated label sentence. "
                 "Do not use the refusal sentence when relevant "
                 "evidence is present. "
                 "If the available evidence is insufficient, "
@@ -59,8 +68,19 @@ class RAGPromptBuilder:
                 f"'{REFUSAL_MESSAGE_EN}'"
             )
 
+        if normalized_language == "ar":
+            return (
+                "أنت مساعد معرفة داخلي. أجب فقط من السياقات الوثائقية المقدمة. "
+                "لا تستخدم معرفة خارجية أو معلومات غير مدعومة. يجب دعم كل معلومة "
+                "واقعية باستشهاد مصرح به واحد على الأقل، وانسخ الاستشهاد حرفياً "
+                "دون ترجمته أو تعديله. إذا كانت الأدلة غير كافية، أجب فقط: "
+                f"'{REFUSAL_MESSAGE_AR}'"
+            )
+
         return (
             "Tu es un assistant documentaire interne. "
+            "Réponds intégralement en français, même si la question de "
+            "retrieval ou les contextes documentaires sont en anglais. "
             "Réponds uniquement à partir des contextes "
             "documentaires fournis. "
             "N'utilise aucune connaissance externe, supposition "
@@ -137,11 +157,17 @@ class RAGPromptBuilder:
                 "DOCUMENTARY CONTEXTS\n"
                 f"{contexts_text}\n\n"
                 "FINAL INSTRUCTIONS\n"
-                "- Give a clear and concise answer.\n"
+                f"- {self._style_instruction(request.response_style, 'en')}\n"
                 "- Use only information explicitly present "
                 "in the contexts.\n"
                 "- If at least one context contains direct evidence, "
                 "answer the question.\n"
+                "- Treat an explicit enumeration as direct evidence even "
+                "when its introductory wording differs from the question; "
+                "use only the items actually listed.\n"
+                "- When a context states the requested count or category "
+                "and later lists that same number of relevant items, answer "
+                "from that list without requiring a repeated label.\n"
                 "- Do not refuse when relevant evidence is present.\n"
                 "- Place each citation immediately after "
                 "the supported statement.\n"
@@ -153,13 +179,29 @@ class RAGPromptBuilder:
                 f"reply exactly: {REFUSAL_MESSAGE_EN}"
             )
 
+        if normalized_language == "ar":
+            return (
+                "السؤال\n"
+                f"{normalized_question}\n\n"
+                "السياقات الوثائقية\n"
+                f"{contexts_text}\n\n"
+                "التعليمات النهائية\n"
+                f"- {self._style_instruction(request.response_style, 'ar')}\n"
+                "- استخدم فقط المعلومات الواردة صراحة في السياقات.\n"
+                "- ضع كل استشهاد مباشرة بعد العبارة التي يدعمها.\n"
+                "- انسخ الاستشهاد المصرح به حرفياً دون تعديل.\n"
+                f"- إذا لم تكن الأدلة كافية، أجب حرفياً: {REFUSAL_MESSAGE_AR}"
+            )
+
         return (
             "QUESTION\n"
             f"{normalized_question}\n\n"
             "CONTEXTES DOCUMENTAIRES\n"
             f"{contexts_text}\n\n"
             "INSTRUCTIONS FINALES\n"
-            "- Produis une réponse claire et concise.\n"
+            f"- {self._style_instruction(request.response_style, 'fr')}\n"
+            "- Rédige toute la réponse en français, sauf les citations "
+            "autorisées qui doivent rester strictement inchangées.\n"
             "- Utilise uniquement les informations explicitement "
             "présentes dans les contextes.\n"
             "- Si au moins un contexte contient une preuve directe, "
@@ -176,6 +218,27 @@ class RAGPromptBuilder:
             "- Si les contextes ne contiennent pas assez de preuves, "
             f"réponds exactement : {REFUSAL_MESSAGE_FR}"
         )
+
+    @staticmethod
+    def _style_instruction(style: str, language: str) -> str:
+        instructions = {
+            "en": {
+                "concise": "Keep the answer concise and direct.",
+                "detailed": "Give a detailed explanation while staying within the evidence.",
+                "expert": "Use precise expert terminology while staying within the evidence.",
+            },
+            "fr": {
+                "concise": "Produis une réponse concise et directe.",
+                "detailed": "Produis une explication détaillée sans dépasser les preuves.",
+                "expert": "Utilise une terminologie experte sans dépasser les preuves.",
+            },
+            "ar": {
+                "concise": "اجعل الإجابة موجزة ومباشرة.",
+                "detailed": "قدم شرحاً مفصلاً ضمن حدود الأدلة.",
+                "expert": "استخدم مصطلحات دقيقة بمستوى خبير ضمن حدود الأدلة.",
+            },
+        }
+        return instructions.get(language, instructions["en"])[style]
 
     def build_messages(
         self,

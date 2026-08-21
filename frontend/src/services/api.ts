@@ -3,8 +3,8 @@ import type { AskResponse, Language } from '../types/chat'
 
 const api = axios.create({ baseURL: import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8001', timeout: 120_000, headers: { 'Content-Type': 'application/json' } })
 
-export async function askAssistant(question: string, language: Language) {
-  const { data } = await api.post<AskResponse>('/ask', { question, language })
+export async function askAssistant(question: string, language: Language, conversationId?: string) {
+  const { data } = await api.post<AskResponse>('/ask', { question, language, conversation_id: conversationId })
   return data
 }
 

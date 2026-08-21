@@ -32,7 +32,7 @@ export function useChat() {
     setIsLoading(true)
     const request = async () => {
       try {
-        const result = await askAssistant(content, language)
+        const result = await askAssistant(content, language, id)
         const assistant: Message = { id: crypto.randomUUID(), role: 'assistant', content: result.answer || result.refusal_reason || 'No response was generated.', createdAt: new Date().toISOString(), metadata: result }
         patch(id, (chat) => ({ ...chat, messages: [...chat.messages, assistant] }))
       } catch (error) {

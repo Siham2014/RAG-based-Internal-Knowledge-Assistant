@@ -60,6 +60,7 @@ class GenerationRequest:
     language: str = "fr"
     max_output_tokens: int = 250
     temperature: float = 0.0
+    response_style: str = "concise"
 
     def __post_init__(self) -> None:
         if not self.question.strip():
@@ -82,6 +83,11 @@ class GenerationRequest:
             raise ValueError(
                 "temperature doit être comprise "
                 "entre 0 et 2."
+            )
+
+        if self.response_style not in {"concise", "detailed", "expert"}:
+            raise ValueError(
+                "response_style must be 'concise', 'detailed', or 'expert'."
             )
 
 

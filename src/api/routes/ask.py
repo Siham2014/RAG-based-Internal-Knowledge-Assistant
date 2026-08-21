@@ -10,16 +10,14 @@ from fastapi import (
 )
 
 from src.api.dependencies import (
-    get_rag_pipeline,
+    get_conversational_service,
 )
+from src.conversation import ConversationalRAGService
 from src.api.schemas import (
     AskRequest,
     AskResponse,
     SourceResponse,
     TimingResponse,
-)
-from src.pipeline import (
-    RAGPipeline,
 )
 
 
@@ -35,8 +33,8 @@ router = APIRouter(
 )
 def ask(
     payload: AskRequest,
-    pipeline: RAGPipeline = Depends(
-        get_rag_pipeline
+    service: ConversationalRAGService = Depends(
+        get_conversational_service
     ),
 ) -> AskResponse:
     """
@@ -66,16 +64,38 @@ def ask(
         )
 
     if language not in {
+        "auto",
         "en",
         "fr",
+        "ar",
     }:
         raise HTTPException(
             status_code=(
                 status.HTTP_422_UNPROCESSABLE_ENTITY
             ),
             detail=(
-                "La langue doit être 'en' ou 'fr'."
+                "La langue doit être 'auto', 'en', 'fr' ou 'ar'."
             ),
+        )
+
+    reply_language = (
+        str(payload.reply_language).strip().lower()
+        if payload.reply_language is not None
+        else None
+    )
+    if reply_language is not None and reply_language not in {
+        "auto", "en", "fr", "ar"
+    }:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="reply_language doit être 'auto', 'en', 'fr' ou 'ar'.",
+        )
+
+    response_style = str(payload.response_style or "concise").strip().lower()
+    if response_style not in {"concise", "detailed", "expert"}:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="response_style doit être 'concise', 'detailed' ou 'expert'.",
         )
 
     try:
@@ -83,15 +103,41 @@ def ask(
         # Configuration dynamique de la langue
         # ====================================================
 
-        pipeline.language = language
-
-        # ====================================================
-        # Exécution complète du RAG
-        # ====================================================
-
-        response = pipeline.answer(
-            question
+        turn = service.process(
+            question=question,
+            conversation_id=payload.conversation_id,
+            language=language,
+            reply_language=reply_language,
+            response_style=response_style,
         )
+        response = turn.rag_response
+
+        if response is None:
+            return AskResponse(
+                accepted=True,
+                answer=turn.answer,
+                provider=None,
+                model_name=None,
+                confidence_score=1.0,
+                failed_rules=[],
+                citations=[],
+                sources=[],
+                timings=TimingResponse(
+                    retrieval_time_ms=0.0,
+                    confidence_time_ms=0.0,
+                    generation_time_ms=0.0,
+                    citation_validation_time_ms=0.0,
+                    total_time_ms=0.0,
+                ),
+                refusal_reason=None,
+                original_query=turn.original_query,
+                normalized_query=turn.normalized_query,
+                rewritten_query=turn.rewritten_query,
+                detected_language=turn.detected_language,
+                reply_language=turn.reply_language,
+                intent=turn.intent.value,
+                conversation_id=turn.conversation_id,
+            )
 
         # ====================================================
         # Conversion des sources
@@ -189,6 +235,13 @@ def ask(
                 if response.refusal_reason
                 else None
             ),
+            original_query=turn.original_query,
+            normalized_query=turn.normalized_query,
+            rewritten_query=turn.rewritten_query,
+            detected_language=turn.detected_language,
+            reply_language=turn.reply_language,
+            intent=turn.intent.value,
+            conversation_id=turn.conversation_id,
         )
 
     except HTTPException:

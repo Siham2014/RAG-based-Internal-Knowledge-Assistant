@@ -36,6 +36,7 @@ from src.generation.kimi_provider import (
 from src.generation.openai_provider import (
     OpenAIProvider,
 )
+from src.generation.qwen_provider import QwenProvider
 
 __all__ = [
     "BaseLLMProvider",
@@ -56,4 +57,5 @@ __all__ = [
     "REFUSAL_MESSAGE_FR",
     "KimiProvider",
     "OpenAIProvider",
+    "QwenProvider",
 ]

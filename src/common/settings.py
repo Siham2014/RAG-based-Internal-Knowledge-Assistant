@@ -84,6 +84,15 @@ class ConfidenceSettings:
 
 
 @dataclass(frozen=True)
+class QwenGenerationSettings:
+    model_name: str
+    base_url: str
+    enable_thinking: bool
+    thinking_budget: int | None
+    timeout_seconds: float
+
+
+@dataclass(frozen=True)
 class GenerationSettings:
     enabled: bool
     provider: str
@@ -92,6 +101,9 @@ class GenerationSettings:
     temperature: float
     max_tokens: int
     context_count: int
+    fallback_providers: tuple[str, ...]
+    fallback_openai_model: str | None
+    qwen: QwenGenerationSettings
 
     # Fournisseur logiciel :
     # mock, huggingface, openai, ollama...
@@ -109,6 +121,31 @@ class GenerationSettings:
 
     temperature: float
     max_tokens: int
+
+
+@dataclass(frozen=True)
+class QueryNormalizationSettings:
+    enabled: bool
+    provider: str
+    model_name: str
+    reasoning_effort: str | None
+    temperature: float
+    max_tokens: int
+
+
+@dataclass(frozen=True)
+class QueryProcessingSettings:
+    normalization: QueryNormalizationSettings
+
+
+@dataclass(frozen=True)
+class ConversationSettings:
+    enabled: bool
+    max_conversations: int
+    max_messages: int
+    max_context_messages: int
+    max_context_chars: int
+    rewrite_max_tokens: int
 
 
 @dataclass(frozen=True)
@@ -132,6 +169,8 @@ class ApplicationSettings:
     reranking: RerankingSettings
     confidence: ConfidenceSettings
     generation: GenerationSettings
+    query_processing: QueryProcessingSettings
+    conversation: ConversationSettings
     storage: StorageSettings
     api: APISettings
 
@@ -180,6 +219,17 @@ def _optional_text(
     normalized = str(value).strip()
 
     return normalized or None
+
+
+def _text_tuple(value: Any, field_name: str) -> tuple[str, ...]:
+    if value is None:
+        return ()
+    if not isinstance(value, list):
+        raise ValueError(f"Le champ '{field_name}' doit être une liste.")
+    items = tuple(str(item).strip().lower() for item in value if str(item).strip())
+    if len(items) != len(set(items)):
+        raise ValueError(f"Le champ '{field_name}' contient des doublons.")
+    return items
 
 
 def _require_positive_integer(
@@ -347,6 +397,18 @@ def _apply_environment_overrides(
         {},
     )
 
+    query_processing = raw.setdefault(
+        "query_processing",
+        {},
+    )
+    normalization = query_processing.setdefault(
+        "normalization",
+        {},
+    )
+    qwen_generation = generation.setdefault("qwen", {})
+
+    raw.setdefault("conversation", {})
+
     overrides: dict[
         str,
         tuple[dict[str, Any], str],
@@ -369,6 +431,18 @@ def _apply_environment_overrides(
         ),
         "RAG_GENERATION_MODEL": (
             generation,
+            "model_name",
+        ),
+        "RAG_QWEN_MODEL": (
+            qwen_generation,
+            "model_name",
+        ),
+        "RAG_QUERY_NORMALIZATION_PROVIDER": (
+            normalization,
+            "provider",
+        ),
+        "RAG_QUERY_NORMALIZATION_MODEL": (
+            normalization,
             "model_name",
         ),
         "RAG_INFERENCE_PROVIDER": (
@@ -516,6 +590,26 @@ def load_settings(
     generation_raw = _require_mapping(
         raw.get("generation"),
         "generation",
+    )
+
+    qwen_raw = _require_mapping(
+        generation_raw.get("qwen", {}),
+        "generation.qwen",
+    )
+
+    query_processing_raw = _require_mapping(
+        raw.get("query_processing"),
+        "query_processing",
+    )
+
+    normalization_raw = _require_mapping(
+        query_processing_raw.get("normalization"),
+        "query_processing.normalization",
+    )
+
+    conversation_raw = _require_mapping(
+        raw.get("conversation"),
+        "conversation",
     )
 
     storage_raw = _require_mapping(
@@ -847,6 +941,97 @@ def load_settings(
                     ),
                     "generation.context_count",
                 )
+            ),
+            fallback_providers=_text_tuple(
+                generation_raw.get("fallback_providers", []),
+                "generation.fallback_providers",
+            ),
+            fallback_openai_model=_optional_text(
+                generation_raw.get("fallback_openai_model")
+            ),
+            qwen=QwenGenerationSettings(
+                model_name=_require_text(
+                    qwen_raw.get("model_name", "qwen3.8-max"),
+                    "generation.qwen.model_name",
+                ),
+                base_url=_require_text(
+                    qwen_raw.get(
+                        "base_url",
+                        "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+                    ),
+                    "generation.qwen.base_url",
+                ),
+                enable_thinking=_require_boolean(
+                    qwen_raw.get("enable_thinking", True),
+                    "generation.qwen.enable_thinking",
+                ),
+                thinking_budget=(
+                    None
+                    if qwen_raw.get("thinking_budget") is None
+                    else _require_positive_integer(
+                        qwen_raw.get("thinking_budget"),
+                        "generation.qwen.thinking_budget",
+                    )
+                ),
+                timeout_seconds=_require_float(
+                    qwen_raw.get("timeout_seconds", 60.0),
+                    "generation.qwen.timeout_seconds",
+                ),
+            ),
+        ),
+
+        query_processing=QueryProcessingSettings(
+            normalization=QueryNormalizationSettings(
+                enabled=_require_boolean(
+                    normalization_raw.get("enabled", False),
+                    "query_processing.normalization.enabled",
+                ),
+                provider=_require_text(
+                    normalization_raw.get("provider"),
+                    "query_processing.normalization.provider",
+                ),
+                model_name=_require_text(
+                    normalization_raw.get("model_name"),
+                    "query_processing.normalization.model_name",
+                ),
+                reasoning_effort=_optional_text(
+                    normalization_raw.get("reasoning_effort")
+                ),
+                temperature=_require_float(
+                    normalization_raw.get("temperature", 0.0),
+                    "query_processing.normalization.temperature",
+                ),
+                max_tokens=_require_positive_integer(
+                    normalization_raw.get("max_tokens"),
+                    "query_processing.normalization.max_tokens",
+                ),
+            ),
+        ),
+
+        conversation=ConversationSettings(
+            enabled=_require_boolean(
+                conversation_raw.get("enabled", True),
+                "conversation.enabled",
+            ),
+            max_conversations=_require_positive_integer(
+                conversation_raw.get("max_conversations", 1000),
+                "conversation.max_conversations",
+            ),
+            max_messages=_require_positive_integer(
+                conversation_raw.get("max_messages", 12),
+                "conversation.max_messages",
+            ),
+            max_context_messages=_require_positive_integer(
+                conversation_raw.get("max_context_messages", 4),
+                "conversation.max_context_messages",
+            ),
+            max_context_chars=_require_positive_integer(
+                conversation_raw.get("max_context_chars", 4000),
+                "conversation.max_context_chars",
+            ),
+            rewrite_max_tokens=_require_positive_integer(
+                conversation_raw.get("rewrite_max_tokens", 128),
+                "conversation.rewrite_max_tokens",
             ),
         ),
 

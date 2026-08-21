@@ -15,6 +15,10 @@ class AskRequest(BaseModel):
         description="Langue de génération de la réponse.",
     )
 
+    reply_language: str | None = None
+    conversation_id: str | None = None
+    response_style: str = "concise"
+
 
 class SourceResponse(BaseModel):
     rank: int
@@ -53,6 +57,14 @@ class AskResponse(BaseModel):
     timings: TimingResponse
 
     refusal_reason: str | None = None
+
+    original_query: str | None = None
+    normalized_query: str | None = None
+    rewritten_query: str | None = None
+    detected_language: str | None = None
+    reply_language: str | None = None
+    intent: str | None = None
+    conversation_id: str | None = None
 
 
 class HealthResponse(BaseModel):

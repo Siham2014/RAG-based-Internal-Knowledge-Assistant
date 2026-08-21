@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 import time
+import logging
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Callable
 
 from src.generation.base import (
     BaseLLMProvider,
@@ -11,6 +12,9 @@ from src.generation.models import (
     GenerationRequest,
     GenerationResponse,
 )
+
+
+LOGGER = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -63,6 +67,10 @@ class LLMGenerationError(RuntimeError):
                 for attempt in self.attempts
             ],
         }
+
+
+class LLMResponseValidationError(RuntimeError):
+    """Provider returned a response that violates the RAG output contract."""
 
 
 class LLMManager:
@@ -221,6 +229,7 @@ class LLMManager:
     def generate(
         self,
         request: GenerationRequest,
+        response_validator: Callable[[GenerationResponse], bool] | None = None,
     ) -> GenerationResponse:
         """
         Tente la génération avec chaque fournisseur.
@@ -250,6 +259,7 @@ class LLMManager:
         for provider_index, provider in enumerate(
             self.providers
         ):
+            LOGGER.info("Generation provider: %s", provider.provider_name)
             for attempt_number in range(
                 1,
                 self.max_attempts_per_provider + 1,
@@ -283,6 +293,14 @@ class LLMManager:
                             "une réponse vide."
                         )
 
+                    if (
+                        response_validator is not None
+                        and not response_validator(response)
+                    ):
+                        raise LLMResponseValidationError(
+                            "The provider response failed grounded-output validation."
+                        )
+
                     attempts.append(
                         LLMProviderAttempt(
                             provider=(
@@ -309,6 +327,11 @@ class LLMManager:
                     return response
 
                 except Exception as error:
+                    LOGGER.warning(
+                        "%s generation failed: %s",
+                        provider.provider_name.capitalize(),
+                        str(error),
+                    )
                     duration_ms = (
                         time.perf_counter()
                         - attempt_start
@@ -345,6 +368,8 @@ class LLMManager:
                     )
 
                     if not is_last_attempt:
+                        if isinstance(error, LLMResponseValidationError):
+                            break
                         time.sleep(
                             self.retry_delay_seconds
                         )
@@ -355,13 +380,13 @@ class LLMManager:
                 < len(self.providers) - 1
             )
 
-            if (
-                has_next_provider
-                and self.retry_delay_seconds > 0
-            ):
-                time.sleep(
-                    self.retry_delay_seconds
+            if has_next_provider:
+                LOGGER.info(
+                    "Trying fallback provider: %s",
+                    self.providers[provider_index + 1].provider_name,
                 )
+                if self.retry_delay_seconds > 0:
+                    time.sleep(self.retry_delay_seconds)
 
         self._last_attempts = tuple(
             attempts
